@@ -1,0 +1,35 @@
+img {
+  width: 1200px;
+  height: 500px;
+  /* object-fit: cover;
+  object-fit: contain; */
+  object-fit: fill;
+  /* object-fit: scale-down; */
+  cursor: pointer;
+}
+.container {
+  width: 1200px;
+  text-align: center;
+  margin: auto;
+  height: 700px;
+  position: relative;
+}
+
+.left-info {
+  width: 550px;
+  height: 700px;
+  position: absolute;
+  background-color: #f9d19f;
+  /* clip-path: inset(10px 40px 110px 110px); */
+  clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+/*
+.left-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 300px solid transparent;
+  border-right: 100px solid transparent;
+  transform: rotate(-45deg);
+} */
