@@ -1,0 +1,67 @@
+// .hamburger {
+//   padding: 5px;
+//   border: 1px solid black;
+// }
+.hamburger-button {
+  border: none;
+  background-color: none;
+  padding: 0px;
+}
+.shopping-container {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  border-color: $navbar-light-toggler-border-color;
+  border-radius: $navbar-toggler-border-radius;
+}
+.fa-cart-shopping {
+  font-size: 2rem;
+}
+
+.hamburger {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 1rem;
+  &__line {
+    opacity: 1;
+    transition: all 0.3s;
+    height: 5px;
+    width: 35px;
+    background-color: black;
+    position: absolute;
+    border-radius: 10px;
+  }
+}
+
+.hamburger__line--one {
+  top: 20%;
+}
+
+.hamburger__line--two,
+.hamburger__line--three {
+  top: 46%;
+}
+
+.hamburger__line--four {
+  top: 72%;
+}
+
+.rotate-two {
+  transform: rotate(-45deg);
+}
+.rotate-three {
+  transform: rotate(45deg);
+}
+.opacity {
+  opacity: 0;
+}
