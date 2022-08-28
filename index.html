@@ -23,28 +23,25 @@
 <body>
     <header>
         <div class="top-rim"></div>
-        <!-- <div class="container-lg"> -->
-        <!-- <nav> -->
-        <!-- <div class="logo-container">
-                    <img src="./images/logo.png" alt="">
-                </div> -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-lg">
-                <a class="navbar-brand" href="#"><img src="./images/logo.png" alt=""></a>
-                <!-- <button class="navbar-togglerr" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
-                <div class="shopping-container">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt=""></a>
+
+
+
+                <div class="icon-container">
+                    <div class="shopping-container">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="cart-info">1</div>
+                    </div>
+                    <div class="hamburger navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+                        <div class="hamburger__line hamburger__line--one"></div>
+                        <div class="hamburger__line hamburger__line--two"></div>
+                        <div class="hamburger__line hamburger__line--three"></div>
+                        <div class="hamburger__line hamburger__line--four"></div>
+                    </div>
                 </div>
-                <!-- <button class="hamburger-button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"> -->
-                <div class="hamburger navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
-                    <div class="hamburger__line hamburger__line--one"></div>
-                    <div class="hamburger__line hamburger__line--two"></div>
-                    <div class="hamburger__line hamburger__line--three"></div>
-                    <div class="hamburger__line hamburger__line--four"></div>
-                </div>
-                <!-- </button> -->
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -56,43 +53,52 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Login</a>
                         </li>
-                        <!-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </li> -->
-                        <!-- <li class="nav-item">
-                                    <a class="nav-link disabled">Disabled</a>
-                                </li> -->
                     </ul>
-                    <!-- <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form> -->
                 </div>
-                <!-- </div> -->
+
+            </div>
         </nav>
-        <!-- </nav> -->
+
         </div>
     </header>
     <main>
 
         <div class="container-lg">
+            <div class="hero-banner">
+                <img src="./images/hero-banner.jpg" class="hero-banner__img" alt="">
+            </div>
+            <h2>This weeks featured products</h2>
+            <div class="row featured"></div>
+            <div class="shipping-info">
+                <i class="fa-solid fa-truck"></i>
+                <h2 class="shipping-info__text">Free shipping on orders above 1200,-</h2>
+            </div>
+
 
         </div>
 
     </main>
-    <footer>
+    <footer class="footer">
+        <div class="container-lg footer-container">
+            <div class="footer-info">
+                <p>Contact Us</p>
+                <p>About us</p>
+                <p>Our stores</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com"> <i class="fa-brands fa-square-facebook footer-social__facebook"></i></a>
+                <a href="https://instagram.com"> <i class="fa-brands fa-square-instagram footer-social__instagram"></i></a>
+                <a href="https://twitter.com/"> <i class="fa-brands fa-square-twitter footer-social__twitter"></i></a>
+
+            </div>
+            <div class="copyright">
+                <p>Copyright Practicly 2022</p>
+            </div>
+        </div>
         <div class="bottom-rim"></div>
+
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 </body>

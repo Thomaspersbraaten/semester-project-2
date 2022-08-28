@@ -12486,6 +12486,11 @@ fieldset:disabled .btn {
 
 body {
   margin: 0;
+  height: 100%;
+}
+
+header {
+  border: 10px 0px 0px 0px #ef8b08;
 }
 
 .top-rim,
@@ -12495,19 +12500,42 @@ body {
   height: 10px;
 }
 
-footer {
-  position: absolute;
-  bottom: 0%;
-  width: 100%;
+.hero-banner {
+  margin: 1rem auto;
 }
 
-header {
-  background-color: rgba(252, 74, 5, 0.2);
+.hero-banner__img {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 100%;
+  opacity: 0.9;
+  -webkit-box-shadow: 0px;
+          box-shadow: 0px;
+}
+
+.hero-banner__img:hover {
+  opacity: 1;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
+}
+
+.col {
+  width: 208px;
+  height: 317px;
 }
 
 .nav-item {
   font-family: "Oswald", sans-serif;
   font-size: 1.6rem;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+header {
+  background-color: rgba(252, 74, 5, 0.2);
 }
 
 .hamburger-button {
@@ -12570,6 +12598,10 @@ header {
   border-radius: 10px;
 }
 
+.hamburger:hover {
+  cursor: pointer;
+}
+
 .hamburger__line--one {
   top: 20%;
 }
@@ -12595,5 +12627,127 @@ header {
 
 .opacity {
   opacity: 0;
+}
+
+.icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5rem;
+}
+
+.cart-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff6900;
+  color: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shipping-info {
+  background-color: #ef8b08;
+  width: 100%;
+  color: white;
+  padding: 10px 0px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin: 1rem auto;
+}
+
+.shipping-info__text {
+  font-size: 0.9rem;
+  margin: 0px;
+}
+
+.fa-truck {
+  font-size: 1.3rem;
+}
+
+.card {
+  width: 208px;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.footer {
+  background-color: rgba(252, 74, 5, 0.2);
+}
+
+.footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.footer-container > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer-social__facebook {
+  color: #3b5998;
+}
+
+.footer-social__twitter {
+  color: #00acee;
+}
+
+.footer-social__instagram {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), -webkit-gradient(linear, left top, left bottom, from(#6559ca), color-stop(30%, #bc318f), color-stop(50%, #e33f5f), color-stop(70%, #f77638), to(#fec66d));
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff0 !important;
 }
 /*# sourceMappingURL=style.css.map */

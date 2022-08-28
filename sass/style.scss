@@ -49,7 +49,10 @@
 // Utilities
 @import "./bootstrap-scss/utilities/api";
 // scss-docs-end import-stack
-
+@import "./partials/variables";
 @import "./partials/layout";
 @import "./partials/typography";
 @import "./partials/navigation";
+@import "./partials/home";
+@import "./partials/card";
+@import "./partials/footer";

@@ -1,0 +1,21 @@
+.shipping-info {
+  background-color: $primary-color;
+  width: 100%;
+  color: white;
+  padding: 10px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem auto;
+  &__text {
+    font-size: 0.9rem;
+    margin: 0px;
+  }
+}
+
+.fa-truck {
+  font-size: 1.3rem;
+}

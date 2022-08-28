@@ -1,6 +1,13 @@
 $nav-font: "Oswald", sans-serif;
+$primary-font: "Oswald", sans-serif;
 
 .nav-item {
   font-family: $nav-font;
   font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $primary-font;
 }

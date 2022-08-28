@@ -2,6 +2,11 @@
 //   padding: 5px;
 //   border: 1px solid black;
 // }
+header {
+  // background: rgb(252, 74, 5);
+  // background: linear-gradient(24deg, rgba(252, 74, 5, 0.17) 0%, rgba(126, 37, 3, 0.3) 100%);
+  background-color: $nav-footer-color;
+}
 .hamburger-button {
   border: none;
   background-color: none;
@@ -42,6 +47,9 @@
     border-radius: 10px;
   }
 }
+.hamburger:hover {
+  cursor: pointer;
+}
 
 .hamburger__line--one {
   top: 20%;
@@ -64,4 +72,24 @@
 }
 .opacity {
   opacity: 0;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.cart-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff6900;
+  color: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
 }
