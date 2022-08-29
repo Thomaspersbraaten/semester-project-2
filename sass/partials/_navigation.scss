@@ -93,3 +93,14 @@ header {
   display: flex;
   align-items: center;
 }
+
+@media (min-width: 992px) {
+  .navbar__container {
+    position: relative;
+  }
+  .shopping-container {
+    position: absolute;
+    right: 8%;
+    top: 10%;
+  }
+}
