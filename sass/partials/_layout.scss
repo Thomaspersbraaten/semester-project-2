@@ -41,10 +41,10 @@ header {
   }
 }
 
-.col {
-  width: 208px;
-  height: 317px;
-}
+// .col {
+//   width: 208px;
+//   height: 317px;
+// }
 
 // .push {
 //   height: 50px;
@@ -54,3 +54,9 @@ header {
 //   bottom: 0;
 //   margin-top: auto;
 // }
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+}

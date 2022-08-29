@@ -19,12 +19,16 @@ export async function submitLoginForm(username, password) {
     if (json.user) {
       saveUser(json.user);
       saveToken(json.jwt);
-      //   location.href = "./index.html";
+      location.href = "./index.html";
     }
     if (json.error) {
       displayMessage("alert-danger", "Login attempt failed: " + json.message[0].messages[0].message, ".login-form__message-container");
     }
   } catch (error) {
     console.log(error);
+    displayMessage("alert-danger", "There was an error during loin", ".login-form__message-container");
   }
 }
+
+// Username: admin@admin.com
+// Password: Pass1234

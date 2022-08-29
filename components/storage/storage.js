@@ -9,6 +9,10 @@ export function saveUser(user) {
   saveToStorage(userKey, user);
 }
 
+export function getToken() {
+  return getFromStorage(tokenKey);
+}
+
 export function getUser() {
   const user = getFromStorage(userKey);
   if (user) {
