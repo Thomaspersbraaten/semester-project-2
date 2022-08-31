@@ -12903,6 +12903,13 @@ input {
   background-color: white;
 }
 
+#search,
+.modal-form > * {
+  border-radius: 0px;
+  border: 2px solid #ef8b08;
+  width: 300px;
+}
+
 .error-message {
   font-style: italic;
   color: #fc4a05;
@@ -12915,5 +12922,61 @@ input {
 
 .btn {
   max-width: 120px;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 3rem;
+  border: 1px solid white;
+  text-align: center;
+  background-color: black;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  max-height: 75%;
+}
+
+.modal__btns {
+  margin: 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cancel,
+.confirm {
+  height: 50px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

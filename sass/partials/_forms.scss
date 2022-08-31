@@ -31,6 +31,13 @@ input {
   background-color: white;
 }
 
+#search,
+.modal-form > * {
+  border-radius: 0px;
+  border: 2px solid $primary-color;
+  width: 300px;
+}
+
 .error-message {
   font-style: italic;
   color: $error-color;
