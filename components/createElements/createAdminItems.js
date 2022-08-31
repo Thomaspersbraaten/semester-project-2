@@ -14,7 +14,7 @@ export function createAdminItems(products) {
                     <i class="fa-solid fa-pen-to-square"></i>
                     <p> Edit product</p>
                 </div>
-                <div class="card-action__delete">
+                <div class="card-action__delete" data-id="${product.id}">
                 <i class="fa-solid fa-trash"></i>
                     <p> Delete product</p>
                 </div>

@@ -9,14 +9,15 @@ export const modal = `
     <input id="image-url" type="text">
     <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-    Is Featured
-  </label>
-</div>
+        <label class="form-check-label" for="flexCheckDefault">Is Featured</label>
+    </div>
+
   </form>
   <div class="modal__btns">
-    <button class="btn btn-large btn-warning cancel"></button>
-    <button class="btn  btn-large btn-success confirm"></button>
-  </div>
+  <button class="btn btn-large btn-warning cancel"></button>
+  <button class="btn  btn-large btn-success confirm"></button>
+</div>
 </div>
 `;
+
+// flytt button in i form og bruk submit

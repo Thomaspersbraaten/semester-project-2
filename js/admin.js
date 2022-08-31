@@ -4,6 +4,9 @@ import { getUser, getToken } from "../components/storage/storage.js";
 import { baseUrl } from "../components/consts/baseUrl.js";
 import { createAdminItems } from "../components/createElements/createAdminItems.js";
 import { createProductModal } from "../components/createElements/createProductModal.js";
+import { editPanel } from "../components/createElements/editPanel.js";
+// import { startEdit } from "../components/ui/startEdit.js";
+
 createNavMenu();
 const user = getUser();
 const token = getToken();
@@ -29,8 +32,31 @@ createBtn.addEventListener("click", createProductModal);
 // edit
 const editBtn = document.querySelectorAll(".card-action__edit");
 editBtn.forEach((button) => {
-  button.addEventListener("click", (target) => {
-    const targetId = target;
-    console.log(targetId);
-  });
+  button.addEventListener("click", startEdit);
 });
+
+function startEdit() {
+  const targetId = parseInt(this.dataset.id);
+  console.log(targetId);
+  const clickedProduct = products.find((item) => {
+    return item.id === targetId;
+  });
+  console.log(clickedProduct);
+  editPanel(clickedProduct);
+}
+
+//Delete
+
+const deleteBtn = document.querySelectorAll(".card-action__delete");
+deleteBtn.forEach((button) => {
+  button.addEventListener("click", startDeletion);
+});
+
+function startDeletion() {
+  const targetId = parseInt(this.dataset.id);
+  console.log(targetId);
+  const clickedProduct = products.find((item) => {
+    return item.id === targetId;
+  });
+  deletePanel(clickedProduct);
+}
