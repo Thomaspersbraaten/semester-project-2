@@ -1,6 +1,11 @@
 const itemContainer = document.querySelector(".admin-item-container");
+const spinner = document.querySelector(".spinner-container");
 
 export function createAdminItems(products) {
+  itemContainer.innerHTML = "";
+
+  itemContainer.style.opacity = "1";
+  spinner.style.display = "none";
   products.forEach((product) => {
     itemContainer.innerHTML += `
         <div class="card col">

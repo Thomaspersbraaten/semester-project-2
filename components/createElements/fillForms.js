@@ -1,4 +1,4 @@
-export function fillForms(product) {
+export function fillForms(product, action) {
   const title = document.querySelector("#title");
   const desc = document.querySelector("#description");
   const price = document.querySelector("#price");
@@ -12,4 +12,13 @@ export function fillForms(product) {
   imageUrl.value = product.image_url;
   isFeatured.checked = product.featured;
   form.dataset.id = product.id;
+
+  if (action === "delete") {
+    console.log("this is delete");
+    title.disabled = true;
+    desc.disabled = true;
+    price.disabled = true;
+    imageUrl.disabled = true;
+    isFeatured.disabled = true;
+  }
 }

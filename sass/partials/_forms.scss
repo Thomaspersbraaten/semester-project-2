@@ -38,6 +38,20 @@ input {
   width: 300px;
 }
 
+.fa-magnifying-glass {
+  font-size: 1.2rem;
+  margin-left: -2rem;
+  cursor: pointer;
+  margin: auto 0px auto -2rem;
+  border-left: 1px solid $primary-color;
+  height: 50px;
+  padding: 5px;
+  display: flex;
+}
+.fa-magnifying-glass::before {
+  margin: auto;
+}
+
 .error-message {
   font-style: italic;
   color: $error-color;
@@ -46,4 +60,9 @@ input {
 }
 .error {
   border: 1px solid $error-color;
+}
+
+.search-form {
+  margin: 1rem auto;
+  display: flex;
 }
