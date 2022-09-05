@@ -15,7 +15,7 @@ export function createNavMenu() {
     <a class="nav-link ${pathname === "/" || pathname === "/index.html" ? "active" : ""}" href="index.html">Home</a>
 </li>
 <li class="nav-item">
-<a class="nav-link ${pathname === "/store.html" || pathname === "/details.html" ? "active" : ""}" href="store.html">Store</a>
+<a class="nav-link ${pathname === "/store.html" || pathname === "/details.html" || pathname === "/cart.html" ? "active" : ""}" href="store.html">Store</a>
 </li>
 <li class="nav-item">
     ${authLink}

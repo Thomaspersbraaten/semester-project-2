@@ -12487,10 +12487,10 @@ fieldset:disabled .btn {
 body,
 html {
   margin: 0;
-  height: 100%;
 }
 
 body {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12498,6 +12498,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+main {
+  height: 100%;
 }
 
 .wrapper {
@@ -12616,6 +12620,7 @@ header {
 
 .fa-cart-shopping {
   font-size: 2rem;
+  color: black;
 }
 
 .hamburger {
@@ -12783,6 +12788,11 @@ header {
 .hero-image {
   height: 650px;
   width: 100%;
+}
+
+.hero-image-container__image {
+  width: 100%;
+  height: 650px;
 }
 
 .card {
@@ -13096,5 +13106,87 @@ input {
 
 .details-image {
   width: 100%;
+}
+
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid grey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  font-family: "oswald";
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.breadcrumbs__link:hover {
+  cursor: pointer;
+}
+
+.breadcrumbs__angle {
+  font-weight: 500;
+}
+
+.breadcrumbs__active {
+  margin: 0;
+}
+
+.cart-item {
+  padding: 10px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+
+.cart-item > * {
+  margin: 0;
+}
+
+.cart-item__img {
+  width: 100%;
+  max-width: 70px;
+  height: 70px;
+}
+
+.cart-item__title {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.cart-item__price {
+  font-size: 1.5rem;
+}
+
+.summary-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin: 2rem auto;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

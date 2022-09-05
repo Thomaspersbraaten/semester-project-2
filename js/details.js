@@ -16,7 +16,7 @@ setupProductPage(theProduct);
 // console.log(theProduct);
 // const addToCartBtn = document.querySelector(".btn-cart");
 
-let cartArray = getCart();
+// let cartArray = getCart();
 // console.log(cartArray);
 
 // addToCartBtn.addEventListener("click", () => {

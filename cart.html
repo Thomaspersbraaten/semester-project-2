@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
-    <script src="./js/details.js" type="module" defer></script>
+    <script src="./js/cart.js" type="module" defer></script>
 </head>
 
 <body>
@@ -66,14 +66,21 @@
 
     <main>
         <div class="container-lg">
-            <h1 class="breadcrumbs"></h1>
+            <div class="breadcrumbs">
+                <a href="index.html" class="breadcrumbs__link"><i class="fas fa-home"></i> Home</a>
+                <div class="breadcrumbs__angle">&gt;</div>
+                <p class="active-page breadcrumbs__active">Shopping Cart</p>
+            </div>
+            <h1>Shopping cart</h1>
             <div class="details-container">
+
                 <div class="spinner-container">
                     <div class="spinner-border float-right" role="status">
-                        <!-- <span class="sr-only">Loading...</span> -->
+
                     </div>
                 </div>
             </div>
+            <div class="summary-container"></div>
             <div class="modal-container"></div>
         </div>
     </main>
