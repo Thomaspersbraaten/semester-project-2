@@ -4,8 +4,12 @@ export function cartInfo() {
   const cartInfoContainer = document.querySelector(".cart-info");
   cartInfoContainer.innerHTML = "";
   let cart = getCart();
-  console.log(cart);
-
-  cartInfoContainer.innerHTML = `${cart.length}`;
-  cartInfoContainer.style.opacity = "1";
+  // console.log(cart);
+  if (cart.length >= 1) {
+    cartInfoContainer.innerHTML = `${cart.length}`;
+    cartInfoContainer.style.opacity = "1";
+  } else {
+    cartInfoContainer.innerHTML = "";
+    cartInfoContainer.style.opacity = "0";
+  }
 }

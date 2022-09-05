@@ -12714,8 +12714,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
-  -webkit-transition: 0.5s opacity ease-in-out;
-  transition: 0.5s opacity ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 @media (min-width: 992px) {
@@ -13003,7 +13003,6 @@ input {
 }
 
 .btn {
-  max-width: 120px;
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
   border: 1px solid black;
@@ -13028,6 +13027,15 @@ input {
   background-color: none;
   border: none;
   padding: 0;
+}
+
+.btn-cart--add {
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #75ad27), color-stop(95%, #588a1b));
+  background: linear-gradient(to right, #75ad27 5%, #588a1b 95%);
+  color: white;
+  font-size: 1.3rem;
+  width: 180px;
+  height: 52px;
 }
 
 .modal-container {

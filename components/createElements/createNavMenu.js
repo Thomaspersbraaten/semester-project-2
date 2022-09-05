@@ -6,7 +6,7 @@ export function createNavMenu() {
   const navMenu = document.querySelector(".navbar-nav");
   const userName = getUser();
   let authLink = `<a class="nav-link ${pathname === "/login.html" ? "active" : ""}" href="login.html">Login</a>`;
-  console.log(userName.id);
+
   if (userName.id) {
     authLink = `<a class="nav-link ${pathname === "/admin.html" ? "active" : ""}" href="admin.html">Admin</a>`;
   }

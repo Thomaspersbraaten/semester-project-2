@@ -1,5 +1,5 @@
 .btn {
-  max-width: 120px;
+  // max-width: 120px;
   box-shadow: 1px 1px 5px black;
   border: 1px solid black;
   margin: auto;
@@ -23,4 +23,16 @@
   border: none;
 
   padding: 0;
+}
+
+.btn-cart--add {
+  // background: linear-gradient(to right, #75b022 5%, #588a1b 95%);
+  background: linear-gradient(to right, #75ad27 5%, #588a1b 95%);
+  // background: rgb(80, 255, 64);
+  // background: linear-gradient(24deg, rgba(80, 255, 40, 0.9) 0%, rgba(19, 222, 22, 0.9) 100%);
+  color: white;
+  font-size: 1.3rem;
+
+  width: 180px;
+  height: 52px;
 }
