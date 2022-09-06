@@ -7,9 +7,11 @@ import { createProductModal } from "../components/createElements/createProductMo
 import { editPanel } from "../components/createElements/editPanel.js";
 import { deletePanel } from "../components/createElements/deletePanel.js";
 import { logoutPanel } from "../components/createElements/logoutPanel.js";
+import { cartQuantityInfo } from "../components/createElements/cartQuantityInfo.js";
 // import { startEdit } from "../components/ui/startEdit.js";
 
 createNavMenu();
+cartQuantityInfo();
 const user = getUser();
 const token = getToken();
 

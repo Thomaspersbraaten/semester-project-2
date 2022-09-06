@@ -1,8 +1,13 @@
 .card {
   width: 208px;
+  min-width: 208px;
   overflow: hidden;
   text-align: center;
   padding: 0;
+  transition: 0.4s scale;
+  &:hover {
+    scale: 1.1;
+  }
   &__img {
     width: 100%;
   }
@@ -35,6 +40,7 @@
 .card-action {
   display: flex;
   gap: 0.5rem;
+  justify-content: center;
   & > * {
     width: 95px;
     display: flex;
@@ -43,6 +49,7 @@
     align-items: center;
     text-align: center;
     gap: 0.2rem;
+    padding: 10px;
   }
   &__delete {
     background-color: red;

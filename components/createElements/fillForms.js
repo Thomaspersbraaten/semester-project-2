@@ -3,7 +3,7 @@ export function fillForms(product, action) {
   const desc = document.querySelector("#description");
   const price = document.querySelector("#price");
   const imageUrl = document.querySelector("#image-url");
-  const isFeatured = document.querySelector(".form-check-input");
+  const isFeatured = document.querySelector(".form-check__input");
   const form = document.querySelector(".modal-form");
 
   title.value = product.title;

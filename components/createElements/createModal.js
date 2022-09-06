@@ -1,15 +1,30 @@
 export const modal = `
 <div class="modal">
   <h2 class="modal__header"></h2>
+  <div class="modal-form__message alert"></div>
   <form class="modal-form">
-    <div class="modal-form__message alert"></div>
+
+  <div>
+  <label for="title">Title</label>
     <input id="title" placeholder="Title" type="text">
+   
+    </div>
+    <div>
+    <label for="description">Description</label>
     <input id="description" placeholder="Description" type="text">
+    </div>
+
+    <div>
+    <label for="price">Price</label>
     <input id="price" placeholder="Price" type="number">
+    </div>
+    <div>
+    <label for="title">Image link</label>
     <input id="image-url" type="text">
+    </div>
     <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">Is Featured</label>
+        <input class="form-check__input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check__label" for="flexCheckDefault">Is Featured</label>
     </div>
 
   </form>

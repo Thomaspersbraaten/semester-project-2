@@ -3,8 +3,10 @@ import { submitLoginForm } from "../components/ui/submitLoginForm.js";
 import { baseUrl } from "../components/consts/baseUrl.js";
 import { checkEmail, validateEmail, validatePassword } from "../components/validations/index.js";
 import { createNavMenu } from "../components/createElements/createNavMenu.js";
+import { cartQuantityInfo } from "../components/createElements/cartQuantityInfo.js";
 
 createNavMenu();
+cartQuantityInfo();
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
 const loginForm = document.querySelector(".login-form");

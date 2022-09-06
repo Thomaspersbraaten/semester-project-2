@@ -3,14 +3,15 @@ import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
 import { createNavMenu } from "../components/createElements/createNavMenu.js";
 
 import { baseUrl } from "../components/consts/baseUrl.js";
-import { cartInfo } from "../components/createElements/cartInfo.js";
+
 import { getHeroImage } from "../components/apicalls/getHeroImage.js";
+import { cartQuantityInfo } from "../components/createElements/cartQuantityInfo.js";
 createNavMenu();
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
 
 getFeatured(baseUrl);
-cartInfo();
+cartQuantityInfo();
 
 const getImage = await getHeroImage(baseUrl);
 

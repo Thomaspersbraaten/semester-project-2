@@ -28,7 +28,7 @@ export function editPanel(product) {
     const descInput = document.querySelector("#description");
     const priceInput = document.querySelector("#price");
     const imageUrl = document.querySelector("#image-url");
-    const featured = document.querySelector(".form-check-input");
+    const featured = document.querySelector(".form-check__input");
     const editForm = document.querySelector(".modal-form");
 
     // const { createAt, description, featured, id, image, imageurl, price, published, at, title, updatedAt } = product;
