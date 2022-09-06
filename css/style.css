@@ -12668,13 +12668,11 @@ header {
 }
 
 .rotate-two {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  rotate: -45deg;
 }
 
 .rotate-three {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  rotate: 45deg;
 }
 
 .opacity {

@@ -5,13 +5,14 @@ import { createNavMenu } from "../components/createElements/createNavMenu.js";
 import { baseUrl } from "../components/consts/baseUrl.js";
 
 import { getHeroImage } from "../components/apicalls/getHeroImage.js";
-import { cartQuantityInfo } from "../components/createElements/cartQuantityInfo.js";
+
+import { cartInfo } from "../components/createElements/cartInfo.js";
 createNavMenu();
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
 
 getFeatured(baseUrl);
-cartQuantityInfo();
+cartInfo();
 
 const getImage = await getHeroImage(baseUrl);
 

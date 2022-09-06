@@ -1,6 +1,6 @@
 import { getCart } from "../storage/storage.js";
 
-export function cartQuantityInfo() {
+export function cartInfo() {
   const cartInfoContainer = document.querySelector(".cart-info");
   cartInfoContainer.innerHTML = "";
   let cart = getCart();

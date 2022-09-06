@@ -3,14 +3,14 @@ import { submitLoginForm } from "../components/ui/submitLoginForm.js";
 import { baseUrl } from "../components/consts/baseUrl.js";
 import { checkEmail, validateEmail, validatePassword } from "../components/validations/index.js";
 import { createNavMenu } from "../components/createElements/createNavMenu.js";
-import { cartQuantityInfo } from "../components/createElements/cartQuantityInfo.js";
+
+import { cartInfo } from "../components/createElements/cartInfo.js";
 
 createNavMenu();
-cartQuantityInfo();
+cartInfo();
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
 const loginForm = document.querySelector(".login-form");
-
 const btn = document.querySelector(".btn");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
