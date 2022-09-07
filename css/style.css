@@ -12544,6 +12544,8 @@ header {
   display: flex;
   gap: 20px;
   justify-items: center;
+  width: 100%;
+  margin: auto;
 }
 
 .admin-item-container {
@@ -12587,6 +12589,15 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 header {
   background-color: rgba(252, 74, 5, 0.2);
+  background-color: #5398fd75;
+}
+
+.navbar-container {
+  position: relative;
+}
+
+.navbar-brand img {
+  width: 125px;
 }
 
 .hamburger-button {
@@ -12688,6 +12699,10 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0.5rem;
+  margin: 1rem auto 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cart-info {
@@ -12715,6 +12730,12 @@ header {
   opacity: 0;
   -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
+}
+
+@media (min-width: 325px) {
+  .navbar-brand img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -13109,6 +13130,11 @@ label {
   font-size: 1.3rem;
   width: 180px;
   height: 52px;
+}
+
+.cancel {
+  background-color: white;
+  color: black;
 }
 
 .modal-container {

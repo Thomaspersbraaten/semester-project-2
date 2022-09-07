@@ -32,7 +32,7 @@ export function createProductModal() {
   //   const formMessage = document.querySelector(".modal-form__message");
 
   btnConfirm.addEventListener("click", () => {
-    const featuredCheck = document.querySelector(".form-check-input");
+    const featuredCheck = document.querySelector(".form-check__input");
     const titleValue = titleInput.value.trim();
     const descValue = descInput.value.trim();
     const priceValue = priceInput.value.trim();

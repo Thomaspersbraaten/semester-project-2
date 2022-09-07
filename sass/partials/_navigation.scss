@@ -6,7 +6,18 @@ header {
   // background: rgb(252, 74, 5);
   // background: linear-gradient(24deg, rgba(252, 74, 5, 0.17) 0%, rgba(126, 37, 3, 0.3) 100%);
   background-color: $nav-footer-color;
+  background-color: #5398fd75;
 }
+// nav {
+//   display: flex;
+// }
+.navbar-container {
+  position: relative;
+}
+.navbar-brand img {
+  width: 125px;
+}
+
 .hamburger-button {
   border: none;
   background-color: none;
@@ -79,6 +90,9 @@ header {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  margin: 1rem auto 0 auto;
+
+  justify-content: center;
 }
 
 .cart-info {
@@ -101,6 +115,11 @@ header {
   transition: 0.5s all ease-in-out;
 }
 
+@media (min-width: 325px) {
+  .navbar-brand img {
+    width: 100%;
+  }
+}
 @media (min-width: 992px) {
   .navbar__container {
     position: relative;

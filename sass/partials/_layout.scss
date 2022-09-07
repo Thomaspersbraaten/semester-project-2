@@ -61,7 +61,13 @@ header {
   display: flex;
   gap: 20px;
   justify-items: center;
+  width: 100%;
+  margin: auto;
 }
+// .featured {
+//   width: 100%;
+//   margin: auto;
+// }
 
 .admin-item-container {
   opacity: 0;

@@ -19,18 +19,17 @@ hamburgerButton.addEventListener("click", hamburgerMenu);
 const user = getUser();
 const token = getToken();
 
-console.log(user, token);
+// console.log(user, token);
 if (token.length === 0 || !user.id) {
   location.href = "/";
 }
 // Setup the admin page
 const header = document.querySelector(".admin-header");
 header.innerHTML = `Welcome to the admin control panel: ${user.username}`;
-
-const products = await getAllProducts(baseUrl);
-console.log(products);
 const adminItemHeader = document.querySelector(".admin-item-header");
 adminItemHeader.innerHTML = "List of products";
+const products = await getAllProducts(baseUrl);
+// console.log(products);
 
 createAdminItems(products);
 const searchForm = document.querySelector(".search-form");
@@ -42,36 +41,47 @@ const createBtn = document.querySelector(".create-btn");
 createBtn.addEventListener("click", createProductModal);
 
 // edit
-const editBtn = document.querySelectorAll(".card-action__edit");
-editBtn.forEach((button) => {
-  button.addEventListener("click", startEdit);
-});
 
-function startEdit() {
-  const targetId = parseInt(this.dataset.id);
-  console.log(targetId);
-  const clickedProduct = products.find((item) => {
-    return item.id === targetId;
-  });
-  console.log(clickedProduct);
-  editPanel(clickedProduct);
-}
+// const editBtn = document.querySelectorAll(".card-action__edit");
+// editBtn.forEach((button) => {
+//   button.addEventListener("click", (btn) => {
+//     const targetID = parseInt(btn.target.dataset.id);
+//     startEdit(products, targetID);
+//   });
+// });
+// const editBtn = document.querySelectorAll(".card-action__edit");
+// editBtn.forEach((button) => {
+//   // button.addEventListener("click", startEdit);
+//   button.addEventListener("click", (event) => {
+//     console.log(event.target.dataset.id);
+//   });
+// });
+
+// function startEdit() {
+//   const targetId = parseInt(this.dataset.id);
+//   console.log(targetId);
+//   const clickedProduct = products.find((item) => {
+//     return item.id === targetId;
+//   });
+//   console.log(clickedProduct);
+//   editPanel(clickedProduct);
+// }
 
 //Delete
 
-const deleteBtn = document.querySelectorAll(".card-action__delete");
-deleteBtn.forEach((button) => {
-  button.addEventListener("click", startDeletion);
-});
+// const deleteBtn = document.querySelectorAll(".card-action__delete");
+// deleteBtn.forEach((button) => {
+//   button.addEventListener("click", startDeletion);
+// });
 
-function startDeletion() {
-  const targetId = parseInt(this.dataset.id);
-  // console.log(targetId);
-  const clickedProduct = products.find((item) => {
-    return item.id === targetId;
-  });
-  deletePanel(clickedProduct);
-}
+// function startDeletion() {
+//   const targetId = parseInt(this.dataset.id);
+//   // console.log(targetId);
+//   const clickedProduct = products.find((item) => {
+//     return item.id === targetId;
+//   });
+//   deletePanel(clickedProduct);
+// }
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -91,16 +101,16 @@ searchForm.addEventListener("submit", (event) => {
     console.log(filteredProducts);
     adminItemHeader.innerHTML = `Showing search results for "${searchValue}"`;
     createAdminItems(filteredProducts);
-    // // const searchTarget = product.title.value + product.description.value;
-    // searchForProduct();
-    const deleteBtn = document.querySelectorAll(".card-action__delete");
-    deleteBtn.forEach((button) => {
-      button.addEventListener("click", startDeletion);
-    });
-    const editBtn = document.querySelectorAll(".card-action__edit");
-    editBtn.forEach((button) => {
-      button.addEventListener("click", startEdit);
-    });
+    // // // const searchTarget = product.title.value + product.description.value;
+    // // searchForProduct();
+    // const deleteBtn = document.querySelectorAll(".card-action__delete");
+    // deleteBtn.forEach((button) => {
+    //   button.addEventListener("click", startDeletion);
+    // });
+    // const editBtn = document.querySelectorAll(".card-action__edit");
+    // editBtn.forEach((button) => {
+    //   button.addEventListener("click", startEdit);
+    // });
   }
 });
 
@@ -111,6 +121,3 @@ searchForm.addEventListener("submit", (event) => {
 const logOutBtn = document.querySelector(".logout-btn");
 
 logOutBtn.addEventListener("click", logoutPanel);
-logOutBtn.addEventListener("click", () => {
-  console.log("yes");
-});

@@ -1,6 +1,7 @@
 const itemContainer = document.querySelector(".admin-item-container");
 const spinner = document.querySelector(".spinner-container");
-
+import { startEdit } from "../ui/startEdit.js";
+import { startDeletion } from "../ui/startDeletion.js";
 export function createAdminItems(products) {
   itemContainer.innerHTML = "";
 
@@ -16,15 +17,33 @@ export function createAdminItems(products) {
               <p class="card-price">${product.price}</p>
               <div class="card-action">
                 <div class="card-action__edit" data-id="${product.id}">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <p> Edit product</p>
+                    <i class="fa-solid fa-pen-to-square" data-id="${product.id}"></i>
+                    <p data-id="${product.id}"> Edit product</p>
                 </div>
                 <div class="card-action__delete" data-id="${product.id}">
-                <i class="fa-solid fa-trash"></i>
-                    <p> Delete product</p>
+                <i class="fa-solid fa-trash" data-id="${product.id}"></i>
+                    <p data-id="${product.id}"> Delete product</p>
                 </div>
              </div>
         </div>
         `;
+  });
+
+  // Edit
+  const editBtn = document.querySelectorAll(".card-action__edit");
+  editBtn.forEach((button) => {
+    button.addEventListener("click", (btn) => {
+      const targetID = parseInt(btn.target.dataset.id);
+      startEdit(products, targetID);
+    });
+  });
+
+  // Delete
+  const deleteBtn = document.querySelectorAll(".card-action__delete");
+  deleteBtn.forEach((button) => {
+    button.addEventListener("click", (btn) => {
+      const targetID = parseInt(btn.target.dataset.id);
+      startDeletion(products, targetID);
+    });
   });
 }
