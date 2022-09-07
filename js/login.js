@@ -5,9 +5,11 @@ import { checkEmail, validateEmail, validatePassword } from "../components/valid
 import { createNavMenu } from "../components/createElements/createNavMenu.js";
 
 import { cartInfo } from "../components/createElements/cartInfo.js";
+import { createBreadcrumbs } from "../components/createElements/breadcrumbs.js";
 
 createNavMenu();
 cartInfo();
+createBreadcrumbs();
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
 const loginForm = document.querySelector(".login-form");

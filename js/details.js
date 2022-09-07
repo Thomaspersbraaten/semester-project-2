@@ -6,10 +6,13 @@ import { baseUrl } from "../components/consts/baseUrl.js";
 import { setupProductPage } from "../components/createElements/setupProductPage.js";
 import { createNavMenu } from "../components/createElements/createNavMenu.js";
 import { cartInfo } from "../components/createElements/cartInfo.js";
+import { createBreadcrumbs } from "../components/createElements/breadcrumbs.js";
 
 const detailsUrl = baseUrl + "products/" + id;
 
 createNavMenu();
 cartInfo();
+
 const theProduct = await getProductPage(detailsUrl);
+createBreadcrumbs(theProduct);
 setupProductPage(theProduct);
