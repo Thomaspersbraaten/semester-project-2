@@ -1,2 +1,4 @@
-*breadcrumbs på alle
-*breadcrumbs function
+*breadcrumbs på alle | DONE
+*breadcrumbs function | DONE
+
+* FIX search i admin. etter edit er ikke repopulation av vindu korrekt. gammel data på produkter

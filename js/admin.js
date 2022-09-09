@@ -8,6 +8,7 @@ import { logoutPanel } from "../components/createElements/logoutPanel.js";
 import { cartInfo } from "../components/createElements/cartInfo.js";
 import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
 import { searchForAdminProduct } from "../components/ui/searchForAdminProduct.js";
+import { searchForProduct } from "../components/ui/searchForProduct.js";
 import { searchControlAndClearSearch } from "../components/ui/searchControlAndClearSearch.js";
 import { createBreadcrumbs } from "../components/createElements/breadcrumbs.js";
 
@@ -43,7 +44,7 @@ createBtn.addEventListener("click", createProductModal);
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  searchForAdminProduct(products);
+  searchForProduct(products);
 });
 
 searchForm.addEventListener("keyup", () => {
