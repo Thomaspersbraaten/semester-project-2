@@ -16,11 +16,12 @@ export function setupProductPage(product) {
         <div class="image-price-button">
             <img src="${image_url}" class="details-image">
             <div class="price-and-button">
-            <p class="details-price">${price}</p>
-            <div class="btn-container"></div>
+              <p class="details-price">${price}</p>
+              <div class="btn-container"></div>
             </div>
+            <p class="details__description">${description}</p> 
         </div>
-        <p class="details__description">${description}</p>
+   
     </div>
     `;
 

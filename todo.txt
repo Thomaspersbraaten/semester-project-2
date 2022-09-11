@@ -2,4 +2,4 @@
 *breadcrumbs function | DONE
 
 * FIX search i admin. etter edit er ikke repopulation av vindu korrekt. gammel data på produkter
-* knapp for hvert product i cart som fjerner dem fra cart.
+* knapp for hvert product i cart som fjerner dem fra cart. | DONE

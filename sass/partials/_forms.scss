@@ -104,13 +104,10 @@ label {
   align-content: center;
   &__x {
     position: absolute;
-    right: 25px;
+    right: 27px;
     top: 12%;
-    padding: 7px;
-
+    padding: 5px;
     background-color: white;
-
-    // border: 1px solid black;
     visibility: hidden;
     &:hover {
       cursor: pointer;

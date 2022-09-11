@@ -15,8 +15,10 @@ const spinner = document.querySelector(".spinner-container");
 cartInfo();
 createNavMenu();
 createBreadcrumbs();
+const searchInput = document.querySelector("#search");
 const products = await getAllProducts(baseUrl);
 console.log(products);
+searchInput.placeholder = `search among ${products.length} products`;
 // products.forEach((product) => {
 //   createAllStoreProducts(product);
 //   spinner.style.display = "none";

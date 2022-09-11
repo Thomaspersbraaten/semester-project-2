@@ -26,6 +26,20 @@
     font-size: 1.5rem;
   }
 }
+.cart-action-remove {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  &__x {
+    padding: 5px;
+    transition: all 0.3s;
+  }
+  &__x:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+}
 
 .summary-container {
   display: flex;

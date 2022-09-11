@@ -5,12 +5,12 @@ const searchInput = document.querySelector("#search");
 
 export function searchForProduct(products) {
   const { pathname } = window.location;
-  console.log(searchInput.value.trim().toLowerCase());
-  console.log(pathname);
+  // console.log(searchInput.value.trim().toLowerCase());
+  // console.log(pathname);
   const searchValue = searchInput.value.trim().toLowerCase();
 
   if (searchInput.value.length >= 1) {
-    console.log(searchValue);
+    // console.log(searchValue);
     // let productsToRender = products;
     const filteredProducts = products.filter((product) => {
       // if (product.title.toLowerCase().startsWith(searchValue) || product.description.toLowerCase().startsWith(searchValue)) {
@@ -20,26 +20,27 @@ export function searchForProduct(products) {
         return true;
       }
     });
+    const itemHeader = document.querySelector(".item-header");
+    if (filteredProducts.length === 0) {
+      console.log(filteredProducts.length);
+      if (pathname === "/admin.html") {
+        createAdminItems(filteredProducts);
+      }
+      if (pathname === "/store.html") {
+        createAllStoreProducts(filteredProducts);
+      }
+      itemHeader.innerHTML = `We found no results for "${searchValue}". Try being more specific.`;
+    }
 
-    if (pathname === "/admin.html") {
-      const adminItemHeader = document.querySelector(".admin-item-header");
+    if (pathname === "/admin.html" && filteredProducts.length > 0) {
       console.log(filteredProducts);
-      adminItemHeader.innerHTML = `Showing search results for "${searchValue}"`;
+      itemHeader.innerHTML = `Showing search results for "${searchValue}"`;
+      // itemHeader.innerHTML = `Showing search results for "${searchValue}"`;
       createAdminItems(filteredProducts);
     }
-    if (pathname === "/store.html") {
+    if (pathname === "/store.html" && filteredProducts.length > 0) {
+      itemHeader.innerHTML = `Showing search results for "${searchValue}"`;
       createAllStoreProducts(filteredProducts);
     }
-
-    // // // const searchTarget = product.title.value + product.description.value;
-    // // searchForProduct();
-    // const deleteBtn = document.querySelectorAll(".card-action__delete");
-    // deleteBtn.forEach((button) => {
-    //   button.addEventListener("click", startDeletion);
-    // });
-    // const editBtn = document.querySelectorAll(".card-action__edit");
-    // editBtn.forEach((button) => {
-    //   button.addEventListener("click", startEdit);
-    // });
   }
 }

@@ -1,6 +1,7 @@
+import { deleteProduct } from "../formSubmissions/deleteProduct.js";
 import { modal } from "./createModal.js";
 import { fillForms } from "./fillForms.js";
-import { deleteProduct } from "../ui/deleteProduct.js";
+
 export function deletePanel(product) {
   //   console.log(productId);
   const modalContainer = document.querySelector(".modal-container");

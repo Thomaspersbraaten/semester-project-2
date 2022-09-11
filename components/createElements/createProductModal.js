@@ -1,5 +1,5 @@
 import { modal } from "./createModal.js";
-import { createNewProduct } from "../ui/createNewProduct.js";
+import { createNewProduct } from "../formSubmissions/createNewProduct.js";
 import { displayMessage } from "../displayMessage.js";
 export function createProductModal() {
   //

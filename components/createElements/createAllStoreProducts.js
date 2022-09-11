@@ -24,7 +24,6 @@ export function createAllStoreProducts(products) {
       <img class="card__img " src="${image_url}" alt="${title}">
       <div class="card-body">
         <h3 class="card-title">${title}</h3>
-        <p class="card-text">${description}</p>
         <p class="card-price">${price}</p>
         <button href="#" class="btn btn-primary">View Product</button>
       </div>
@@ -32,3 +31,4 @@ export function createAllStoreProducts(products) {
     `;
   });
 }
+/* <p class="card-text">${description}</p> */

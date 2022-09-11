@@ -1,5 +1,6 @@
-$nav-font: "Oswald", sans-serif;
+$nav-font: "bebas neue", cursive, open-sans;
 $primary-font: "Oswald", sans-serif;
+$secondary-font: "Montserrat", sans-serif;
 
 .nav-item {
   font-family: $nav-font;
@@ -10,4 +11,12 @@ h1,
 h2,
 h3 {
   font-family: $primary-font;
+}
+p {
+  font-family: $secondary-font;
+}
+
+.breadcrumbs__link,
+.breadcrumbs__active {
+  font-family: $nav-font;
 }

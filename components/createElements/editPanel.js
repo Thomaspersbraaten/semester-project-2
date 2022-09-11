@@ -1,4 +1,4 @@
-import { editProduct } from "../ui/EditProduct.js";
+import { editProduct } from "../formSubmissions/editProduct.js";
 import { modal } from "./createModal.js";
 import { fillForms } from "./fillForms.js";
 export function editPanel(product) {

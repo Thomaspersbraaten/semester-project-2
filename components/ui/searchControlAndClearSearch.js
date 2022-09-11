@@ -2,13 +2,12 @@ import { createAdminItems } from "../createElements/createAdminItems.js";
 import { createAllStoreProducts } from "../createElements/createAllStoreProducts.js";
 
 const searchInput = document.querySelector("#search");
-const adminItemHeader = document.querySelector(".admin-item-header");
+const adminItemHeader = document.querySelector(".item-header");
 const searchX = document.querySelector(".search-form__x");
 export function searchControlAndClearSearch(products) {
   const searchLength = searchInput.value.length;
   const { pathname } = window.location;
 
-  console.log(searchLength);
   if (searchLength >= 1) {
     searchX.style.visibility = "visible";
   }

@@ -27,7 +27,7 @@ if (token.length === 0 || !user.id) {
 // Setup the admin page
 const header = document.querySelector(".admin-header");
 header.innerHTML = `Welcome to the admin control panel: ${user.username}`;
-const adminItemHeader = document.querySelector(".admin-item-header");
+const adminItemHeader = document.querySelector(".item-header");
 adminItemHeader.innerHTML = "List of products";
 const products = await getAllProducts(baseUrl);
 // console.log(products);
