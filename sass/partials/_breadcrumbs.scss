@@ -1,11 +1,14 @@
 .breadcrumbs {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.35rem;
   border-bottom: 1px solid grey;
   align-items: center;
   margin: 10px auto;
   padding-bottom: 10px;
   font-family: "oswald";
+
+  overflow: hidden;
+  white-space: nowrap;
 
   &__link {
     text-decoration: none;
@@ -17,6 +20,7 @@
   }
   &__angle {
     font-weight: 500;
+    margin-bottom: 0.5rem;
   }
   &__active {
     margin: 0;

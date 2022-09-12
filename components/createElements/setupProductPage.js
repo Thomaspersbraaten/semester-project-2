@@ -26,4 +26,10 @@ export function setupProductPage(product) {
     `;
 
   cartButton(id, product);
+
+  // meta
+  const metaDescription = document.querySelector("#meta-description");
+
+  metaDescription.content = `${description}`;
+  console.log(metaDescription);
 }

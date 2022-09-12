@@ -30,7 +30,7 @@ export function cartPage() {
       `;
     });
   } else {
-    detailsContainer.innerHTML = "You have no items in your shopping cart";
+    detailsContainer.innerHTML = `You have no items in your shopping cart, Please check out our <a href="/store.html" class="text-link">store page</a>.`;
     summaryContainer.innerHTML = "";
   }
 

@@ -1,18 +1,19 @@
-import { getFeatured } from "../components/apicalls/getFeatured.js";
+// import { getFeatured } from "../components/apicalls/getFeatured.js";
 import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
 import { createNavMenu } from "../components/createElements/createNavMenu.js";
 
 import { baseUrl } from "../components/consts/baseUrl.js";
 
 import { getHeroImage } from "../components/apicalls/getHeroImage.js";
-
+import { getHomeProducts } from "../components/apicalls/getHomeProducts.js";
 import { cartInfo } from "../components/createElements/cartInfo.js";
 createNavMenu();
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
 
-getFeatured(baseUrl);
+// getFeatured(baseUrl);
 cartInfo();
+getHomeProducts(baseUrl);
 
 const getImage = await getHeroImage(baseUrl);
 

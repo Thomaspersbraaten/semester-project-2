@@ -9,4 +9,9 @@ export async function getFeatured(url) {
       createFeaturedProduct(product);
     }
   });
+  data.forEach((product) => {
+    if (product.featured === false) {
+      createFeaturedProduct(product);
+    }
+  });
 }

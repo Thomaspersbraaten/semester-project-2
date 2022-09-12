@@ -25,16 +25,20 @@
   padding: 0;
 }
 
+.btn-container > * {
+  font-size: 1rem;
+  // height: 52px;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 .btn-cart--add {
+  padding: 1rem 3.78rem;
   // background: linear-gradient(to right, #75b022 5%, #588a1b 95%);
   background: linear-gradient(to right, #75ad27 5%, #588a1b 95%);
   // background: rgb(80, 255, 64);
   // background: linear-gradient(24deg, rgba(80, 255, 40, 0.9) 0%, rgba(19, 222, 22, 0.9) 100%);
   color: white;
-  font-size: 1.3rem;
-
-  width: 180px;
-  height: 52px;
 }
 .btn-cart--remove {
   color: white;

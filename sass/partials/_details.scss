@@ -1,3 +1,29 @@
+.details {
+  &__header {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  &__description {
+    // word-spacing: 0.1rem;
+  }
+}
+
 .details-image {
   width: 100%;
+}
+
+.price-and-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  margin: 1rem auto 1.5rem auto;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid grey;
+  gap: 1.2rem;
+}
+
+.details-price {
+  @extend .card-price;
 }

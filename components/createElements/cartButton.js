@@ -16,7 +16,7 @@ export function cartButton(id, product) {
 
   if (!isProductInCart) {
     btnContainer.innerHTML = `
-    <button class="btn btn-large btn-cart--add">Add to Cart</button>`;
+    <button class="btn btn-large btn-cart--add">Add to Cart </button>`;
     const AddToCartBtn = document.querySelector(".btn-cart--add");
     AddToCartBtn.addEventListener("click", () => {
       cartContents.push(product);
@@ -27,7 +27,7 @@ export function cartButton(id, product) {
   }
   if (isProductInCart) {
     btnContainer.innerHTML = `
-    <button class="btn btn-large btn-cart--remove">Remove from cart</button>`;
+    <button class="btn btn-large btn-cart--remove">Remove from cart </button>`;
 
     const removeFromCartBtn = document.querySelector(".btn-cart--remove");
 

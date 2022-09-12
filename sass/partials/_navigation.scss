@@ -17,6 +17,18 @@ header {
 .navbar-brand img {
   width: 125px;
 }
+.nav-list {
+  display: flex;
+  position: absolute;
+  right: -100px;
+  background-color: white;
+  padding: 1rem;
+  top: 73px;
+  flex-direction: column;
+  transition: all 0.3s;
+  list-style-type: none;
+  gap: 2rem;
+}
 
 .hamburger-button {
   border: none;
@@ -90,7 +102,7 @@ header {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  margin: 1rem auto 0 auto;
+  margin: 1rem 10px 0 auto;
 
   justify-content: center;
 }
@@ -120,6 +132,12 @@ header {
     width: 100%;
   }
 }
+
+// @media (min-width: 768px) {
+//   .navbar-collapse {
+//     display: flex !important;
+//   }
+// }
 @media (min-width: 992px) {
   .navbar__container {
     position: relative;

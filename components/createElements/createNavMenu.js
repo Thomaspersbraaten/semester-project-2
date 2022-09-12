@@ -3,7 +3,8 @@ import { getUser } from "../storage/storage.js";
 export function createNavMenu() {
   const { pathname } = window.location;
 
-  const navMenu = document.querySelector(".navbar-nav");
+  // const navMenu = document.querySelector(".navbar-nav");
+  const navMenu = document.querySelector(".nav-list");
   const userName = getUser();
   let authLink = `<a class="nav-link ${pathname === "/login.html" ? "active" : ""}" href="login.html">Login</a>`;
 
