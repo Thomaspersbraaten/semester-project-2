@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" id="meta-description">
-    <title></title>
+    <meta name="description" content="Home page of practicly the best online store" id="meta-description">
+    <title>Practicly | Home page</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/ba0e3e950c.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon//apple-touch-icon.png">
@@ -19,48 +19,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
-    <script src="./js/details.js" type="module" defer></script>
+    <script src="./js/script.js" type="module" defer></script>
 </head>
 
 <body>
     <header>
         <div class="top-rim"></div>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-lg">
-                <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt=""></a>
+        <nav class="navbar">
+            <div class="container-lg navbar-container">
+                <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="Practicly Logo"></a>
+                <div class="nav-link-container">
+                    <ul class="nav-list"></ul>
+                </div>
 
 
 
                 <div class="icon-container">
+                    <div class="user-container">
+                        <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                        <p class="login-text">Login</p>
+                    </div>
                     <div class="shopping-container">
                         <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <p>Cart</p>
                         <!-- <div class="cart-info"></div> -->
                         <p class="cart-info"></p>
                     </div>
-                    <div class="hamburger navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
-                        <div class="hamburger__line hamburger__line--one"></div>
-                        <div class="hamburger__line hamburger__line--two"></div>
-                        <div class="hamburger__line hamburger__line--three"></div>
-                        <div class="hamburger__line hamburger__line--four"></div>
+                    <div class="hamburger-container">
+                        <div class="hamburger navbar-toggler">
+                            <div class="hamburger__line hamburger__line--one"></div>
+                            <div class="hamburger__line hamburger__line--two"></div>
+                            <div class="hamburger__line hamburger__line--three"></div>
+                            <div class="hamburger__line hamburger__line--four"></div>
+                        </div>
+                        <p>Menu</p>
                     </div>
+
                 </div>
 
                 <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Store</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="login.html">Login</a>
-                        </li>
+                    <ul class="navbar-nav">
                     </ul>
                 </div> -->
-                <div class="nav-link-container">
-                    <ul class="nav-list"></ul>
-                </div>
+
+
             </div>
         </nav>
 
@@ -68,18 +70,32 @@
     </header>
 
     <main>
-        <div class="container-lg">
-            <div class="breadcrumbs"></div>
-            <div class="details-container">
-                <div class="spinner-container">
-                    <div class="spinner-border float-right" role="status">
-                        <!-- <span class="sr-only">Loading...</span> -->
-                    </div>
+        <div class="wrapper">
+            <div class="container-lg">
+                <!-- <div class="hero-container">
+                    <div class="hero-info">
+                        <h2>Practicly the best online store</h2>
+                        <p>Total supplier of electromaterial,
+                            heat, lighting and tools
+                            since 1937.
+                        </p>
+                        <button>Check out our store</button>
+                    </div>-->
+
+                <div class="hero-image-container"></div>
+
+                <h2>This weeks featured products</h2>
+                <div class="row featured"></div>
+                <div class="shipping-info">
+                    <i class="fa-solid fa-truck"></i>
+                    <h2 class="shipping-info__text">Free shipping on orders above 1200,-</h2>
                 </div>
+                <div class="row un-featured"></div>
             </div>
-            <div class="modal-container"></div>
+
         </div>
     </main>
+
     <footer class="footer">
         <div class="container-lg footer-container">
             <div class="footer-info">
@@ -91,14 +107,12 @@
                 <a href="https://facebook.com"> <i class="fa-brands fa-square-facebook footer-social__facebook"></i></a>
                 <a href="https://instagram.com"> <i class="fa-brands fa-square-instagram footer-social__instagram"></i></a>
                 <a href="https://twitter.com/"> <i class="fa-brands fa-square-twitter footer-social__twitter"></i></a>
-
             </div>
             <div class="copyright">
                 <p>Copyright Practicly 2022</p>
             </div>
         </div>
         <div class="bottom-rim"></div>
-
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

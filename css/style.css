@@ -12520,7 +12520,7 @@ header {
 .bottom-rim {
   background-color: #ef8b08;
   width: 100%;
-  height: 10px;
+  height: 6px;
 }
 
 .hero-banner {
@@ -12603,7 +12603,7 @@ p {
 
 header {
   background-color: rgba(252, 74, 5, 0.2);
-  background-color: #5398fd75;
+  background-color: #5398fd;
 }
 
 .navbar-container {
@@ -12611,7 +12611,7 @@ header {
 }
 
 .navbar-brand img {
-  width: 125px;
+  width: 100px;
 }
 
 .nav-list {
@@ -12619,10 +12619,10 @@ header {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  right: -100px;
-  background-color: white;
-  padding: 1rem;
-  top: 73px;
+  right: -130px;
+  background-color: #5398fd;
+  padding: 2rem;
+  top: 86px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -12631,6 +12631,7 @@ header {
   transition: all 0.3s;
   list-style-type: none;
   gap: 2rem;
+  border-radius: 0px 0px 0px 10px;
 }
 
 .hamburger-button {
@@ -12639,14 +12640,16 @@ header {
   padding: 0px;
 }
 
-.shopping-container {
-  width: 50px;
-  height: 50px;
+.fa-cart-shopping,
+.fa-user {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  font-size: 1.6rem;
+  color: black;
+  padding: 0px;
   border: 1px solid black;
   background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -12656,16 +12659,38 @@ header {
           align-items: center;
   border-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.375rem;
+  padding: 0.5rem 0.35rem;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
 }
 
-.fa-cart-shopping {
-  font-size: 2rem;
-  color: black;
+.user-container a,
+.shopping-container a {
+  text-decoration: none;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+  width: 43px;
+  height: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.shopping-container {
+  position: relative;
 }
 
 .hamburger {
-  width: 50px;
-  height: 50px;
+  width: 43px;
+  height: 43px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12680,15 +12705,14 @@ header {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin-right: 1rem;
 }
 
 .hamburger__line {
   opacity: 1;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  height: 5px;
-  width: 35px;
+  height: 4px;
+  width: 30px;
   background-color: black;
   position: absolute;
   border-radius: 10px;
@@ -12732,7 +12756,7 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0.5rem;
-  margin: 1rem 10px 0 auto;
+  margin: 1rem 1rem 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -12765,9 +12789,73 @@ header {
   transition: 0.5s all ease-in-out;
 }
 
-@media (min-width: 325px) {
+.icon-container > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.icon-container > * p {
+  font-size: 0.8rem;
+}
+
+.icon-container p {
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+@media (min-width: 357px) {
   .navbar-brand img {
     width: 100%;
+  }
+}
+
+@media (min-width: 400px) {
+  .icon-container {
+    gap: 1rem;
+  }
+  .user-container a,
+  .shopping-container a {
+    width: 50px;
+    height: 50px;
+  }
+  .fa-cart-shopping,
+  .fa-user {
+    font-size: 2rem;
+    padding: 0.5rem 0.35rem;
+  }
+  .fa-user {
+    padding: 0.5rem 0.65rem;
+  }
+  .hamburger {
+    width: 50px;
+    height: 50px;
+  }
+  .hamburger__line {
+    height: 5px;
+    width: 35px;
+  }
+}
+
+@media (min-width: 700px) {
+  .hamburger-container {
+    display: none;
+  }
+  .nav-list {
+    position: relative;
+    right: inherit;
+    top: inherit;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 0px;
+    background-color: inherit;
+    padding: 0px;
   }
 }
 

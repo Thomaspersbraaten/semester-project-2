@@ -6,7 +6,7 @@ header {
   // background: rgb(252, 74, 5);
   // background: linear-gradient(24deg, rgba(252, 74, 5, 0.17) 0%, rgba(126, 37, 3, 0.3) 100%);
   background-color: $nav-footer-color;
-  background-color: #5398fd75;
+  background-color: #5398fd;
 }
 // nav {
 //   display: flex;
@@ -15,19 +15,20 @@ header {
   position: relative;
 }
 .navbar-brand img {
-  width: 125px;
+  width: 100px;
 }
 .nav-list {
   display: flex;
   position: absolute;
-  right: -100px;
-  background-color: white;
-  padding: 1rem;
-  top: 73px;
+  right: -130px;
+  background-color: #5398fd;
+  padding: 2rem;
+  top: 86px;
   flex-direction: column;
   transition: all 0.3s;
   list-style-type: none;
   gap: 2rem;
+  border-radius: 0px 0px 0px 10px;
 }
 
 .hamburger-button {
@@ -35,37 +36,58 @@ header {
   background-color: none;
   padding: 0px;
 }
-.shopping-container {
-  width: 50px;
-  height: 50px;
+
+.fa-cart-shopping,
+.fa-user {
+  display: flex !important;
+  font-size: 1.6rem;
+  color: black;
+  padding: 0px;
+  // width: 43px;
+  // height: 43px;
   border: 1px solid black;
   background-color: transparent;
-  display: flex;
+
   justify-content: center;
   position: relative;
   align-items: center;
   border-color: $navbar-light-toggler-border-color;
   border-radius: $navbar-toggler-border-radius;
+  padding: 0.5rem 0.35rem;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
 }
-.fa-cart-shopping {
-  font-size: 2rem;
-  color: black;
+.user-container a,
+.shopping-container a {
+  text-decoration: none;
+  border-color: $navbar-light-toggler-border-color;
+  border-radius: $navbar-toggler-border-radius;
+  width: 43px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin: auto;
+  text-align: center;
 }
-
+.shopping-container {
+  position: relative;
+}
 .hamburger {
-  width: 50px;
-  height: 50px;
+  width: 43px;
+  height: 43px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-right: 1rem;
+  // margin-right: 1rem;
   &__line {
     opacity: 1;
     transition: all 0.3s;
-    height: 5px;
-    width: 35px;
+    height: 4px;
+    width: 30px;
     background-color: black;
     position: absolute;
     border-radius: 10px;
@@ -102,8 +124,7 @@ header {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  margin: 1rem 10px 0 auto;
-
+  margin: 1rem 1rem 0 auto;
   justify-content: center;
 }
 
@@ -126,18 +147,66 @@ header {
   opacity: 0;
   transition: 0.5s all ease-in-out;
 }
+.icon-container > * {
+  display: flex;
+  flex-direction: column;
+  & p {
+    font-size: 0.8rem;
+  }
+}
 
-@media (min-width: 325px) {
+.icon-container p {
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+@media (min-width: 357px) {
   .navbar-brand img {
     width: 100%;
   }
 }
+@media (min-width: 400px) {
+  .icon-container {
+    gap: 1rem;
+  }
+  .user-container a,
+  .shopping-container a {
+    width: 50px;
+    height: 50px;
+  }
+  .fa-cart-shopping,
+  .fa-user {
+    font-size: 2rem;
+    padding: 0.5rem 0.35rem;
+  }
+  .fa-user {
+    padding: 0.5rem 0.65rem;
+  }
+  .hamburger {
+    width: 50px;
+    height: 50px;
 
-// @media (min-width: 768px) {
-//   .navbar-collapse {
-//     display: flex !important;
-//   }
-// }
+    &__line {
+      height: 5px;
+      width: 35px;
+    }
+  }
+}
+@media (min-width: 700px) {
+  .hamburger-container {
+    display: none;
+  }
+  .nav-list {
+    position: relative;
+    right: inherit;
+    top: inherit;
+    flex-direction: row;
+    margin-bottom: 0px;
+    background-color: inherit;
+    padding: 0px;
+  }
+}
+
 @media (min-width: 992px) {
   .navbar__container {
     position: relative;
@@ -148,3 +217,5 @@ header {
     top: 10%;
   }
 }
+
+// new nav
