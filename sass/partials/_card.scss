@@ -1,22 +1,30 @@
 .card {
   width: 208px;
   min-width: 208px;
+  max-width: 300px;
   overflow: hidden;
   text-align: center;
   padding: 0;
   transition: 0.35s scale;
-  &:hover {
-    scale: 1.07;
-  }
+
   &__img {
     width: 100%;
     height: 40%;
   }
 }
+.scale:hover {
+  scale: 1.06;
+}
 .card-body {
   display: flex;
   flex-direction: column;
   height: 60%;
+  // & > * {
+  //   flex: 1;
+  // }
+}
+.cart-title {
+  font-size: 0.7rem;
 }
 .card-price {
   background-color: $primary-color;
@@ -44,7 +52,7 @@
   gap: 0.5rem;
   justify-content: center;
   & > * {
-    width: 95px;
+    width: 75px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -52,8 +60,14 @@
     text-align: center;
     gap: 0.2rem;
     padding: 10px;
+    transition: scale 0.1s ease-in;
+    border: 1px solid black;
+  }
+  & > *:hover {
+    scale: 1.04;
   }
   &__delete {
+    box-shadow: 2px 2px 3px black;
     background-color: red;
     padding: 10px 0px;
     border-radius: 10px;
@@ -64,6 +78,7 @@
     margin-bottom: 0;
   }
   &__edit {
+    box-shadow: 2px 2px 3px black;
     background-color: blue;
     padding: 10px 0px;
     border-radius: 10px;
@@ -73,5 +88,5 @@
 
 .fa-pen-to-square,
 .fa-trash {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }

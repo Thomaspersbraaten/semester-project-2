@@ -12,6 +12,8 @@
 
 .top-container__btns {
   margin: 1rem auto;
+  gap: 1rem;
+  display: flex;
 }
 .top-container__btns > * {
   height: 62px;

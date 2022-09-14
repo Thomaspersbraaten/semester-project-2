@@ -7,9 +7,11 @@ import { createNavMenu } from "../components/createElements/createNavMenu.js";
 import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
 import { searchControlAndClearSearch } from "../components/ui/searchControlAndClearSearch.js";
 import { searchForProduct } from "../components/ui/searchForProduct.js";
+import { fixMenuPosition } from "../components/ui/fixMenuPosition.js";
 
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
+window.addEventListener("resize", fixMenuPosition);
 const spinner = document.querySelector(".spinner-container");
 
 cartInfo();

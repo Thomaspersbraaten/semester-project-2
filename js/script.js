@@ -7,6 +7,8 @@ import { baseUrl } from "../components/consts/baseUrl.js";
 import { getHeroImage } from "../components/apicalls/getHeroImage.js";
 import { getHomeProducts } from "../components/apicalls/getHomeProducts.js";
 import { cartInfo } from "../components/createElements/cartInfo.js";
+import { fixMenuPosition } from "../components/ui/fixMenuPosition.js";
+window.addEventListener("resize", fixMenuPosition);
 createNavMenu();
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);

@@ -6,6 +6,7 @@ const nav = document.querySelector(".nav-list");
 let navHidden = true;
 
 export function hamburgerMenu() {
+  nav.style.transition = "right 0.3s";
   hamburgerLineOne.classList.toggle("opacity");
   hamburgerLineFour.classList.toggle("opacity");
   hamburgerLineThree.classList.toggle("rotate-three");
@@ -16,7 +17,6 @@ export function hamburgerMenu() {
     navHidden = false;
   } else {
     navHidden = true;
-    // nav.style.display = "none";
     nav.style.right = "-140px";
   }
 }

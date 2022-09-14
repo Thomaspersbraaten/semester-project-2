@@ -3,7 +3,7 @@ export function homeProducts(product, container) {
 
   const { id, image_url, title, description, price } = product;
   targetContainer.innerHTML += `
-    <a href="details.html?id=${id}" style="text-decoration:none" class="card col">
+    <a href="details.html?id=${id}" style="text-decoration:none" class="card col scale">
       <img class="card__img " src="${image_url}" alt="${title}">
       <div class="card-body">
         <h3 class="card-title">${title}</h3>
@@ -13,7 +13,4 @@ export function homeProducts(product, container) {
       </div>
     </a>
            `;
-}
-{
-  /* <p class="card-text">${description}</p> */
 }

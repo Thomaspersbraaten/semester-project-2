@@ -11,12 +11,14 @@ h1,
 h2,
 h3 {
   font-family: $primary-font;
+  color: black;
 }
 p {
   font-family: $secondary-font;
+  margin-bottom: 0px;
 }
 
 .breadcrumbs__link,
 .breadcrumbs__active {
-  font-family: $nav-font;
+  font-family: $secondary-font;
 }

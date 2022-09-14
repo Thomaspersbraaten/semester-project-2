@@ -11,7 +11,7 @@ export const modal = `
     </div>
     <div>
     <label for="description">Description</label>
-    <input id="description" placeholder="Description" type="text">
+    <textarea id="description" placeholder="Description" type="text"></textarea>
     </div>
 
     <div>
@@ -26,11 +26,10 @@ export const modal = `
         <input class="form-check__input" type="checkbox" value="" id="flexCheckDefault">
         <label class="form-check__label" for="flexCheckDefault">Is Featured</label>
     </div>
-
   </form>
   <div class="modal__btns">
   <button class="btn btn-large btn-warning cancel"></button>
-  <button class="btn  btn-large btn-success confirm"></button>
+  <button class="btn btn-large btn-success confirm"></button>
 </div>
 </div>
 `;

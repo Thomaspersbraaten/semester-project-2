@@ -20,32 +20,33 @@ export function createAdminItems(products) {
               <div class="card-action">
                 <div class="card-action__edit" data-id="${product.id}">
                     <i class="fa-solid fa-pen-to-square" data-id="${product.id}"></i>
-                    <p data-id="${product.id}"> Edit product</p>
+                    <p data-id="${product.id}">Edit</p>
                 </div>
                 <div class="card-action__delete" data-id="${product.id}">
-                <i class="fa-solid fa-trash" data-id="${product.id}"></i>
-                    <p data-id="${product.id}"> Delete product</p>
+                    <i class="fa-solid fa-trash" data-id="${product.id}"></i>
+                    <p data-id="${product.id}"> Delete</p>
                 </div>
              </div>
         </div>
         `;
+    const editBtn = document.querySelectorAll(".card-action__edit");
+    editBtn.forEach((button) => {
+      button.addEventListener("click", (btn) => {
+        console.log("bart");
+        const targetID = parseInt(btn.target.dataset.id);
+        startEdit(products, targetID);
+      });
+    });
+
+    // Delete
+    const deleteBtn = document.querySelectorAll(".card-action__delete");
+    deleteBtn.forEach((button) => {
+      button.addEventListener("click", (btn) => {
+        const targetID = parseInt(btn.target.dataset.id);
+        startDeletion(products, targetID);
+      });
+    });
   });
 
   // Edit
-  const editBtn = document.querySelectorAll(".card-action__edit");
-  editBtn.forEach((button) => {
-    button.addEventListener("click", (btn) => {
-      const targetID = parseInt(btn.target.dataset.id);
-      startEdit(products, targetID);
-    });
-  });
-
-  // Delete
-  const deleteBtn = document.querySelectorAll(".card-action__delete");
-  deleteBtn.forEach((button) => {
-    button.addEventListener("click", (btn) => {
-      const targetID = parseInt(btn.target.dataset.id);
-      startDeletion(products, targetID);
-    });
-  });
 }

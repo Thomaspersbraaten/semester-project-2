@@ -22,10 +22,14 @@ header {
   display: flex;
   position: absolute;
   right: -140px;
-  background-color: #5398fd;
-  background-color: $primary-color;
+  // background-color: #5398fd;
+  // background-color: $primary-color;
+  background-color: white;
+  border-left: 6px solid;
+  border-bottom: 6px solid;
+  border-color: $primary-color;
   padding: 2rem;
-  top: 91px;
+  top: 86px;
   flex-direction: column;
   transition: right 0.3s;
   list-style-type: none;
@@ -166,7 +170,18 @@ header {
 .active {
   text-decoration: underline;
 }
-
+.nav-item,
+.fa-cart-shopping,
+.fa-user {
+  transition: all 0.2s;
+}
+.nav-item:hover,
+.fa-cart-shopping:hover,
+.fa-user:hover {
+  color: $primary-color;
+  // scale: 1.1;
+  // border-color: $primary-color;
+}
 @media (min-width: 357px) {
   .navbar-brand img {
     width: 100%;
@@ -216,5 +231,6 @@ header {
     padding: 0px;
     right: 0px;
     margin-left: 1.5rem;
+    border: none;
   }
 }
