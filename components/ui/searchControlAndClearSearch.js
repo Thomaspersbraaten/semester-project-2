@@ -1,9 +1,11 @@
+import { getAllProducts } from "../apicalls/getAllProducts.js";
 import { createAdminItems } from "../createElements/createAdminItems.js";
 import { createAllStoreProducts } from "../createElements/createAllStoreProducts.js";
 
 const searchInput = document.querySelector("#search");
 const adminItemHeader = document.querySelector(".item-header");
 const searchX = document.querySelector(".search-form__x");
+
 export function searchControlAndClearSearch(products) {
   const searchLength = searchInput.value.length;
   const { pathname } = window.location;
@@ -32,6 +34,5 @@ export function searchControlAndClearSearch(products) {
   if (searchLength === 0 && pathname === "/store.html") {
     createAllStoreProducts(products);
     searchX.style.visibility = "hidden";
-    // adminItemHeader.innerHTML = `List of products`;
   }
 }

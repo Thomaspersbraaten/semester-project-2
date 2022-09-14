@@ -2,6 +2,9 @@ const itemContainer = document.querySelector(".admin-item-container");
 const spinner = document.querySelector(".spinner-container");
 import { startEdit } from "../ui/startEdit.js";
 import { startDeletion } from "../ui/startDeletion.js";
+import { getAllProducts } from "../apicalls/getAllProducts.js";
+import { baseUrl } from "../consts/baseUrl.js";
+
 export function createAdminItems(products) {
   itemContainer.innerHTML = "";
 
@@ -13,7 +16,6 @@ export function createAdminItems(products) {
             <img class="card__img img-fluid" src="${product.image_url}" alt="${product.title}">
             <div class="card-body">
               <h3 class="card-title" >${product.title}</h3>
-              <p class="card-text">${product.description}</p>
               <p class="card-price">${product.price}</p>
               <div class="card-action">
                 <div class="card-action__edit" data-id="${product.id}">

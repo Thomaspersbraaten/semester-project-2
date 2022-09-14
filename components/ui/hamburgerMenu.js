@@ -17,6 +17,6 @@ export function hamburgerMenu() {
   } else {
     navHidden = true;
     // nav.style.display = "none";
-    nav.style.right = "-130px";
+    nav.style.right = "-140px";
   }
 }
