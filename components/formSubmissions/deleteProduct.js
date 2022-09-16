@@ -1,5 +1,5 @@
 import { baseUrl } from "../consts/baseUrl.js";
-import { displayMessage } from "../displayMessage.js";
+import { displayMessage } from "../feedback/displayMessage.js";
 import { getToken } from "../storage/storage.js";
 
 export async function deleteProduct({ id, title }) {
@@ -37,10 +37,10 @@ export async function deleteProduct({ id, title }) {
       // legg inn blank form med succemessage og back button.
     }
     if (json.error) {
-      displayMessage("alert-danger", "Something went wrong during deletion", ".modal-form__message");
+      displayMessage("alert-danger", "Something went wrong during deletion", ".modal-form-message");
     }
   } catch (error) {
     console.log(error);
-    displayMessage("alert-danger", "An error occured when trying to delete", ".modal-form__message");
+    displayMessage("alert-danger", "An error occured when trying to delete", ".modal-form-message");
   }
 }

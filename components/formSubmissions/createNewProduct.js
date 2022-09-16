@@ -1,5 +1,5 @@
 import { baseUrl } from "../consts/baseUrl.js";
-import { displayMessage } from "../displayMessage.js";
+import { displayMessage } from "../feedback/displayMessage.js";
 import { getToken } from "../storage/storage.js";
 import { createAdminItems } from "../createElements/createAdminItems.js";
 import { getAllProducts } from "../apicalls/getAllProducts.js";
@@ -26,16 +26,16 @@ export async function createNewProduct(titleValue, descriptionValue, priceValue,
     const json = await response.json();
     console.log(json);
     if (json.created_at) {
-      displayMessage("alert-success", "Product was succesfully created!", ".modal-form__message");
+      displayMessage("alert-success", "Product was succesfully created!", ".modal-form-message");
       // Repopulates the container with updated items.
       const products = await getAllProducts(baseUrl);
       createAdminItems(products);
     }
     if (json.error) {
-      displayMessage("alert-warning", "Product creation has failed", ".modal-form__message");
+      displayMessage("alert-warning", "Product creation has failed", ".modal-form-message");
     }
   } catch (error) {
     console.log(error);
-    displayMessage("alert-warning", "There was an error during creation", ".modal-form__message");
+    displayMessage("alert-warning", "There was an error during creation", ".modal-form-message");
   }
 }

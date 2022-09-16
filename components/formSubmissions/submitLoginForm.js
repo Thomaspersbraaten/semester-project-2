@@ -1,6 +1,6 @@
 import { baseUrl } from "../consts/baseUrl.js";
 import { saveToken, saveUser } from "../storage/storage.js";
-import { displayMessage } from "../displayMessage.js";
+import { displayMessage } from "../feedback/displayMessage.js";
 export async function submitLoginForm(username, password) {
   const loginUrl = baseUrl + "auth/local";
   const data = JSON.stringify({ identifier: username, password: password });

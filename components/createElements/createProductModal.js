@@ -1,6 +1,6 @@
 import { modal } from "./createModal.js";
 import { createNewProduct } from "../formSubmissions/createNewProduct.js";
-import { displayMessage } from "../displayMessage.js";
+import { displayMessage } from "../feedback/displayMessage.js";
 export function createProductModal() {
   //
   // Setup the modal

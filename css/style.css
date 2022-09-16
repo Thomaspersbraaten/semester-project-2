@@ -12992,7 +12992,7 @@ header {
 
 .card {
   width: 208px;
-  min-width: 208px;
+  min-width: 207px;
   max-width: 300px;
   overflow: hidden;
   text-align: center;
@@ -13229,10 +13229,6 @@ header {
   margin: auto;
 }
 
-.modal-form__message {
-  display: none;
-}
-
 .modal-form input[type="text"],
 .modal-form textarea {
   font-size: 0.85rem;
@@ -13258,6 +13254,15 @@ header {
 .modal-form div label {
   text-align: left;
   margin-bottom: 0.2rem;
+}
+
+.modal-form-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form-check {
@@ -13500,6 +13505,11 @@ label {
 
 .details-image {
   width: 100%;
+  max-width: 500px;
+}
+
+.details-container {
+  position: relative;
 }
 
 .price-and-button {
@@ -13520,6 +13530,45 @@ label {
   padding-bottom: 2rem;
   border-bottom: 1px solid grey;
   gap: 1.2rem;
+}
+
+.feedback {
+  position: fixed;
+  border: 1px solid black;
+  top: 20%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 300px;
+  padding: 10px;
+  text-align: center;
+  left: -50%;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+}
+
+.feedback div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.feedback div p {
+  margin-top: 0.5rem;
+}
+
+.fa-circle-xmark {
+  padding: 5px;
+  margin-left: auto;
+  color: black;
+}
+
+.fa-circle-xmark:hover {
+  cursor: pointer;
 }
 
 .breadcrumbs {

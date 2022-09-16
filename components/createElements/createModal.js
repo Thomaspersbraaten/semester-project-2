@@ -1,7 +1,7 @@
 export const modal = `
 <div class="modal">
   <h2 class="modal__header"></h2>
-  <div class="modal-form__message alert"></div>
+  <div class="modal-form-message alert"></div>
   <form class="modal-form">
 
   <div>

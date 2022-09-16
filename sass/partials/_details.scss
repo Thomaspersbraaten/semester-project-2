@@ -10,6 +10,10 @@
 
 .details-image {
   width: 100%;
+  max-width: 500px;
+}
+.details-container {
+  position: relative;
 }
 
 .price-and-button {
@@ -22,6 +26,35 @@
   padding-bottom: 2rem;
   border-bottom: 1px solid grey;
   gap: 1.2rem;
+}
+// .added,
+// .removed,
+.feedback {
+  position: fixed;
+  border: 1px solid black;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 300px;
+  padding: 10px;
+  text-align: center;
+  left: -50%;
+  transition: left 0.4s;
+  & div {
+    display: flex;
+    flex-direction: column;
+    & p {
+      margin-top: 0.5rem;
+    }
+  }
+}
+.fa-circle-xmark {
+  padding: 5px;
+  margin-left: auto;
+  color: black;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .details-price {

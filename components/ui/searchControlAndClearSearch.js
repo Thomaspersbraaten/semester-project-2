@@ -23,6 +23,7 @@ export function searchControlAndClearSearch(products) {
     }
     if (pathname === "/store.html") {
       createAllStoreProducts(products);
+      ItemHeader.innerHTML = `List of products`;
       // adminItemHeader.innerHTML = `List of products`;
     }
   });

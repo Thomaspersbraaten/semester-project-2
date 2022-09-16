@@ -1,14 +1,11 @@
+import { productCartFeedback } from "../feedback/productCartFeedback.js";
 import { getCart, saveCart } from "../storage/storage.js";
 import { cartInfo } from "./cartInfo.js";
 
 export function cartButton(id, product) {
-  //   console.log(cartContents);
   let cartContents = getCart();
   cartInfo();
 
-  //   const isProductInCart = cartContents.find((item) => {
-  //     return item.id === id;
-  //   });    const btnContainer = document.querySelector(".btn-container");
   const btnContainer = document.querySelector(".btn-container");
   const isProductInCart = cartContents.some((item) => {
     return item.id === id;
@@ -19,10 +16,13 @@ export function cartButton(id, product) {
     <button class="btn btn-large btn-cart--add">Add to Cart </button>`;
     const AddToCartBtn = document.querySelector(".btn-cart--add");
     AddToCartBtn.addEventListener("click", () => {
+      // product.quantity = "1";
+      // console.log(product.quantity);
       cartContents.push(product);
-      console.log(cartContents);
+
       saveCart(cartContents);
       cartButton(id, product);
+      productCartFeedback(isProductInCart);
     });
   }
   if (isProductInCart) {
@@ -35,9 +35,10 @@ export function cartButton(id, product) {
       const newArray = cartContents.filter((item) => {
         return item.id != id;
       });
-      console.log(newArray);
+
       saveCart(newArray);
       cartButton(id, product);
+      productCartFeedback(isProductInCart);
     });
   }
 }

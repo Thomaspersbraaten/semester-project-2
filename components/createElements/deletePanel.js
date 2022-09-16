@@ -17,6 +17,7 @@ export function deletePanel(product) {
   btnConfirm.classList.remove("btn-success");
   btnConfirm.classList.add("btn-danger");
   modalHeader.innerHTML = "Are you sure you want to delete this product?";
+  modalHeader.style.color = "red";
 
   // Cancel actions
   btnCancel.addEventListener("click", () => {

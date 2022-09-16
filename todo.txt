@@ -1,9 +1,9 @@
 *breadcrumbs på alle | DONE
 *breadcrumbs function | DONE
 * knapp for hvert product i cart som fjerner dem fra cart. | DONE
-
+ * bedre feedback når ting er added/removed to cart | DONE
  FIX 
  * search i admin. etter edit og search cleared er ikke repopulation av vindu korrekt. gammel data på produkter
- * bedre feedback når ting er added/removed to cart
 
+ 
 
