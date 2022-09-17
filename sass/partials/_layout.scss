@@ -10,7 +10,9 @@ body {
   flex-direction: column;
 }
 main {
-  margin-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  background-color: #f5f7f755;
   // background: rgb(255, 255, 255);
   // background: linear-gradient(24deg, rgba(255, 255, 255, 0.17130602240896353) 0%, rgba(126, 37, 3, 0.31416316526610644) 50%, rgba(255, 255, 255, 0.16850490196078427) 100%);
 }

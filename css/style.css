@@ -12494,7 +12494,9 @@ body {
 }
 
 main {
-  margin-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  background-color: #f5f7f755;
 }
 
 .wrapper {
@@ -12592,10 +12594,6 @@ p {
 .breadcrumbs__link,
 .breadcrumbs__active {
   font-family: "Open sans", sans-serif;
-}
-
-header {
-  margin-bottom: 1rem;
 }
 
 .navbar-container {
@@ -12948,6 +12946,13 @@ header {
   height: 100%;
 }
 
+.featured,
+.un-featured {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media (min-width: 445px) {
   .fa-truck {
     font-size: 1.8rem;
@@ -13019,6 +13024,10 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 60%;
+}
+
+.card-stock {
+  color: green;
 }
 
 .cart-title {
@@ -13512,6 +13521,16 @@ label {
   position: relative;
 }
 
+.image-container {
+  max-width: 575px;
+}
+
+.img-price-btn {
+  border-bottom: 1px solid grey;
+  padding-bottom: 2rem;
+  margin: 1rem auto 1.5rem auto;
+}
+
 .price-and-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13526,10 +13545,26 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem auto 1.5rem auto;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid grey;
   gap: 1.2rem;
+}
+
+.description {
+  border-radius: 10px 10px 0px 0px;
+  -webkit-box-shadow: 2px 2px 7px #c2bdbd;
+          box-shadow: 2px 2px 7px #c2bdbd;
+}
+
+.description__header {
+  padding: 0.5rem;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #392114;
+  margin-bottom: 0;
+  color: white;
+}
+
+.description__text {
+  border-top: none;
+  padding: 0.5rem;
 }
 
 .feedback {
@@ -13569,6 +13604,22 @@ label {
 
 .fa-circle-xmark:hover {
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .img-price-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .img-price-btn > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .image-container {
+    max-width: 400px;
+  }
 }
 
 .breadcrumbs {
@@ -13702,5 +13753,15 @@ label {
   .cart-action-remove__text {
     font-size: 1.4rem;
   }
+}
+
+.contact-text,
+.contact-email,
+.contact-phone {
+  margin-bottom: 1.5rem;
+}
+
+.email {
+  margin-top: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

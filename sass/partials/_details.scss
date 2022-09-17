@@ -15,20 +15,40 @@
 .details-container {
   position: relative;
 }
+.image-container {
+  max-width: 575px;
+}
+.img-price-btn {
+  border-bottom: 1px solid grey;
+  padding-bottom: 2rem;
+  margin: 1rem auto 1.5rem auto;
+}
 
 .price-and-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   align-items: center;
-  margin: 1rem auto 1.5rem auto;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid grey;
+
   gap: 1.2rem;
 }
-// .added,
-// .removed,
+.description {
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 2px 2px 7px #c2bdbd;
+  &__header {
+    padding: 0.5rem;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #392114;
+    margin-bottom: 0;
+    color: white;
+  }
+  &__text {
+    border-top: none;
+    padding: 0.5rem;
+  }
+}
+
+// Feedback
 .feedback {
   position: fixed;
   border: 1px solid black;
@@ -59,4 +79,16 @@
 
 .details-price {
   @extend .card-price;
+}
+
+@media (min-width: 600px) {
+  .img-price-btn {
+    display: flex;
+    & > * {
+      flex: 1;
+    }
+  }
+  .image-container {
+    max-width: 400px;
+  }
 }

@@ -69,6 +69,10 @@
     // height: 250px;
   }
 }
+.featured,
+.un-featured {
+  justify-content: center;
+}
 
 @media (min-width: 445px) {
   .fa-truck {

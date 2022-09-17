@@ -44,4 +44,12 @@ export function createBreadcrumbs(item) {
     <p class="active-page breadcrumbs__active">Shopping cart</p>
     `;
   }
+  if (pathname === "/contact.html") {
+    breadCrumbsContainer.innerHTML = `
+    <a href="index.html" class="breadcrumbs__link"><i class="fas fa-home"></i> Home</a>
+    <div class="breadcrumbs__angle"><i class="fa-solid fa-angle-right"></i></div>
+    <p class="active-page breadcrumbs__active">Contact us</p>
+
+    `;
+  }
 }
