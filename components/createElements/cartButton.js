@@ -16,7 +16,7 @@ export function cartButton(id, product) {
     <button class="btn btn-large btn-cart--add">Add to Cart </button>`;
     const AddToCartBtn = document.querySelector(".btn-cart--add");
     AddToCartBtn.addEventListener("click", () => {
-      // product.quantity = "1";
+      product.amount = 1;
       // console.log(product.quantity);
       cartContents.push(product);
 

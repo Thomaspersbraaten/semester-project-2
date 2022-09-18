@@ -13,19 +13,23 @@ export function setupProductPage(product) {
   //   add meta desc
   // https://www.w3schools.com/tags/tag_meta.asp
   document.title = `${title}`;
-  detailsContainer.innerHTML = productCard;
+  // detailsContainer.innerHTML = productCard;
   detailsContainer.innerHTML = `
   <div class="details">
-      <h1 class="details__header">${title}</h1>
-      <div class="image-price-button">
-          <div class="image-container"><img src="${image_url}" class="details-image"></div>
-          <div class="price-and-button">
-            <p class="details-price">${price}</p>
-            <div class="btn-container"></div>
-          </div>
-          <p class="details__description">${description}</p> 
-      </div>
- 
+    <h1 class="details__header">${title}</h1>
+    <div class="img-price-btn">
+        <div class="image-container">
+          <img src="${image_url}" class="details-image">
+        </div>
+        <div class="price-and-button">
+          <p class="details-price">${price}</p>
+          <div class="btn-container"></div>
+        </div>
+    </div>
+    <div class="description"> 
+      <h2 class="description__header">product description</h2>
+      <p class="description__text">${description}</p> 
+    </div>
   </div>
   `;
 

@@ -3,9 +3,6 @@
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
   }
-  &__description {
-    // word-spacing: 0.1rem;
-  }
 }
 
 .details-image {
@@ -29,11 +26,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 1.2rem;
 }
 .description {
   border-radius: 10px 10px 0px 0px;
+  text-transform: capitalize;
   box-shadow: 2px 2px 7px #c2bdbd;
   &__header {
     padding: 0.5rem;
