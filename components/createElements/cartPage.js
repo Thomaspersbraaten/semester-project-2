@@ -9,7 +9,7 @@ export function cartPage() {
   detailsContainer.innerHTML = "";
   summaryContainer.innerHTML = "";
   let sum = 0;
-  console.log(items);
+  // console.log(items);
 
   if (items.length >= 1) {
     items.forEach((item) => {
@@ -50,7 +50,7 @@ export function cartPage() {
       //   let amountInput = document.querySelector(".amount-control__input");
       //   console.log(amountInput.value);
       // }
-      sum += item.price;
+      sum += price * amount;
       summaryContainer.innerHTML = `
       <p class="summary-container__sum"><b>Total sum:</b> ${sum},-</p>
       `;
@@ -62,7 +62,7 @@ export function cartPage() {
   const amountMinus = document.querySelectorAll(".amount-control__minus");
   const inputNodes = document.querySelectorAll(".amount-control__input");
   const inputArray = Array.from(inputNodes);
-  console.log(inputArray);
+
   amountMinus.forEach((minus) => {
     minus.addEventListener("click", (event) => {
       // updateValue(event);
@@ -75,10 +75,10 @@ export function cartPage() {
       });
       let inputValue = parseInt(targetInput.value);
 
-      // if (inputValue === 1) {
-      //   console.log("return");
-      //   return;
-      // }
+      if (inputValue === 1) {
+        console.log("return");
+        return;
+      }
 
       inputValue = inputValue - 1;
       targetInput.value = inputValue;
@@ -86,13 +86,15 @@ export function cartPage() {
       const clickedProduct = items.find((item) => {
         return item.id === parseInt(targetId);
       });
-      console.log(clickedProduct);
+      clickedProduct.amount = inputValue;
 
-      const cart = getCart();
-      const filteredProducts = cart.filter((product) => {
-        return clickedProduct.id != product.id;
-      });
-      console.log(filteredProducts);
+      // const cart = getCart();
+      // const filteredProducts = cart.filter((product) => {
+      //   return clickedProduct.id != product.id;
+      // });
+
+      // setTimer(filteredProducts, inputValue, clickedProduct);
+      setTimer(items);
     });
   });
   const amountPlus = document.querySelectorAll(".amount-control__plus");
@@ -114,25 +116,37 @@ export function cartPage() {
       const clickedProduct = items.find((item) => {
         return item.id === parseInt(targetId);
       });
-      console.log(clickedProduct);
 
-      const cart = getCart();
-      const filteredProducts = cart.filter((product) => {
-        return clickedProduct.id != product.id;
-      });
-      console.log(filteredProducts);
+      clickedProduct.amount = inputValue;
+      console.log(clickedProduct);
+      console.log(items);
+
+      // const cart = getCart();
+      // const filteredProducts = cart.filter((product) => {
+      //   return clickedProduct.id != product.id;
+      // });
+
+      // setTimer(items, inputValue, clickedProduct);
+      setTimer(items);
     });
   });
 
   let timerID;
 
-  function setTimer(updatedProduct) {
+  function setTimer(newArray, newValue, targetProduct) {
     console.log("starting/restarting timer");
     clearTimeout(timerID);
+
     timerID = setTimeout(() => {
       console.log("finished");
-      console.log(updatedProduct);
-    }, 2000);
+      // console.log(newArray, newValue, targetProduct);
+      // targetProduct.amount = newValue;
+      // newArray.push(targetProduct);
+      // console.log(newArray);
+      saveCart(newArray);
+      cartPage();
+      cartInfo();
+    }, 1000);
   }
 
   // console.log(qtyInput);
