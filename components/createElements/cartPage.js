@@ -62,6 +62,7 @@ export function cartPage() {
   const amountMinus = document.querySelectorAll(".amount-control__minus");
   const inputNodes = document.querySelectorAll(".amount-control__input");
   const inputArray = Array.from(inputNodes);
+  // legge til funksjon ved input keyup?
 
   amountMinus.forEach((minus) => {
     minus.addEventListener("click", (event) => {
