@@ -5,5 +5,5 @@
  FIX 
  * search i admin. etter edit og search cleared er ikke repopulation av vindu korrekt. gammel data på produkter
 
- 
+* try catch i alle apicalls 
 

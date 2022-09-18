@@ -2,7 +2,7 @@ import { productCard } from "../consts/productCard.js";
 
 export function homeProducts(product, container) {
   const targetContainer = document.querySelector(container);
-  console.log(productCard);
+  // console.log(productCard);
   // const { id, image_url, title, description, price } = product;
   // targetContainer.innerHTML += `
   //   <a href="details.html?id=${id}" style="text-decoration:none" class="card col scale">

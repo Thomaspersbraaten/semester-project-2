@@ -1,7 +1,7 @@
 import { homeProducts } from "../createElements/homeProducts.js";
 
 export async function getHomeProducts(url) {
-  console.log(url);
+  // console.log(url);
   const response = await fetch(url + "products");
   const data = await response.json();
 
@@ -12,7 +12,7 @@ export async function getHomeProducts(url) {
   });
   data.forEach((product) => {
     if (!product.featured) {
-      console.log(product.featured);
+      // console.log(product.featured);
       homeProducts(product, ".un-featured");
     }
   });
