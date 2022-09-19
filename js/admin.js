@@ -12,12 +12,6 @@ import { searchForProduct } from "../components/ui/searchForProduct.js";
 import { searchControlAndClearSearch } from "../components/ui/searchControlAndClearSearch.js";
 import { createBreadcrumbs } from "../components/createElements/breadcrumbs.js";
 import { fixMenuPosition } from "../components/ui/fixMenuPosition.js";
-window.addEventListener("resize", fixMenuPosition);
-createNavMenu();
-cartInfo();
-createBreadcrumbs();
-const hamburgerButton = document.querySelector(".hamburger");
-hamburgerButton.addEventListener("click", hamburgerMenu);
 
 const user = getUser();
 const token = getToken();
@@ -26,6 +20,13 @@ const token = getToken();
 if (token.length === 0 || !user.id) {
   location.href = "/";
 }
+
+window.addEventListener("resize", fixMenuPosition);
+createNavMenu();
+cartInfo();
+createBreadcrumbs();
+const hamburgerButton = document.querySelector(".hamburger");
+hamburgerButton.addEventListener("click", hamburgerMenu);
 // Setup the admin page
 const header = document.querySelector(".admin-header");
 header.innerHTML = `Welcome to the admin control panel: ${user.username}`;
