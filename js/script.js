@@ -1,28 +1,22 @@
-// import { getFeatured } from "../components/apicalls/getFeatured.js";
 import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
-import { createNavMenu } from "../components/createElements/createNavMenu.js";
-
 import { herokuUrl } from "../components/consts/herokuUrl.js";
 import { getHeroImage } from "../components/apicalls/getHeroImage.js";
 import { getHomeProducts } from "../components/apicalls/getHomeProducts.js";
-import { cartInfo } from "../components/createElements/cartInfo.js";
 import { fixMenuPosition } from "../components/ui/fixMenuPosition.js";
-window.addEventListener("resize", fixMenuPosition);
-createNavMenu();
+import { setupCartInfo, setupNavMenu } from "../components/createElements/pageSetup/index.js";
+
+setupCartInfo();
+setupNavMenu();
+
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
+window.addEventListener("resize", fixMenuPosition);
 
-cartInfo();
 getHomeProducts(herokuUrl);
 
+// Sets up the hero image for the home page
+const heroContainer = document.querySelector(".hero-image-container");
 const getImage = await getHeroImage(herokuUrl);
-
-console.log(getImage.hero_banner.url);
-
-// console.log(getImage.hero_banner);
 const theheroImage = getImage.hero_banner.url;
 
-const heroContainer = document.querySelector(".hero-image-container");
-heroContainer.innerHTML = `
-<img src="${theheroImage}" class="hero-image-container__image">
-`;
+heroContainer.innerHTML = `<img src="${theheroImage}" class="hero-image-container__image">`;

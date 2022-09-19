@@ -1,6 +1,6 @@
 const breadCrumbsContainer = document.querySelector(".breadcrumbs");
 
-export function createBreadcrumbs(item) {
+export function SetupBreadcrumbs(item) {
   const { pathname } = window.location;
 
   if (pathname === "/store.html") {

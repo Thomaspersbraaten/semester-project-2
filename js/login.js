@@ -1,18 +1,16 @@
 import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
 import { submitLoginForm } from "../components/formSubmissions/submitLoginForm.js";
-import { checkEmail, validateEmail, validatePassword } from "../components/validations/index.js";
-import { createNavMenu } from "../components/createElements/createNavMenu.js";
-
-import { cartInfo } from "../components/createElements/cartInfo.js";
-import { createBreadcrumbs } from "../components/createElements/breadcrumbs.js";
+import { validateEmail, validatePassword } from "../components/validations/index.js";
 import { fixMenuPosition } from "../components/ui/fixMenuPosition.js";
-window.addEventListener("resize", fixMenuPosition);
 
-createNavMenu();
-cartInfo();
-createBreadcrumbs();
+import { SetupBreadcrumbs, setupCartInfo, setupNavMenu } from "../components/createElements/pageSetup/index.js";
+SetupBreadcrumbs();
+setupCartInfo();
+setupNavMenu();
+window.addEventListener("resize", fixMenuPosition);
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
+
 const loginForm = document.querySelector(".login-form");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");

@@ -5,12 +5,16 @@ const hamburgerLineFour = document.querySelector(".hamburger__line--four");
 const nav = document.querySelector(".nav-list");
 let navHidden = true;
 
+// toggles the visibility of the navigation menu on smaller screens
+// Also animates the hamburger menu
+
 export function hamburgerMenu() {
-  nav.style.transition = "right 0.3s";
   hamburgerLineOne.classList.toggle("opacity");
   hamburgerLineFour.classList.toggle("opacity");
   hamburgerLineThree.classList.toggle("rotate-three");
   hamburgerLineTwo.classList.toggle("rotate-two");
+
+  nav.style.transition = "right 0.3s";
 
   if (navHidden) {
     nav.style.right = "0px";

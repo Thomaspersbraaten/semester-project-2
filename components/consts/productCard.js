@@ -1,5 +1,6 @@
+// Returns the product card for customer facing pages
 export function productCard(product) {
-  const { id, image_url, title, description, price } = product;
+  const { id, image_url, title, price } = product;
   return `
 <a href="details.html?id=${id}" style="text-decoration:none" class="card col scale">
   <img class="card__img " src="${image_url}" alt="${title}">

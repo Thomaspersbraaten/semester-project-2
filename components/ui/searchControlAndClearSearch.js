@@ -1,40 +1,45 @@
-import { getAllProducts } from "../apicalls/getAllProducts.js";
 import { createAdminItems } from "../createElements/createAdminItems.js";
 import { createAllStoreProducts } from "../createElements/createAllStoreProducts.js";
 
 const searchInput = document.querySelector("#search");
 const ItemHeader = document.querySelector(".item-header");
-const searchX = document.querySelector(".search-form__x");
+const clearSearch = document.querySelector(".search-form__x");
+
+// This function is triggered on keyup
+// Clears search and repopulates on either "clear search" button or when user empties the input.
 
 export function searchControlAndClearSearch(products) {
   const searchLength = searchInput.value.length;
   const { pathname } = window.location;
 
+  // shows the "clear search" button on input
   if (searchLength >= 1) {
-    searchX.style.visibility = "visible";
+    clearSearch.style.visibility = "visible";
   }
-  searchX.addEventListener("click", () => {
+  // when clicked clears the input value and hides "clear search" button
+  // Repopulates the container for Store or admin and resets header.
+  clearSearch.addEventListener("click", () => {
     searchInput.value = "";
+    clearSearch.style.visibility = "hidden";
 
-    searchX.style.visibility = "hidden";
     if (pathname === "/admin.html") {
       createAdminItems(products);
-      ItemHeader.innerHTML = `List of products`;
     }
     if (pathname === "/store.html") {
       createAllStoreProducts(products);
-      ItemHeader.innerHTML = `List of products`;
-      // adminItemHeader.innerHTML = `List of products`;
     }
+    ItemHeader.innerHTML = `List of products`;
   });
+
+  // if input is emptied by the user repopulate the container, update header and hide "clear search" button.
   if (searchLength === 0 && pathname === "/admin.html") {
     createAdminItems(products);
-    searchX.style.visibility = "hidden";
+    clearSearch.style.visibility = "hidden";
     ItemHeader.innerHTML = `List of products`;
   }
   if (searchLength === 0 && pathname === "/store.html") {
     createAllStoreProducts(products);
-    searchX.style.visibility = "hidden";
+    clearSearch.style.visibility = "hidden";
     ItemHeader.innerHTML = `List of products`;
   }
 }

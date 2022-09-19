@@ -1,10 +1,10 @@
 import { productCartFeedback } from "../feedback/productCartFeedback.js";
 import { getCart, saveCart } from "../storage/storage.js";
-import { cartInfo } from "./cartInfo.js";
+import { setupCartInfo } from "./pageSetup/setupCartInfo.js";
 
 export function cartButton(id, product) {
   let cartContents = getCart();
-  cartInfo();
+  setupCartInfo();
 
   const btnContainer = document.querySelector(".btn-container");
   const isProductInCart = cartContents.some((item) => {

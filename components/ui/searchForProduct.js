@@ -3,44 +3,41 @@ import { createAllStoreProducts } from "../createElements/createAllStoreProducts
 
 const searchInput = document.querySelector("#search");
 
+// Searchfunction for Admin and store pages
+
 export function searchForProduct(products) {
   const { pathname } = window.location;
-  // console.log(searchInput.value.trim().toLowerCase());
-  // console.log(pathname);
   const searchValue = searchInput.value.trim().toLowerCase();
 
   if (searchInput.value.length >= 1) {
-    // console.log(searchValue);
-    // let productsToRender = products;
     const filteredProducts = products.filter((product) => {
-      // if (product.title.toLowerCase().startsWith(searchValue) || product.description.toLowerCase().startsWith(searchValue)) {
-      //   return true;
-      // }
       if (product.title.toLowerCase().includes(searchValue) || product.description.toLowerCase().includes(searchValue)) {
         return true;
       }
     });
     const itemHeader = document.querySelector(".item-header");
+
+    // if no products was found, show helpfull message and empty product page.
     if (filteredProducts.length === 0) {
-      console.log(filteredProducts.length);
       if (pathname === "/admin.html") {
         createAdminItems(filteredProducts);
       }
       if (pathname === "/store.html") {
+        console.log("yes");
         createAllStoreProducts(filteredProducts);
       }
       itemHeader.innerHTML = `We found no results for "${searchValue}". Try being more specific.`;
     }
 
-    if (pathname === "/admin.html" && filteredProducts.length > 0) {
-      console.log(filteredProducts);
+    // if products was found, show results and update header.
+    else {
+      if (pathname === "/admin.html" && filteredProducts.length > 0) {
+        createAdminItems(filteredProducts);
+      }
+      if (pathname === "/store.html" && filteredProducts.length > 0) {
+        createAllStoreProducts(filteredProducts);
+      }
       itemHeader.innerHTML = `Showing search results for "${searchValue}"`;
-      // itemHeader.innerHTML = `Showing search results for "${searchValue}"`;
-      createAdminItems(filteredProducts);
-    }
-    if (pathname === "/store.html" && filteredProducts.length > 0) {
-      itemHeader.innerHTML = `Showing search results for "${searchValue}"`;
-      createAllStoreProducts(filteredProducts);
     }
   }
 }

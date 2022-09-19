@@ -12586,6 +12586,10 @@ h1, .h1, h2, .h2, h3, .h3 {
   color: black;
 }
 
+h1, .h1 {
+  text-align: center;
+}
+
 p {
   font-family: "Open sans", sans-serif;
   margin-bottom: 0px;
@@ -13836,5 +13840,19 @@ input[type="number"] {
 
 .email {
   margin-top: 1.5rem;
+}
+
+.catch-error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 1rem;
+  margin: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

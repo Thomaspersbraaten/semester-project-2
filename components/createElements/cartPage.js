@@ -1,5 +1,6 @@
 import { getCart, saveCart } from "../storage/storage.js";
-import { cartInfo } from "./cartInfo.js";
+// import { cartInfo } from "./cartInfo.js";
+import { setupCartInfo } from "./pageSetup/index.js";
 
 export function cartPage() {
   const items = getCart();
@@ -149,7 +150,7 @@ export function cartPage() {
       // console.log(newArray);
       saveCart(newArray);
       cartPage();
-      cartInfo();
+      setupCartInfo();
     }, 1000);
   }
 
@@ -190,7 +191,7 @@ export function cartPage() {
       console.log(newArray);
       saveCart(newArray);
       cartPage();
-      cartInfo();
+      setupCartInfo();
     });
   });
 }
