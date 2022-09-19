@@ -1,8 +1,10 @@
-import { baseUrl } from "../consts/baseUrl.js";
+// import { baseUrl } from "../consts/baseUrl.js";
+import { herokuUrl } from "../consts/herokuUrl.js";
 import { saveToken, saveUser } from "../storage/storage.js";
 import { displayMessage } from "../feedback/displayMessage.js";
+
 export async function submitLoginForm(username, password) {
-  const loginUrl = baseUrl + "auth/local";
+  const loginUrl = herokuUrl + "auth/local";
   const data = JSON.stringify({ identifier: username, password: password });
   console.log(data);
   const options = {

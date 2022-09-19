@@ -1,15 +1,16 @@
-import { baseUrl } from "../consts/baseUrl.js";
+// import { baseUrl } from "../consts/baseUrl.js";
 import { getToken } from "../storage/storage.js";
 import { displayMessage } from "../feedback/displayMessage.js";
 import { createAdminItems } from "../createElements/createAdminItems.js";
 import { getAllProducts } from "../apicalls/getAllProducts.js";
+import { herokuUrl } from "../consts/herokuUrl.js";
 
 // import { createProductModal } from "../createElements/createProductModal.js";
 // import { startEdit } from "../ui/startEdit.js";
 
 export async function editProduct(titleValue, descriptionValue, priceValue, imageUrlValue, isFeatured, targetId) {
   const token = getToken();
-  const editUrl = baseUrl + "products/" + targetId;
+  const editUrl = herokuUrl + "products/" + targetId;
 
   const data = JSON.stringify({ title: titleValue, description: descriptionValue, price: priceValue, image_url: imageUrlValue, featured: isFeatured });
 

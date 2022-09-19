@@ -1,4 +1,5 @@
-import { baseUrl } from "../consts/baseUrl.js";
+// import { baseUrl } from "../consts/baseUrl.js";
+import { herokuUrl } from "../consts/herokuUrl.js";
 import { displayMessage } from "../feedback/displayMessage.js";
 import { getToken } from "../storage/storage.js";
 
@@ -6,7 +7,7 @@ export async function deleteProduct({ id, title }) {
   console.log("yes");
   console.log(id);
   const token = getToken();
-  const deleteUrl = baseUrl + "products/" + id;
+  const deleteUrl = herokuUrl + "products/" + id;
 
   const options = {
     method: "DELETE",

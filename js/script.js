@@ -2,8 +2,7 @@
 import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
 import { createNavMenu } from "../components/createElements/createNavMenu.js";
 
-import { baseUrl } from "../components/consts/baseUrl.js";
-
+import { herokuUrl } from "../components/consts/herokuUrl.js";
 import { getHeroImage } from "../components/apicalls/getHeroImage.js";
 import { getHomeProducts } from "../components/apicalls/getHomeProducts.js";
 import { cartInfo } from "../components/createElements/cartInfo.js";
@@ -13,16 +12,15 @@ createNavMenu();
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
 
-// getFeatured(baseUrl);
 cartInfo();
-getHomeProducts(baseUrl);
+getHomeProducts(herokuUrl);
 
-const getImage = await getHeroImage(baseUrl);
+const getImage = await getHeroImage(herokuUrl);
 
-console.log(getImage);
+console.log(getImage.hero_banner.url);
 
-console.log(getImage.hero_banner);
-const theheroImage = baseUrl + "uploads/hero_a52ba3f4d8.jpg";
+// console.log(getImage.hero_banner);
+const theheroImage = getImage.hero_banner.url;
 
 const heroContainer = document.querySelector(".hero-image-container");
 heroContainer.innerHTML = `

@@ -1,6 +1,5 @@
 import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
 import { submitLoginForm } from "../components/formSubmissions/submitLoginForm.js";
-import { baseUrl } from "../components/consts/baseUrl.js";
 import { checkEmail, validateEmail, validatePassword } from "../components/validations/index.js";
 import { createNavMenu } from "../components/createElements/createNavMenu.js";
 

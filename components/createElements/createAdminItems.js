@@ -3,7 +3,8 @@ const spinner = document.querySelector(".spinner-container");
 import { startEdit } from "../ui/startEdit.js";
 import { startDeletion } from "../ui/startDeletion.js";
 import { getAllProducts } from "../apicalls/getAllProducts.js";
-import { baseUrl } from "../consts/baseUrl.js";
+// import { baseUrl } from "../consts/baseUrl.js";
+import { herokuUrl } from "../consts/herokuUrl.js";
 
 export function createAdminItems(products) {
   itemContainer.innerHTML = "";

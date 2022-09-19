@@ -1,7 +1,8 @@
 import { getAllProducts } from "../components/apicalls/getAllProducts.js";
 import { createNavMenu } from "../components/createElements/createNavMenu.js";
 import { getUser, getToken } from "../components/storage/storage.js";
-import { baseUrl } from "../components/consts/baseUrl.js";
+// import { baseUrl } from "../components/consts/baseUrl.js";
+
 import { createAdminItems } from "../components/createElements/createAdminItems.js";
 import { createProductModal } from "../components/createElements/createProductModal.js";
 import { logoutPanel } from "../components/createElements/logoutPanel.js";
@@ -12,6 +13,7 @@ import { searchForProduct } from "../components/ui/searchForProduct.js";
 import { searchControlAndClearSearch } from "../components/ui/searchControlAndClearSearch.js";
 import { createBreadcrumbs } from "../components/createElements/breadcrumbs.js";
 import { fixMenuPosition } from "../components/ui/fixMenuPosition.js";
+import { herokuUrl } from "../components/consts/herokuUrl.js";
 
 const user = getUser();
 const token = getToken();
@@ -32,7 +34,7 @@ const header = document.querySelector(".admin-header");
 header.innerHTML = `Welcome to the admin control panel: ${user.username}`;
 const adminItemHeader = document.querySelector(".item-header");
 adminItemHeader.innerHTML = "List of products";
-const products = await getAllProducts(baseUrl);
+const products = await getAllProducts(herokuUrl);
 // console.log(products);
 
 createAdminItems(products);
