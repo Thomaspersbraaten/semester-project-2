@@ -2,6 +2,7 @@
 *breadcrumbs function | DONE
 * knapp for hvert product i cart som fjerner dem fra cart. | DONE
  * bedre feedback når ting er added/removed to cart | DONE
+ input i cart ? | DONE
  
  FIX 
  * search i admin. etter edit og search cleared er ikke repopulation av vindu korrekt. gammel data på produkter
@@ -9,4 +10,5 @@
 * try catch i alle apicalls 
 * sort arrays by ID in store\home\admin
 * comment alt
-* input i cart ?
+* console error favicon i chrome
+

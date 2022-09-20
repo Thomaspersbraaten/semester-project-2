@@ -36,6 +36,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    & a {
+      display: flex;
+      text-decoration: none;
+      margin: auto;
+    }
   }
   &__header {
     color: black;

@@ -30,8 +30,14 @@
   }
 }
 .product-total {
-  text-decoration: underline;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  &__text {
+    text-decoration: underline;
+  }
 }
+
 // .image-container {
 //   max-height: 630px;
 //   overflow: hidden;
@@ -77,6 +83,7 @@ input[type="number"] {
   justify-content: center;
   text-align: center;
 }
+
 .amount-control {
   display: flex;
   align-items: center;
@@ -86,7 +93,7 @@ input[type="number"] {
 
   // }
   &__input {
-    width: 30px;
+    width: 40px;
     border-radius: 0px;
     text-align: center;
     border: 1px solid grey;

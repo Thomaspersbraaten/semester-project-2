@@ -16,22 +16,47 @@ export function cartPage() {
     items.forEach((item) => {
       const { title, description, price, image_url, id, amount } = item;
 
+      //   detailsContainer.innerHTML += `
+      // <div class="cart-item">
+      //     <a href="details.html?id=${id}"><img src="${image_url}" class="cart-item__img"></a>
+      //     <div>
+      //       <a href="details.html?id=${id}" style="text-decoration:none"><h2 class="cart-item__title">${title}</h2></a>
+      //       <p class="cart-item__price">Price: ${price},-</p>
+      //       <div class="amount-container">
+      //         <label for="amount-control__input">Amount</label>
+      //         <div class="amount-control">
+      //           <i class="fa-regular fa-square-minus amount-control__minus" data-id="${id}"></i>
+      //           <input type="number" class="amount-control__input" id="amount-control__input" value="${amount}" data-id="${id}" min="1">
+      //           <i class="fa-regular fa-square-plus amount-control__plus" data-id="${id}"></i>
+      //         </div>
+      //       </div>
+      //     </div>
+      //     <div class="product-total">
+      //     <p class="product-total__text">Total: ${price * amount},-</p>
+      //     </div>
+      //     <div class="cart-action-remove">
+      //     <i class="fa-regular fa-circle-xmark cart-action-remove__x" data-id="${id}"></i>
+      //     <p class="cart-action-remove__text">Remove</p>
+      //     </div>
+      // </div>
+      // `;
       detailsContainer.innerHTML += ` 
     <div class="cart-item">
         <a href="details.html?id=${id}"><img src="${image_url}" class="cart-item__img"></a>
         <div>
           <a href="details.html?id=${id}" style="text-decoration:none"><h2 class="cart-item__title">${title}</h2></a>
           <p class="cart-item__price">Price: ${price},-</p>
-          <div class="amount-container">
-            <label for="amount-control__input">Amount</label>
-            <div class="amount-control">
-              <i class="fa-regular fa-square-minus amount-control__minus" data-id="${id}"></i>
-              <input type="number" class="amount-control__input" id="amount-control__input" value="${amount}" data-id="${id}">
-              <i class="fa-regular fa-square-plus amount-control__plus" data-id="${id}"></i>
-            </div>
-          </div>
+     
         </div>
         <div class="product-total">
+        <div class="amount-container">
+        <label for="amount-control__input">Amount</label>
+        <div class="amount-control">
+          <i class="fa-regular fa-square-minus amount-control__minus" data-id="${id}"></i>
+          <input type="number" class="amount-control__input" id="amount-control__input" value="${amount}" data-id="${id}" min="1">
+          <i class="fa-regular fa-square-plus amount-control__plus" data-id="${id}"></i>
+        </div>
+      </div>
         <p class="product-total__text">Total: ${price * amount},-</p> 
         </div>
         <div class="cart-action-remove">
@@ -66,22 +91,40 @@ export function cartPage() {
   const amountMinus = document.querySelectorAll(".amount-control__minus");
   const inputNodes = document.querySelectorAll(".amount-control__input");
   const inputArray = Array.from(inputNodes);
-  // legge til funksjon ved input keyup?
+
+  inputArray.forEach((input) => {
+    input.addEventListener("keyup", (event) => {
+      const targetId = event.target.dataset.id;
+      const targetInput = inputArray.find((input) => {
+        return input.dataset.id === targetId;
+      });
+
+      let inputValue = parseInt(targetInput.value);
+      console.log(inputValue);
+
+      const clickedProduct = items.find((item) => {
+        return item.id === parseInt(targetId);
+      });
+      console.log(clickedProduct);
+      clickedProduct.amount = inputValue;
+      if (!targetInput.value || targetInput.value < 1) {
+        clickedProduct.amount = 1;
+      }
+
+      setTimer(items);
+    });
+  });
 
   amountMinus.forEach((minus) => {
     minus.addEventListener("click", (event) => {
-      // updateValue(event);
-      // const targetId = parseInt(event.target.dataset.id);
       const targetId = event.target.dataset.id;
 
-      // console.log(inputGroup);
       const targetInput = inputArray.find((input) => {
         return input.dataset.id === targetId;
       });
       let inputValue = parseInt(targetInput.value);
 
       if (inputValue === 1) {
-        console.log("return");
         return;
       }
 
@@ -93,23 +136,14 @@ export function cartPage() {
       });
       clickedProduct.amount = inputValue;
 
-      // const cart = getCart();
-      // const filteredProducts = cart.filter((product) => {
-      //   return clickedProduct.id != product.id;
-      // });
-
-      // setTimer(filteredProducts, inputValue, clickedProduct);
       setTimer(items);
     });
   });
   const amountPlus = document.querySelectorAll(".amount-control__plus");
   amountPlus.forEach((plus) => {
     plus.addEventListener("click", (event) => {
-      // updateValue(event);
-      // const targetId = parseInt(event.target.dataset.id);
       const targetId = event.target.dataset.id;
 
-      // console.log(inputGroup);
       const targetInput = inputArray.find((input) => {
         return input.dataset.id === targetId;
       });
@@ -125,13 +159,6 @@ export function cartPage() {
       clickedProduct.amount = inputValue;
       console.log(clickedProduct);
       console.log(items);
-
-      // const cart = getCart();
-      // const filteredProducts = cart.filter((product) => {
-      //   return clickedProduct.id != product.id;
-      // });
-
-      // setTimer(items, inputValue, clickedProduct);
       setTimer(items);
     });
   });
@@ -151,7 +178,7 @@ export function cartPage() {
       saveCart(newArray);
       cartPage();
       setupCartInfo();
-    }, 1000);
+    }, 1300);
   }
 
   // console.log(qtyInput);
