@@ -32,7 +32,7 @@ export async function deleteProduct({ id, title }) {
       backToAdminBtn.addEventListener("click", () => {
         location.href = "/admin.html";
       });
-      displayMessage("alert-success", `<div><p>Deletion of this product was succesfull:</p><h2>"${title}"</h2><p>Click the button to go back</p></div>`, ".modal-form__message");
+      displayMessage("alert-success", `<div><p>Deletion of this product was succesfull:</p><h2>"${title}"</h2><p>Click the button to go back</p></div>`, ".modal-form-message");
       // location.reload();
 
       // legg inn blank form med succemessage og back button.
