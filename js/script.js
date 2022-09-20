@@ -19,4 +19,7 @@ const heroContainer = document.querySelector(".hero-image-container");
 const getImage = await getHeroImage(herokuUrl);
 const theheroImage = getImage.hero_banner.url;
 
-heroContainer.innerHTML = `<img src="${theheroImage}" class="hero-image-container__image">`;
+heroContainer.innerHTML = `
+<img src="${theheroImage}" class="hero-image-container__image">
+<div class="hero-image-container__filter"></div>
+`;

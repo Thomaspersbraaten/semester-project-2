@@ -7,7 +7,7 @@ export function productCard(product) {
   const isProductInCart = cartContents.some((item) => {
     return item.id === id;
   });
-  console.log(isProductInCart);
+
   if (!isProductInCart) {
     return `
     <a href="details.html?id=${id}" style="text-decoration:none" class="card col scale">
@@ -22,12 +22,14 @@ export function productCard(product) {
       </div>
     </a>
     `;
-  } else {
+  }
+  // If product is in the cart, Add a small ribbon on the card letting the user know that the product is in the cart.
+  else {
     return `
     <a href="details.html?id=${id}" style="text-decoration:none" class="card col scale">
       <div class="img-container">
         <img class="card__img" src="${image_url}" alt="${title}">
-        <p class="card-cart-status">in cart</p>
+        <p class="card-cart-status">In cart</p>
       </div>
       <div class="card-body">
         <h3 class="card-title">${title}</h3>
