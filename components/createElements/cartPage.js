@@ -1,4 +1,5 @@
 import { getCart, saveCart } from "../storage/storage.js";
+import { updateCartAmounts } from "../ui/updateCartAmounts.js";
 // import { cartInfo } from "./cartInfo.js";
 import { setupCartInfo } from "./pageSetup/index.js";
 
@@ -98,88 +99,72 @@ export function cartPage() {
       const targetInput = inputArray.find((input) => {
         return input.dataset.id === targetId;
       });
-
       let inputValue = parseInt(targetInput.value);
-      console.log(inputValue);
-
       const clickedProduct = items.find((item) => {
         return item.id === parseInt(targetId);
       });
-      console.log(clickedProduct);
       clickedProduct.amount = inputValue;
       if (!targetInput.value || targetInput.value < 1) {
         clickedProduct.amount = 1;
       }
-
-      setTimer(items);
+      updateCartAmounts(items);
     });
   });
 
   amountMinus.forEach((minus) => {
     minus.addEventListener("click", (event) => {
       const targetId = event.target.dataset.id;
-
       const targetInput = inputArray.find((input) => {
         return input.dataset.id === targetId;
       });
       let inputValue = parseInt(targetInput.value);
-
       if (inputValue === 1) {
         return;
       }
-
       inputValue = inputValue - 1;
       targetInput.value = inputValue;
-
       const clickedProduct = items.find((item) => {
         return item.id === parseInt(targetId);
       });
       clickedProduct.amount = inputValue;
-
-      setTimer(items);
+      updateCartAmounts(items);
     });
   });
   const amountPlus = document.querySelectorAll(".amount-control__plus");
   amountPlus.forEach((plus) => {
     plus.addEventListener("click", (event) => {
       const targetId = event.target.dataset.id;
-
       const targetInput = inputArray.find((input) => {
         return input.dataset.id === targetId;
       });
       let inputValue = parseInt(targetInput.value);
-
       inputValue = inputValue + 1;
       targetInput.value = inputValue;
-
       const clickedProduct = items.find((item) => {
         return item.id === parseInt(targetId);
       });
-
       clickedProduct.amount = inputValue;
-      console.log(clickedProduct);
-      console.log(items);
-      setTimer(items);
+      updateCartAmounts(items);
     });
   });
 
-  let timerID;
+  // let timerID;
 
-  function setTimer(newArray, newValue, targetProduct) {
-    console.log("starting/restarting timer");
-    clearTimeout(timerID);
+  // function setTimer(newArray, newValue, targetProduct) {
+  //   console.log("starting/restarting timer");
+  //   clearTimeout(timerID);
 
-    timerID = setTimeout(() => {
-      console.log("finished");
-      // console.log(newArray, newValue, targetProduct);
-      // targetProduct.amount = newValue;
-      // newArray.push(targetProduct);
-      // console.log(newArray);
-      saveCart(newArray);
-      cartPage();
-      setupCartInfo();
-    }, 1300);
-  }
+  //   timerID = setTimeout(() => {
+  //     console.log("finished");
+  //     // console.log(newArray, newValue, targetProduct);
+  //     // targetProduct.amount = newValue;
+  //     // newArray.push(targetProduct);
+  //     // console.log(newArray);
+  //     saveCart(newArray);
+  //     cartPage();
+  //     setupCartInfo();
+  //   }, 1300);
+  // }
 
   // console.log(qtyInput);
   // const qtyMinus = document.querySelectorAll(".qty-control__minus");

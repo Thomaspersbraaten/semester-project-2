@@ -22,7 +22,8 @@ export function setupProductPage(product) {
           <img src="${image_url}" class="details-image">
         </div>
         <div class="price-and-button">
-          <p class="details-price">${price}</p>
+          <div class="card-stock details-stock"><i class="fa-solid fa-check"></i> 50+ in storage.</div>
+          <p class="details-price"> ${price}</p>
           <div class="btn-container"></div>
         </div>
     </div>

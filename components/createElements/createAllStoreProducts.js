@@ -11,4 +11,5 @@ export function createAllStoreProducts(products) {
   products.forEach((product) => {
     storeContainer.innerHTML += productCard(product);
   });
+  storeContainer.innerHTML += `<div class="hidden-flex-item"></div>`;
 }

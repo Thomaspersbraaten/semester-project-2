@@ -35,21 +35,42 @@
   background-color: #f9d5a7;
   // clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
   // z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 0.5rem 0rem 1rem 0rem;
   margin-bottom: 1rem;
   &__header {
-    padding: 0.1rem;
+    font-family: "fragile bombers", "Oswald", sans-serif;
+    padding: 0.4rem;
   }
   &__text {
-    padding: 0.25rem;
+    padding: 0.4rem;
+    font-family: "quicksand", sans-serif;
+    font-weight: bold;
   }
   &__button {
     margin: auto;
     display: flex;
-    background-color: $primary-color;
+    // background-color: $primary-color;
+    background: linear-gradient(to right, $primary-color 5%, #ef8b0855 95%);
+    background: rgb(255, 216, 165);
+    background: linear-gradient(180deg, rgba(255, 216, 165, 1) 0%, rgba(255, 182, 88, 1) 50%, rgba(255, 147, 0, 1) 100%);
     color: black;
+
+    transition: all 0.4s;
+    &:hover {
+      scale: 1.05;
+
+      border: 1px solid black;
+      color: black;
+    }
   }
+
   & a {
+    width: 166px;
+    margin: auto;
+    padding: 0px;
     text-decoration: none;
   }
 }
@@ -86,7 +107,20 @@
 @media (min-width: 700px) {
   .hero-info {
     position: absolute;
-    // transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    bottom: -15%;
+    left: 50%;
+    gap: 0.5rem;
+    background: #000000c2;
+    border-radius: 15px;
+    &__header,
+    &__text {
+      color: white;
+      margin: auto;
+      // background: #00000085;
+      border-radius: 15px;
+      padding: 0.5rem;
+    }
   }
 }
 
@@ -102,14 +136,48 @@
     display: flex;
   }
   .hero-info {
-    height: 100%;
-    position: absolute;
-    width: 350px;
-    background-color: #f9d5a7;
-    clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
-    z-index: 1;
+    // height: 100%;
+    // position: absolute;
+    // width: 350px;
+    // background-color: #f9d5a7;
+    // clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
+    // z-index: 1;
     &__header {
       font-size: 2;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .hero-info {
+    background: none;
+    position: relative;
+    &__header {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 25rem;
+      background: #000000c2;
+      left: -90rem;
+      width: 370px;
+    }
+    &__text {
+      position: absolute;
+
+      transform: translate(-50%, -50%);
+      background: #000000c2;
+      left: -92rem;
+      top: 31rem;
+      height: 65px;
+      width: 300px;
+    }
+    & a {
+      position: absolute;
+      top: 38rem;
+      transform: translate(-50%, -50%);
+      left: -93rem;
+      width: 250px;
+      & button {
+        padding: 0.8rem 2rem;
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+let timerID;
 export function productCartFeedback(productStatus) {
   const feedbackElement = document.querySelector(".feedback");
   feedbackElement.style.transition = "none";
@@ -35,6 +36,14 @@ export function productCartFeedback(productStatus) {
       });
     }
   }, 50);
+
+  function moveFeedbackToLeft() {
+    clearTimeout(timerID);
+    timerID = setTimeout(() => {
+      feedbackElement.style.left = "-50%";
+    }, 3000);
+  }
+  moveFeedbackToLeft();
 
   setTimeout(() => {
     feedbackElement.style.left = "50%";

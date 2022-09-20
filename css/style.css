@@ -12916,16 +12916,29 @@ p {
 /* clip-path: polygon(0 0, 100% 0, 59% 100%, 0 100%);*/
 .hero-info {
   background-color: #f9d5a7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.5rem 0rem 1rem 0rem;
   margin-bottom: 1rem;
 }
 
 .hero-info__header {
-  padding: 0.1rem;
+  font-family: "fragile bombers", "Oswald", sans-serif;
+  padding: 0.4rem;
 }
 
 .hero-info__text {
-  padding: 0.25rem;
+  padding: 0.4rem;
+  font-family: "quicksand", sans-serif;
+  font-weight: bold;
 }
 
 .hero-info__button {
@@ -12933,11 +12946,26 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #ef8b08;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #ef8b08), color-stop(95%, #ef8b0855));
+  background: linear-gradient(to right, #ef8b08 5%, #ef8b0855 95%);
+  background: #ffd8a5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffd8a5), color-stop(50%, #ffb658), to(#ff9300));
+  background: linear-gradient(180deg, #ffd8a5 0%, #ffb658 50%, #ff9300 100%);
+  color: black;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.hero-info__button:hover {
+  scale: 1.05;
+  border: 1px solid black;
   color: black;
 }
 
 .hero-info a {
+  width: 166px;
+  margin: auto;
+  padding: 0px;
   text-decoration: none;
 }
 
@@ -12969,6 +12997,19 @@ p {
 @media (min-width: 700px) {
   .hero-info {
     position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    bottom: -15%;
+    left: 50%;
+    gap: 0.5rem;
+    background: #000000c2;
+    border-radius: 15px;
+  }
+  .hero-info__header, .hero-info__text {
+    color: white;
+    margin: auto;
+    border-radius: 15px;
+    padding: 0.5rem;
   }
 }
 
@@ -12985,17 +13026,45 @@ p {
     display: -ms-flexbox;
     display: flex;
   }
-  .hero-info {
-    height: 100%;
-    position: absolute;
-    width: 350px;
-    background-color: #f9d5a7;
-    -webkit-clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
-    z-index: 1;
-  }
   .hero-info__header {
     font-size: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-info {
+    background: none;
+    position: relative;
+  }
+  .hero-info__header {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 25rem;
+    background: #000000c2;
+    left: -90rem;
+    width: 370px;
+  }
+  .hero-info__text {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: #000000c2;
+    left: -92rem;
+    top: 31rem;
+    height: 65px;
+    width: 300px;
+  }
+  .hero-info a {
+    position: absolute;
+    top: 38rem;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: -93rem;
+    width: 250px;
+  }
+  .hero-info a button {
+    padding: 0.8rem 2rem;
   }
 }
 
@@ -13012,7 +13081,26 @@ p {
 
 .card__img {
   width: 100%;
+  height: 100%;
+}
+
+.img-container {
   height: 40%;
+  position: relative;
+}
+
+.card-cart-status {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  background-color: orange;
+  width: 100%;
+  color: black;
+  rotate: 45deg;
+  padding: 0rem 0.5rem;
+  width: 110px;
+  top: 17px;
+  left: 60%;
 }
 
 .scale:hover {
@@ -13393,8 +13481,8 @@ label {
 }
 
 .btn {
-  -webkit-box-shadow: 1px 1px 5px black;
-          box-shadow: 1px 1px 5px black;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
   border: 1px solid black;
   margin: auto;
 }
@@ -13560,6 +13648,11 @@ label {
   gap: 1.2rem;
 }
 
+.details-stock {
+  font-size: 1.3rem;
+  margin: 1rem auto;
+}
+
 .description {
   border-radius: 10px 10px 0px 0px;
   text-transform: capitalize;
@@ -13722,10 +13815,6 @@ label {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
-}
-
-.product-total__text {
-  text-decoration: underline;
 }
 
 .cart-action-remove {

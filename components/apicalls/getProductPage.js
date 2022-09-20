@@ -1,4 +1,3 @@
-// import { setupProductPage } from "../createElements/setupProductPage.js";
 export async function getProductPage(url) {
   try {
     const response = await fetch(url);

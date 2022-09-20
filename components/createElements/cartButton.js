@@ -1,7 +1,7 @@
 import { productCartFeedback } from "../feedback/productCartFeedback.js";
 import { getCart, saveCart } from "../storage/storage.js";
 import { setupCartInfo } from "./pageSetup/setupCartInfo.js";
-
+// move this to UI
 export function cartButton(id, product) {
   let cartContents = getCart();
   setupCartInfo();
