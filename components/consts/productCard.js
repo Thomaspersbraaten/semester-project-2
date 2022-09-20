@@ -27,7 +27,7 @@ export function productCard(product) {
     <a href="details.html?id=${id}" style="text-decoration:none" class="card col scale">
       <div class="img-container">
         <img class="card__img" src="${image_url}" alt="${title}">
-        <p class="card-cart-status">In cart</p>
+        <p class="card-cart-status">in cart</p>
       </div>
       <div class="card-body">
         <h3 class="card-title">${title}</h3>

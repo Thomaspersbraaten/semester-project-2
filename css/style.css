@@ -13091,16 +13091,17 @@ p {
 
 .card-cart-status {
   position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   top: 0;
-  left: 0%;
   background-color: orange;
   width: 100%;
   color: black;
   rotate: 45deg;
   padding: 0rem 0.5rem;
   width: 110px;
-  top: 17px;
-  left: 60%;
+  top: 4rem;
+  right: -3.5rem;
 }
 
 .scale:hover {
