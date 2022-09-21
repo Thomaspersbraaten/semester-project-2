@@ -1,12 +1,9 @@
 import { getAllProducts } from "../components/apicalls/getAllProducts.js";
 import { createAllStoreProducts } from "../components/createElements/createAllStoreProducts.js";
-import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
-import { searchControlAndClearSearch } from "../components/ui/searchControlAndClearSearch.js";
-import { searchForProduct } from "../components/ui/searchForProduct.js";
-import { fixMenuPosition } from "../components/ui/fixMenuPosition.js";
 import { herokuUrl } from "../components/consts/herokuUrl.js";
 import { SetupBreadcrumbs, setupCartInfo, setupNavMenu } from "../components/createElements/pageSetup/index.js";
-import { sortProducts } from "../components/ui/sortProducts.js";
+import { hamburgerMenu, fixMenuPosition, scrollToTop, showAndHideScrollToTopBtn, sortProducts, searchForProduct, searchControlAndClearSearch } from "../components/ui/index.js";
+
 SetupBreadcrumbs();
 setupCartInfo();
 setupNavMenu();
@@ -43,3 +40,9 @@ sortingSelector.addEventListener("change", () => {
     createAllStoreProducts(sortedProducts);
   }
 });
+
+window.addEventListener("scroll", () => {
+  showAndHideScrollToTopBtn();
+});
+const scrollToTopBtn = document.querySelector(".fa-angle-up");
+scrollToTopBtn.addEventListener("click", scrollToTop);

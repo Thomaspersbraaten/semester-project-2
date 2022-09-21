@@ -13556,8 +13556,14 @@ label {
   background-color: white;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-angle-up:hover {
+  color: white;
+  scale: 1.1;
+  background-color: #0d6efd;
 }
 
 .modal-container {

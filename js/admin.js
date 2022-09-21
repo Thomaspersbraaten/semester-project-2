@@ -1,18 +1,9 @@
 import { getAllProducts } from "../components/apicalls/getAllProducts.js";
-// import { createNavMenu } from "../components/createElements/createNavMenu.js";
 import { getUser, getToken } from "../components/storage/storage.js";
-// import { baseUrl } from "../components/consts/baseUrl.js";
-
+import { scrollToTop, showAndHideScrollToTopBtn, hamburgerMenu, searchForProduct, searchControlAndClearSearch, fixMenuPosition } from "../components/ui/index.js";
 import { createAdminItems } from "../components/createElements/createAdminItems.js";
 import { createProductModal } from "../components/createElements/createProductModal.js";
 import { logoutPanel } from "../components/createElements/logoutPanel.js";
-// import { cartInfo } from "../components/createElements/cartInfo.js";
-import { hamburgerMenu } from "../components/ui/hamburgerMenu.js";
-// import { searchForAdminProduct } from "../components/ui/searchForAdminProduct.js";
-import { searchForProduct } from "../components/ui/searchForProduct.js";
-import { searchControlAndClearSearch } from "../components/ui/searchControlAndClearSearch.js";
-// import { createBreadcrumbs } from "../components/createElements/breadcrumbs.js";
-import { fixMenuPosition } from "../components/ui/fixMenuPosition.js";
 import { herokuUrl } from "../components/consts/herokuUrl.js";
 import { SetupBreadcrumbs, setupCartInfo, setupNavMenu } from "../components/createElements/pageSetup/index.js";
 
@@ -65,3 +56,11 @@ searchForm.addEventListener("keyup", () => {
 const logOutBtn = document.querySelector(".logout-btn");
 
 logOutBtn.addEventListener("click", logoutPanel);
+
+// Scroll
+
+window.addEventListener("scroll", (e) => {
+  showAndHideScrollToTopBtn();
+});
+const scrollToTopBtn = document.querySelector(".fa-angle-up");
+scrollToTopBtn.addEventListener("click", scrollToTop);
