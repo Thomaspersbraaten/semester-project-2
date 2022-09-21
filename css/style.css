@@ -12475,15 +12475,16 @@ fieldset:disabled .btn {
   }
 }
 
-body,
 html {
   margin: 0;
   height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13540,6 +13541,23 @@ label {
 .cancel {
   background-color: white;
   color: black;
+}
+
+.fa-angle-up {
+  padding: 0.5rem;
+  border: 2px solid #bfbfbf;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
+  cursor: pointer;
+  position: fixed;
+  right: 2rem;
+  bottom: 4rem;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .modal-container {
