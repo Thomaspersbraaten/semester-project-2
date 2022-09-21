@@ -15,7 +15,7 @@
 * try catch i alle apicalls 
 
 * comment alt
-
-
+* to the top button
+* chat?
 
 
