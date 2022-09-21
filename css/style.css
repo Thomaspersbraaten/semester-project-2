@@ -13089,6 +13089,15 @@ p {
   height: 100%;
 }
 
+.card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
 .img-container {
   height: 40%;
   position: relative;
@@ -13367,6 +13376,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
+  margin: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -13577,6 +13588,10 @@ label {
   display: none;
 }
 
+.padding {
+  padding: 1rem;
+}
+
 .modal {
   border-radius: 20px;
   border: 2px solid black;
@@ -13598,12 +13613,12 @@ label {
           flex-direction: column;
   width: 75%;
   max-width: 600px;
-  max-height: 75%;
+  max-height: 92%;
   height: auto;
 }
 
 .modal__btns {
-  margin: 2rem 1rem;
+  margin: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13629,7 +13644,12 @@ label {
 }
 
 .modal__header {
+  font-size: 1.3rem;
   color: black;
+}
+
+.fa-triangle-exclamation {
+  color: red;
 }
 
 .cancel,
@@ -13638,9 +13658,19 @@ label {
   text-align: center;
 }
 
-.fa-triangle-exclamation {
-  font-size: 3rem;
-  color: red;
+@media (min-width: 800px) {
+  .modal__header {
+    font-size: 2.5rem;
+  }
+  .fa-triangle-exclamation {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1140px) {
+  .fa-triangle-exclamation {
+    font-size: 3rem;
+  }
 }
 
 .details__header {

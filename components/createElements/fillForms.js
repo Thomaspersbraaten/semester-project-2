@@ -1,24 +1,23 @@
 export function fillForms(product, action) {
-  const title = document.querySelector("#title");
-  const desc = document.querySelector("#description");
-  const price = document.querySelector("#price");
-  const imageUrl = document.querySelector("#image-url");
+  const titleInput = document.querySelector("#title");
+  const descInput = document.querySelector("#description");
+  const priceInput = document.querySelector("#price");
+  const imageUrlInput = document.querySelector("#image-url");
   const isFeatured = document.querySelector(".form-check__input");
   const form = document.querySelector(".modal-form");
-
-  title.value = product.title;
-  desc.value = product.description;
-  price.value = product.price;
-  imageUrl.value = product.image_url;
-  isFeatured.checked = product.featured;
-  form.dataset.id = product.id;
+  const { id, image_url, title, price, featured, description } = product;
+  titleInput.value = title;
+  descInput.value = description;
+  priceInput.value = price;
+  imageUrlInput.value = image_url;
+  isFeatured.checked = featured;
+  form.dataset.id = id;
 
   if (action === "delete") {
-    console.log("this is delete");
-    title.disabled = true;
-    desc.disabled = true;
-    price.disabled = true;
-    imageUrl.disabled = true;
+    titleInput.disabled = true;
+    descInput.disabled = true;
+    priceInput.disabled = true;
+    imageUrlInput.disabled = true;
     isFeatured.disabled = true;
   }
 }

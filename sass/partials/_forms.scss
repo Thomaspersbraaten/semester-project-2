@@ -39,6 +39,8 @@
 }
 .modal-form-message {
   display: flex;
+  padding: 0;
+  margin: 0;
   justify-content: center;
 }
 .form-check {
@@ -136,6 +138,7 @@ label {
     // height: 100%;
   }
 }
+
 @media (min-width: 500px) {
   .login-form {
     max-width: 480px;

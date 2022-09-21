@@ -17,4 +17,7 @@
 * try catch i alle apicalls 
 * comment alt
 * forms have to scroll on smaller screens
-
+* fix flex på produkter
+* fix spinner på alle loading sider
+* fix footer\wrapper på alle sider
+* main 100% heigth...da funker ikke scroll to top
