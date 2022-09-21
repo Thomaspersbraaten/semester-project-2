@@ -22,6 +22,7 @@ export async function editProduct(titleValue, descriptionValue, priceValue, imag
     console.log(json);
     if (json.updated_at) {
       displayMessage("alert-success", "Product was succesfully edited!", ".modal-form-message");
+
       const form = document.querySelector(".modal-form");
       const modalButtons = document.querySelector(".modal__btns");
       // modalButtons.innerHTML = `<button class="btn btn-large back-to-admin" >Back to admin panel</button>`;

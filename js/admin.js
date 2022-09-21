@@ -2,7 +2,8 @@ import { getAllProducts } from "../components/apicalls/getAllProducts.js";
 import { getUser, getToken } from "../components/storage/storage.js";
 import { scrollToTop, showAndHideScrollToTopBtn, hamburgerMenu, searchForProduct, searchControlAndClearSearch, fixMenuPosition } from "../components/ui/index.js";
 import { createAdminItems } from "../components/createElements/createAdminItems.js";
-import { createProductModal } from "../components/createElements/createProductModal.js";
+// import { createProductModal } from "../components/createElements/createProductModal.js";
+import { createNewProductPanel } from "../components/createElements/createNewProductPanel.js";
 import { logoutPanel } from "../components/createElements/logoutPanel.js";
 import { herokuUrl } from "../components/consts/herokuUrl.js";
 import { SetupBreadcrumbs, setupCartInfo, setupNavMenu } from "../components/createElements/pageSetup/index.js";
@@ -40,7 +41,7 @@ searchInput.placeholder = `search among ${products.length} products`;
 
 // Create
 const createBtn = document.querySelector(".create-btn");
-createBtn.addEventListener("click", createProductModal);
+createBtn.addEventListener("click", createNewProductPanel);
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();

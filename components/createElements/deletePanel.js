@@ -18,6 +18,8 @@ export function deletePanel(product) {
   btnConfirm.classList.add("btn-danger");
   modalHeader.innerHTML = "Are you sure you want to delete this product?";
   modalHeader.style.color = "red";
+  const modalMessageContainer = document.querySelector(".modal-form-message");
+  modalMessageContainer.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>`;
 
   // Cancel actions
   btnCancel.addEventListener("click", () => {

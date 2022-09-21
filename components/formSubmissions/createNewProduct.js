@@ -30,8 +30,18 @@ export async function createNewProduct(titleValue, descriptionValue, priceValue,
     if (json.created_at) {
       displayMessage("alert-success", "Product was succesfully created!", ".modal-form-message");
       // Repopulates the container with updated items.
-      const products = await getAllProducts(herokuUrl);
-      createAdminItems(products);
+      // const products = await getAllProducts(herokuUrl);
+      // createAdminItems(products);
+
+      const form = document.querySelector(".modal-form");
+      const modalButtons = document.querySelector(".modal__btns");
+      // modalButtons.innerHTML = `<button class="btn btn-large back-to-admin" >Back to admin panel</button>`;
+      form.style.display = "none";
+      modalButtons.innerHTML = `
+      <a href="admin.html">
+        <button class="btn btn-large back-to-admin">Back to admin panel</button>
+      </a>
+      `;
     }
     if (json.error) {
       displayMessage("alert-warning", "Product creation has failed", ".modal-form-message");

@@ -12,24 +12,26 @@ export function createAdminItems(products) {
   itemContainer.style.opacity = "1";
   spinner.style.display = "none";
   products.forEach((product) => {
+    const { id, image_url, title, price } = product;
     itemContainer.innerHTML += `
         <div class="card col">
-            <img class="card__img img-fluid" src="${product.image_url}" alt="${product.title}">
+            <img class="card__img img-fluid" src="${image_url}" alt="${title}">
             <div class="card-body">
-              <h3 class="card-title" >${product.title}</h3>
-              <p class="card-price">${product.price}</p>
+              <h3 class="card-title" >${title}</h3>
+              <p class="card-price">${price}</p>
               <div class="card-action">
-                <div class="card-action__edit" data-id="${product.id}">
-                    <i class="fa-solid fa-pen-to-square" data-id="${product.id}"></i>
-                    <p data-id="${product.id}">Edit</p>
+                <div class="card-action__edit" data-id="${id}">
+                    <i class="fa-solid fa-pen-to-square" data-id="${id}"></i>
+                    <p data-id="${id}">Edit</p>
                 </div>
-                <div class="card-action__delete" data-id="${product.id}">
-                    <i class="fa-solid fa-trash" data-id="${product.id}"></i>
-                    <p data-id="${product.id}"> Delete</p>
+                <div class="card-action__delete" data-id="${id}">
+                    <i class="fa-solid fa-trash" data-id="${id}"></i>
+                    <p data-id="${id}">Delete</p>
                 </div>
              </div>
         </div>
         `;
+    // Edit
     const editBtn = document.querySelectorAll(".card-action__edit");
     editBtn.forEach((button) => {
       button.addEventListener("click", (btn) => {
@@ -48,6 +50,4 @@ export function createAdminItems(products) {
       });
     });
   });
-
-  // Edit
 }

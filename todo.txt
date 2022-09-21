@@ -10,12 +10,11 @@
  FIX 
  * console error favicon i chrome ??
  * search i admin. etter edit og search cleared er ikke repopulation av vindu korrekt. gammel data på produkter
+* to the top button | DONE
+
 
 
 * try catch i alle apicalls 
-
 * comment alt
-* to the top button
-* chat?
-
+* forms have to scroll on smaller screens
 
