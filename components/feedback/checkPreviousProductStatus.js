@@ -2,7 +2,6 @@ export function checkPreviousProductStatus() {
   const detailsContainer = document.querySelector(".details-container");
   console.log(detailsContainer.lastChild.className);
   if (detailsContainer.lastChild.className === "added alert alert-danger") {
-    console.log("kek");
     const removed = document.querySelector(".removed");
     removed.remove();
   }

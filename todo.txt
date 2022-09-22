@@ -22,5 +22,7 @@
 * main 100% heigth...da funker ikke scroll to top
 * legge til fler properties på product
 * alt text på product bilder?
+* alt text i API og add/edit?
 * sort mens man søker
 * fix edit og delete visual
+* fade inn på modal?

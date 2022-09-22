@@ -12,7 +12,7 @@ export function setupProductPage(product) {
     <h1 class="details__header">${title}</h1>
     <div class="img-price-btn">
         <div class="image-container">
-          <img src="${image_url}" class="details-image">
+          <img src="${image_url}" class="details-image" alt="${title}">
         </div>
         <div class="price-and-button">
           <div class="card-stock details-stock"><i class="fa-solid fa-check"></i> 50+ in storage.</div>

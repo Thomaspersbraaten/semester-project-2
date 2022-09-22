@@ -2,7 +2,7 @@ import { getAllProducts } from "../components/apicalls/getAllProducts.js";
 import { createAllStoreProducts } from "../components/createElements/createAllStoreProducts.js";
 import { herokuUrl } from "../components/consts/herokuUrl.js";
 import { SetupBreadcrumbs, setupCartInfo, setupNavMenu } from "../components/createElements/pageSetup/index.js";
-import { hamburgerMenu, fixMenuPosition, sortProducts, searchForProduct, searchControlAndClearSearch } from "../components/ui/index.js";
+import { hamburgerMenu, fixMenuPosition, sortProducts, searchForProduct, searchControlAndClearSearch, scrollToTop, showAndHideScrollToTopBtn } from "../components/ui/index.js";
 // import { homeProducts } from "../components/createElements/homeProducts.js";
 // import { populateContainerWithCards } from "../components/createElements/populateContainerWithCards.js";
 
@@ -50,3 +50,10 @@ sortingSelector.addEventListener("change", () => {
     createAllStoreProducts(sortedProducts);
   }
 });
+
+document.body.addEventListener("scroll", () => {
+  showAndHideScrollToTopBtn();
+});
+
+const scrollToTopBtn = document.querySelector(".fa-angle-up");
+scrollToTopBtn.addEventListener("click", scrollToTop);

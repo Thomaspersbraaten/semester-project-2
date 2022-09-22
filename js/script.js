@@ -31,12 +31,14 @@ products.forEach((product) => {
   }
 });
 
-// function test() {
-//   main.addEventListener("scroll", (e) => {
-//     showAndHideScrollToTopBtn();
-//   });
-//   const scrollToTopBtn = document.querySelector(".fa-angle-up");
-//   scrollToTopBtn.addEventListener("click", scrollToTop);
-// }
+// Scroll to top
+// const body = document.body;
+// body.addEventListener("scroll", () => {
+//   showAndHideScrollToTopBtn();
+// });
+document.body.addEventListener("scroll", () => {
+  showAndHideScrollToTopBtn();
+});
 
-// test();
+const scrollToTopBtn = document.querySelector(".fa-angle-up");
+scrollToTopBtn.addEventListener("click", scrollToTop);

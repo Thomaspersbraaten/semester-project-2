@@ -13,7 +13,7 @@ export function cartButton(id, product) {
 
   if (!isProductInCart) {
     btnContainer.innerHTML = `
-    <button class="btn btn-large btn-cart--add">Add to Cart </button>`;
+    <button class="btn btn-large btn-cart--add">Add to Cart</button>`;
     const AddToCartBtn = document.querySelector(".btn-cart--add");
     AddToCartBtn.addEventListener("click", () => {
       product.amount = 1;
@@ -27,15 +27,12 @@ export function cartButton(id, product) {
   }
   if (isProductInCart) {
     btnContainer.innerHTML = `
-    <button class="btn btn-large btn-cart--remove">Remove from cart </button>`;
-
+    <button class="btn btn-large btn-cart--remove">Remove from cart</button>`;
     const removeFromCartBtn = document.querySelector(".btn-cart--remove");
-
     removeFromCartBtn.addEventListener("click", () => {
       const newArray = cartContents.filter((item) => {
         return item.id != id;
       });
-
       saveCart(newArray);
       cartButton(id, product);
       productCartFeedback(isProductInCart);

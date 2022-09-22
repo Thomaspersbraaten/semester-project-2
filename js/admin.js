@@ -57,13 +57,9 @@ logOutBtn.addEventListener("click", logoutPanel);
 
 // Scroll
 
-// window.addEventListener("scroll", (e) => {
-//   showAndHideScrollToTopBtn();
-// });
-// const scrollToTopBtn = document.querySelector(".fa-angle-up");
-// scrollToTopBtn.addEventListener("click", scrollToTop);
+document.body.addEventListener("scroll", () => {
+  showAndHideScrollToTopBtn();
+});
 
-// const header = document.querySelector(".admin-header");
-// header.innerHTML = `Welcome to the admin page`;
-// const adminItemHeader = document.querySelector(".item-header");
-// adminItemHeader.innerHTML = "List of products";
+const scrollToTopBtn = document.querySelector(".fa-angle-up");
+scrollToTopBtn.addEventListener("click", scrollToTop);

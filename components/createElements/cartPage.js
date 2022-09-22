@@ -43,27 +43,26 @@ export function cartPage() {
       // `;
       detailsContainer.innerHTML += ` 
     <div class="cart-item">
-        <a href="details.html?id=${id}"><img src="${image_url}" class="cart-item__img"></a>
-        <div>
-          <a href="details.html?id=${id}" style="text-decoration:none"><h2 class="cart-item__title">${title}</h2></a>
-          <p class="cart-item__price">Price: ${price},-</p>
-     
-        </div>
-        <div class="product-total">
-        <div class="amount-container">
-        <label for="amount-control__input">Amount</label>
-        <div class="amount-control">
-          <i class="fa-regular fa-square-minus amount-control__minus" data-id="${id}"></i>
-          <input type="number" class="amount-control__input" id="amount-control__input" value="${amount}" data-id="${id}" min="1">
-          <i class="fa-regular fa-square-plus amount-control__plus" data-id="${id}"></i>
-        </div>
+      <a href="details.html?id=${id}"><img src="${image_url}" class="cart-item__img"></a>
+      <div>
+        <a href="details.html?id=${id}" style="text-decoration:none"><h2 class="cart-item__title">${title}</h2></a>
+        <p class="cart-item__price">Price: ${price},-</p>
       </div>
-        <p class="product-total__text">Total: ${price * amount},-</p> 
+      <div class="product-total">
+        <div class="amount-container">
+          <label for="amount-control__input">Amount</label>
+          <div class="amount-control">
+            <i class="fa-regular fa-square-minus amount-control__minus" data-id="${id}"></i>
+            <input type="number" class="amount-control__input" id="amount-control__input" value="${amount}" data-id="${id}" min="1">
+            <i class="fa-regular fa-square-plus amount-control__plus" data-id="${id}"></i>
+          </div>
         </div>
-        <div class="cart-action-remove">
+        <p class="product-total__text">Total: ${price * amount},-</p> 
+      </div>
+      <div class="cart-action-remove">
         <i class="fa-regular fa-circle-xmark cart-action-remove__x" data-id="${id}"></i>
         <p class="cart-action-remove__text">Remove</p>
-        </div>
+      </div>
     </div>
     `;
       // const qtyMinus = document.querySelectorAll(".qty-control__minus");
