@@ -14,17 +14,17 @@ window.addEventListener("resize", fixMenuPosition);
 getHomeProducts(herokuUrl);
 
 // Sets up the hero image for the home page
-const heroContainer = document.querySelector(".hero-image-container");
-const getImage = await getHeroImage(herokuUrl);
-const theheroImage = getImage.hero_banner.url;
-
-heroContainer.innerHTML = `
-<img src="${theheroImage}" class="hero-image-container__image">
-<div class="hero-image-container__filter"></div>
-`;
+getHeroImage(herokuUrl);
+// const heroContainer = document.querySelector(".hero-image-container");
+// const getImage = await getHeroImage(herokuUrl);
 
 window.addEventListener("scroll", (e) => {
   showAndHideScrollToTopBtn();
 });
 const scrollToTopBtn = document.querySelector(".fa-angle-up");
 scrollToTopBtn.addEventListener("click", scrollToTop);
+// async function kekw() {
+//   return getHeroImage(herokuUrl);
+// }
+// const image = await kekw();
+// console.log(image);

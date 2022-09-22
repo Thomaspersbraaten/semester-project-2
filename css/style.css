@@ -12917,9 +12917,7 @@ p {
 /* clip-path: polygon(0 0, 100% 0, 59% 100%, 0 100%);*/
 .hero-info {
   background-color: #f9d5a7;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
