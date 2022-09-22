@@ -10,10 +10,11 @@ import { SetupBreadcrumbs, setupCartInfo, setupNavMenu } from "../components/cre
 
 const user = getUser();
 const token = getToken();
-
+// Redirect to home page if the user is not logged in
 if (token.length === 0 || !user.id) {
   location.href = "/";
 }
+// Initial page setup
 SetupBreadcrumbs();
 setupCartInfo();
 setupNavMenu();
@@ -21,27 +22,19 @@ window.addEventListener("resize", fixMenuPosition);
 
 const hamburgerButton = document.querySelector(".hamburger");
 hamburgerButton.addEventListener("click", hamburgerMenu);
+
 // Setup the admin page
-const header = document.querySelector(".admin-header");
-header.innerHTML = `Welcome to the admin page`;
-const adminItemHeader = document.querySelector(".item-header");
-adminItemHeader.innerHTML = "List of products";
+
 const products = await getAllProducts(herokuUrl);
 // console.log(products);
 products.sort(function (a, b) {
   return a.id - b.id;
 });
-console.log(products);
 
 createAdminItems(products);
 const searchForm = document.querySelector(".search-form");
 const searchInput = document.querySelector("#search");
-const searchX = document.querySelector(".search-form__x");
-searchInput.placeholder = `search among ${products.length} products`;
-
-// Create
-const createBtn = document.querySelector(".create-btn");
-createBtn.addEventListener("click", createNewProductPanel);
+searchInput.placeholder = `Search among ${products.length} products`;
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -51,6 +44,10 @@ searchForm.addEventListener("submit", (event) => {
 searchForm.addEventListener("keyup", () => {
   searchControlAndClearSearch(products);
 });
+
+// Create
+const createBtn = document.querySelector(".create-btn");
+createBtn.addEventListener("click", createNewProductPanel);
 
 // logout
 
@@ -65,3 +62,8 @@ logOutBtn.addEventListener("click", logoutPanel);
 // });
 // const scrollToTopBtn = document.querySelector(".fa-angle-up");
 // scrollToTopBtn.addEventListener("click", scrollToTop);
+
+// const header = document.querySelector(".admin-header");
+// header.innerHTML = `Welcome to the admin page`;
+// const adminItemHeader = document.querySelector(".item-header");
+// adminItemHeader.innerHTML = "List of products";

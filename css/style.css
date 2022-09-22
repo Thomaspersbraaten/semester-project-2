@@ -12961,13 +12961,6 @@ p {
   color: black;
 }
 
-.hero-info a {
-  width: 175px;
-  margin: auto;
-  padding: 0px;
-  text-decoration: none;
-}
-
 .hero-container {
   position: relative;
 }
@@ -13142,7 +13135,7 @@ p {
   background-color: #ef8b08;
   color: white;
   padding: 0px 0.75rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   display: inline;
   margin: 1rem auto;
@@ -13497,10 +13490,14 @@ label {
 }
 
 .btn {
-  -webkit-box-shadow: 2px 2px 4px black;
-          box-shadow: 2px 2px 4px black;
-  border: 1px solid black;
+  -webkit-box-shadow: 2px 2px 4px #585858;
+          box-shadow: 2px 2px 4px #585858;
+  border: none;
   margin: auto;
+}
+
+.logout-btn {
+  background-color: #ef8b08;
 }
 
 .card-action__delete:hover,
@@ -13549,29 +13546,6 @@ label {
 .cancel {
   background-color: white;
   color: black;
-}
-
-.fa-angle-up {
-  padding: 0.5rem;
-  border: 2px solid #bfbfbf;
-  border-radius: 50%;
-  -webkit-box-shadow: 1px 1px 5px black;
-          box-shadow: 1px 1px 5px black;
-  cursor: pointer;
-  position: fixed;
-  right: 2rem;
-  bottom: 4rem;
-  background-color: white;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.fa-angle-up:hover {
-  color: white;
-  scale: 1.1;
-  background-color: #0d6efd;
 }
 
 .modal-container {

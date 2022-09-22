@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
-    <script src="./js/login.js" type="module" defer></script>
+
 </head>
 
 <body>
@@ -70,12 +70,13 @@
                 <h2>If you have an admin account, please login using the form below.</h2>
                 <div class="login-form__message-container alert"></div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" autocomplete="off">
+                    <label for="email" class="form-label">Email address</label>
+                    <!-- <input type="email" class="form-control" id="email" aria-describedby="emailHelp" autocomplete="off"> -->
+                    <input type="email" class="form-control" id="email" autocomplete="off">
                     <p class="email-error error-message">Please input a valid email</p>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" autocomplete="off">
                     <p class="password-error error-message">Please input a password</p>
                 </div>
@@ -106,7 +107,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
+    <script src="./js/login.js" type="module"></script>
 </body>
 
 </html>

@@ -17,14 +17,13 @@ export function productCard(product) {
       <div class="card-body">
         <h3 class="card-title">${title}</h3>
         <div class="card-stock"><i class="fa-solid fa-check"></i> 50+ in storage.</div>
-        <p class="card-price">${price}</p>
+        <p class="card-price">${price},-</p>
         <button class="btn btn-primary">View Product</button>
       </div>
     </a>
     `;
   }
   // If product is in the cart, Add a small ribbon on the card letting the user know that the product is in the cart.
-  // img-container.innerhtml + `p` ?
   else {
     return `
     <a href="details.html?id=${id}" style="text-decoration:none" class="card col scale">
@@ -35,22 +34,10 @@ export function productCard(product) {
       <div class="card-body">
         <h3 class="card-title">${title}</h3>
         <div class="card-stock"><i class="fa-solid fa-check"></i> 50+ in storage.</div>
-        <p class="card-price">${price}</p>
+        <p class="card-price">${price},-</p>
         <button class="btn btn-primary">View Product</button>
       </div>
     </a>
     `;
   }
 }
-
-// return `
-// <a href="details.html?id=${id}" style="text-decoration:none" class="card col scale">
-//   <img class="card__img" src="${image_url}" alt="${title}">
-//   <div class="card-body">
-//     <h3 class="card-title">${title}</h3>
-//     <div class="card-stock"><i class="fa-solid fa-check"></i> 50+ in storage.</div>
-//     <p class="card-price">${price}</p>
-//     <button class="btn btn-primary">View Product</button>
-//   </div>
-// </a>
-// `;
