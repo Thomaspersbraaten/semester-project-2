@@ -6,6 +6,7 @@ html {
 }
 
 body {
+  height: 100%;
   overflow-x: hidden;
   margin: 0;
   // height: 100vh;
@@ -80,10 +81,10 @@ header {
 //   margin: auto;
 // }
 
-.admin-item-container {
-  opacity: 0;
-  transition: opacity 0.7s;
-}
+// .admin-item-container {
+//   opacity: 0;
+//   transition: opacity 0.7s;
+// }
 
 .spinner-container {
   display: flex;

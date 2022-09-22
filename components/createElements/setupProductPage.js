@@ -1,15 +1,8 @@
-import { productCard } from "../consts/productCard.js";
-import { getCart } from "../storage/storage.js";
 import { cartButton } from "./cartButton.js";
 export function setupProductPage(product) {
-  const spinner = document.querySelector(".spinner-container");
-  spinner.innerHTML = "";
-
-  // export function setupProductPage({ title, description, image_url, price, id }) {
   const detailsContainer = document.querySelector(".details");
   const { title, description, image_url, price, id } = product;
 
-  //   console.log(image_url);
   //   add meta desc
   // https://www.w3schools.com/tags/tag_meta.asp
   document.title = `${title}`;
@@ -37,7 +30,10 @@ export function setupProductPage(product) {
   cartButton(id, product);
 
   // meta
+  // shorten the product description to the first 125 characters
+  const shortDescription = description.substring(0, 125);
+
   const metaDescription = document.querySelector("#meta-description");
 
-  metaDescription.content = `${description}`;
+  metaDescription.content = `${shortDescription}`;
 }

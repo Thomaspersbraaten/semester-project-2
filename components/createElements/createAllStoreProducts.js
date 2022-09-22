@@ -1,15 +1,12 @@
-import { productCard } from "../consts/productCard.js";
+// import { productCard } from "../consts/productCard.js";
+// import { homeProducts } from "./homeProducts.js";
+import { populateContainerWithCards } from "./populateContainerWithCards.js";
 
-// Clears store container and removes spinner
-// Fills the store container with customer facing product cards
+// Clears store container and fills the store container with customer facing product cards
 export function createAllStoreProducts(products) {
   const storeContainer = document.querySelector(".store-item-container");
   storeContainer.innerHTML = "";
-  const spinner = document.querySelector(".spinner-container");
-  spinner.style.display = "none";
-
   products.forEach((product) => {
-    storeContainer.innerHTML += productCard(product);
+    populateContainerWithCards(product, ".store-item-container");
   });
-  storeContainer.innerHTML += `<div class="hidden-flex-item"></div>`;
 }

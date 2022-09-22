@@ -1,4 +1,4 @@
-import { getCart } from "../storage/storage.js";
+import { getCart } from "../../storage/storage.js";
 
 // Returns the product card for customer facing pages
 export function productCard(product) {
@@ -24,6 +24,7 @@ export function productCard(product) {
     `;
   }
   // If product is in the cart, Add a small ribbon on the card letting the user know that the product is in the cart.
+  // img-container.innerhtml + `p` ?
   else {
     return `
     <a href="details.html?id=${id}" style="text-decoration:none" class="card col scale">

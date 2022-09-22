@@ -6990,10 +6990,10 @@ fieldset:disabled .btn {
 }
 
 .spinner-border {
-  --bs-spinner-width: 2rem;
-  --bs-spinner-height: 2rem;
+  --bs-spinner-width: 4rem;
+  --bs-spinner-height: 4rem;
   --bs-spinner-vertical-align: -0.125em;
-  --bs-spinner-border-width: 0.25em;
+  --bs-spinner-border-width: 0.5rem;
   --bs-spinner-animation-speed: 0.75s;
   --bs-spinner-animation-name: spinner-border;
   border: var(--bs-spinner-border-width) solid currentcolor;
@@ -7031,8 +7031,8 @@ fieldset:disabled .btn {
 }
 
 .spinner-grow {
-  --bs-spinner-width: 2rem;
-  --bs-spinner-height: 2rem;
+  --bs-spinner-width: 4rem;
+  --bs-spinner-height: 4rem;
   --bs-spinner-vertical-align: -0.125em;
   --bs-spinner-animation-speed: 0.75s;
   --bs-spinner-animation-name: spinner-grow;
@@ -12483,6 +12483,7 @@ html {
 }
 
 body {
+  height: 100%;
   overflow-x: hidden;
   margin: 0;
   display: -webkit-box;
@@ -12545,12 +12546,6 @@ header {
   justify-items: center;
   width: 100%;
   margin: auto;
-}
-
-.admin-item-container {
-  opacity: 0;
-  -webkit-transition: opacity 0.7s;
-  transition: opacity 0.7s;
 }
 
 .spinner-container {
@@ -12912,6 +12907,10 @@ p {
 
 .fa-truck {
   font-size: 1.3rem;
+}
+
+.main-content {
+  display: none;
 }
 
 /* clip-path: polygon(0 0, 100% 0, 59% 100%, 0 100%);*/

@@ -21,3 +21,7 @@
 * fix spinner på alle loading sider
 * fix footer\wrapper på alle sider
 * main 100% heigth...da funker ikke scroll to top
+* legge til fler properties på product
+* alt text på product bilder?
+* sort mens man søker
+* se product card comment

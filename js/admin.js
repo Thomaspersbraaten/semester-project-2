@@ -60,8 +60,8 @@ logOutBtn.addEventListener("click", logoutPanel);
 
 // Scroll
 
-window.addEventListener("scroll", (e) => {
-  showAndHideScrollToTopBtn();
-});
-const scrollToTopBtn = document.querySelector(".fa-angle-up");
-scrollToTopBtn.addEventListener("click", scrollToTop);
+// window.addEventListener("scroll", (e) => {
+//   showAndHideScrollToTopBtn();
+// });
+// const scrollToTopBtn = document.querySelector(".fa-angle-up");
+// scrollToTopBtn.addEventListener("click", scrollToTop);
