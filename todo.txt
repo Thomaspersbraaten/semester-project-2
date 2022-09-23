@@ -11,18 +11,17 @@
  * console error favicon i chrome ??
  * search i admin. etter edit og search cleared er ikke repopulation av vindu korrekt. gammel data på produkter
 * to the top button | DONE
+* try catch i alle apicalls  | DONE
+* fix footer\wrapper på alle sider | DONE
+* fix edit og delete visual | DONE
+* fade inn på modal? | DONE
 
-
-
-* try catch i alle apicalls 
 * comment alt
 * forms have to scroll on smaller screens
 * fix flex på produkter
-* fix footer\wrapper på alle sider
-* main 100% heigth...da funker ikke scroll to top
+
 * legge til fler properties på product
 * alt text på product bilder?
 * alt text i API og add/edit?
 * sort mens man søker
-* fix edit og delete visual
-* fade inn på modal?
+

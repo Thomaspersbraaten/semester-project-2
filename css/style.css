@@ -12502,12 +12502,6 @@ main {
   background-color: #f5f7f755;
 }
 
-.wrapper {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-}
-
 header {
   border: 10px 0px 0px 0px #ef8b08;
 }
@@ -13073,6 +13067,7 @@ p {
   padding: 0;
   -webkit-transition: 0.35s scale;
   transition: 0.35s scale;
+  height: 320px;
 }
 
 .card__img {
@@ -13090,7 +13085,7 @@ p {
 }
 
 .img-container {
-  height: 40%;
+  height: 45%;
   position: relative;
 }
 
@@ -13121,7 +13116,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 60%;
+  height: 55%;
+  margin-bottom: 0px;
 }
 
 .card-stock {
@@ -13139,7 +13135,7 @@ p {
   font-size: 1.5rem;
   font-weight: bolder;
   display: inline;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
 }
 
 .card-text {
@@ -13157,60 +13153,11 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.card-action > * {
-  width: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  gap: 0.2rem;
-  padding: 10px;
-  -webkit-transition: scale 0.1s ease-in;
-  transition: scale 0.1s ease-in;
-  border: 1px solid black;
-}
-
-.card-action > *:hover {
-  scale: 1.04;
-}
-
-.card-action__delete {
-  -webkit-box-shadow: 2px 2px 3px black;
-          box-shadow: 2px 2px 3px black;
-  background-color: red;
-  padding: 10px 0px;
-  border-radius: 10px;
-  color: white;
-}
-
-.card-action__delete p,
-.card-action__edit p {
-  margin-bottom: 0;
-}
-
-.card-action__edit {
-  -webkit-box-shadow: 2px 2px 3px black;
-          box-shadow: 2px 2px 3px black;
-  background-color: blue;
-  padding: 10px 0px;
-  border-radius: 10px;
-  color: white;
+  margin: 0.5rem auto;
 }
 
 .fa-pen-to-square,
@@ -13572,6 +13519,36 @@ label {
   background-color: #0d6efd;
 }
 
+.card-action > * {
+  width: 75px;
+  padding: 10px 0px;
+  -webkit-transition: scale 0.1s ease-in;
+  transition: scale 0.1s ease-in;
+  -webkit-box-shadow: 2px 2px 3px #898686;
+          box-shadow: 2px 2px 3px #898686;
+  border-radius: 15px;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+}
+
+.card-action > *:hover {
+  scale: 1.04;
+}
+
+.card-action__delete {
+  background: #ff2700;
+  background: linear-gradient(49deg, #ff2700 0%, #ff4848 100%);
+  color: white;
+}
+
+.card-action__edit {
+  color: black;
+  background: #4cb9ff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#4cb9ff), color-stop(50%, #1db0fd), to(#19cdff));
+  background: linear-gradient(0deg, #4cb9ff 0%, #1db0fd 50%, #19cdff 100%);
+}
+
 .modal-container {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
@@ -13580,7 +13557,13 @@ label {
   z-index: 2;
   top: 0;
   left: 0;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .padding {

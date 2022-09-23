@@ -1,12 +1,10 @@
 import { deleteProduct } from "../formSubmissions/deleteProduct.js";
-import { modal } from "./createModal.js";
 import { fillForms } from "./fillForms.js";
+import { displayModal } from "../ui/displayModal.js";
+import { hideModal } from "../ui/hideModal.js";
 
 export function deletePanel(product) {
-  //   console.log(productId);
-  const modalContainer = document.querySelector(".modal-container");
-  modalContainer.style.display = "flex";
-  modalContainer.innerHTML = modal;
+  displayModal();
 
   const modalHeader = document.querySelector(".modal__header");
   const btnCancel = document.querySelector(".cancel");
@@ -23,8 +21,7 @@ export function deletePanel(product) {
 
   // Cancel actions
   btnCancel.addEventListener("click", () => {
-    modalContainer.innerHTML = "";
-    modalContainer.style.display = "none";
+    hideModal();
   });
   const deleteaction = "delete";
 

@@ -80,3 +80,27 @@
     background-color: #0d6efd;
   }
 }
+
+.card-action > * {
+  width: 75px;
+  padding: 10px 0px;
+  transition: scale 0.1s ease-in;
+  box-shadow: 2px 2px 3px #898686;
+  border-radius: 15px;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  &:hover {
+    scale: 1.04;
+  }
+}
+.card-action__delete {
+  background: rgb(255, 39, 0);
+  background: linear-gradient(49deg, rgba(255, 39, 0, 1) 0%, rgba(255, 72, 72, 1) 100%);
+  color: white;
+}
+.card-action__edit {
+  color: black;
+  background: rgb(76, 185, 255);
+  background: linear-gradient(0deg, rgba(76, 185, 255, 1) 0%, rgba(29, 176, 253, 1) 50%, rgba(25, 205, 255, 1) 100%);
+}

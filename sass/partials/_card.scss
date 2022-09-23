@@ -6,6 +6,7 @@
   text-align: center;
   padding: 0;
   transition: 0.35s scale;
+  height: 320px;
 
   &__img {
     width: 100%;
@@ -22,7 +23,7 @@
   -webkit-box-orient: vertical;
 }
 .img-container {
-  height: 40%;
+  height: 45%;
   position: relative;
 }
 .card-cart-status {
@@ -47,7 +48,8 @@
 .card-body {
   display: flex;
   flex-direction: column;
-  height: 60%;
+  height: 55%;
+  margin-bottom: 0px;
   // & > * {
   //   flex: 1;
   // }
@@ -65,7 +67,7 @@
   font-size: 1.5rem;
   font-weight: bolder;
   display: inline;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
 }
 
 .card-text {
@@ -81,42 +83,45 @@
 // admin cards
 .card-action {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   justify-content: center;
-  & > * {
-    width: 75px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.2rem;
-    padding: 10px;
-    transition: scale 0.1s ease-in;
-    border: 1px solid black;
-  }
-  & > *:hover {
-    scale: 1.04;
-  }
-  &__delete {
-    box-shadow: 2px 2px 3px black;
-    background-color: red;
-    padding: 10px 0px;
-    border-radius: 10px;
-    color: white;
-  }
-  &__delete p,
-  &__edit p {
-    margin-bottom: 0;
-  }
-  &__edit {
-    box-shadow: 2px 2px 3px black;
-    background-color: blue;
-    padding: 10px 0px;
-    border-radius: 10px;
-    color: white;
-  }
+  margin: 0.5rem auto;
 }
+//   & > * {
+//     width: 75px;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     align-items: center;
+//     text-align: center;
+//     gap: 0.2rem;
+//     padding: 10px 0px;
+//     transition: scale 0.1s ease-in;
+//     // border: 1px solid black;
+//     box-shadow: 2px 2px 3px black;
+//     border-radius: 10px;
+//   }
+//   & > *:hover {
+//     scale: 1.04;
+//   }
+//   &__delete {
+//     background-color: red;
+//     // padding: 10px 0px;
+
+//     color: white;
+//   }
+//   // &__delete p,
+//   // &__edit p {
+//   //   margin-bottom: 0;
+//   // }
+//   &__edit {
+//     // box-shadow: 2px 2px 3px black;
+//     background-color: blue;
+//     // padding: 10px 0px;
+//     // border-radius: 10px;
+//     color: white;
+//   }
+// }
 
 .fa-pen-to-square,
 .fa-trash {

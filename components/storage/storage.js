@@ -19,11 +19,6 @@ export function getToken() {
 }
 
 export function getCart() {
-  // const cart = localStorage.getItem(cartKey);
-  // if (cart) {
-  //   return cart;
-  // }
-  // return [];
   return getFromStorage(cartKey);
 }
 
