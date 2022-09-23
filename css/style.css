@@ -12805,8 +12805,8 @@ p {
 .nav-item,
 .fa-cart-shopping,
 .fa-user {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .nav-item:hover,
@@ -12908,7 +12908,6 @@ p {
   display: none;
 }
 
-/* clip-path: polygon(0 0, 100% 0, 59% 100%, 0 100%);*/
 .hero-info {
   background-color: #f9d5a7;
   display: none;
@@ -13068,6 +13067,9 @@ p {
   -webkit-transition: 0.35s scale;
   transition: 0.35s scale;
   height: 320px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 
 .card__img {
@@ -13504,8 +13506,8 @@ label {
           box-shadow: 1px 1px 5px black;
   cursor: pointer;
   position: fixed;
-  right: 2rem;
-  bottom: 4rem;
+  right: 3rem;
+  bottom: 5rem;
   background-color: white;
   visibility: hidden;
   opacity: 0;

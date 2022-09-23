@@ -35,18 +35,6 @@
   gap: 1.5rem;
 }
 
-// .image-container {
-//   max-height: 630px;
-//   overflow: hidden;
-// }
-// img {
-//   transition: all 0.5s ease;
-//   scale: 1;
-// }
-// img:hover {
-//   scale: 1.2;
-// }
-
 .cart-action-remove {
   display: flex;
   justify-content: center;
@@ -86,22 +74,14 @@ input[type="number"] {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  // & > * {
 
-  // }
   &__input {
     width: 40px;
     border-radius: 0px;
     text-align: center;
     border: 1px solid grey;
   }
-  // &__plus,
-  // &__minus {
-  //   // height: 30px;
-  //   font-size: 2rem;
-  //   // padding: 0rem 0.5rem;
-  //   background-color: grey;
-  // }
+
   &__plus,
   &__minus {
     font-size: 1.5rem;

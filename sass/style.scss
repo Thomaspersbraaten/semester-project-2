@@ -1,4 +1,7 @@
-@import "./partials/custom"; //  Bootstrap imports
+// Customize bootstrap
+@import "./partials/custom";
+
+//  Bootstrap imports
 @import "./bootstrap-scss/mixins/banner";
 @include bsBanner("");
 

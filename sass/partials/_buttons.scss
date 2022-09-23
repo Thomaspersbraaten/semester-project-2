@@ -1,12 +1,7 @@
 .btn {
-  // max-width: 120px;
   box-shadow: 2px 2px 4px #585858;
-  // border: 1px solid black;
   border: none;
   margin: auto;
-  // &-primary {
-  //   box-shadow: 1px 1px 4px black;
-  // }
 }
 .logout-btn {
   background-color: $primary-color;
@@ -34,17 +29,13 @@
 
 .btn-container > * {
   font-size: 1rem;
-  // height: 52px;
   padding: 1rem 2rem;
   font-weight: bold;
   font-size: 1.2rem;
 }
 .btn-cart--add {
   padding: 1rem 3.78rem;
-  // background: linear-gradient(to right, #75b022 5%, #588a1b 95%);
   background: linear-gradient(to right, #75ad27 5%, #588a1b 95%);
-  // background: rgb(80, 255, 64);
-  // background: linear-gradient(24deg, rgba(80, 255, 40, 0.9) 0%, rgba(19, 222, 22, 0.9) 100%);
   color: white;
 }
 .btn-cart--remove {
@@ -68,8 +59,8 @@
   box-shadow: 1px 1px 5px black;
   cursor: pointer;
   position: fixed;
-  right: 2rem;
-  bottom: 4rem;
+  right: 3rem;
+  bottom: 5rem;
   background-color: white;
   visibility: hidden;
   opacity: 0;

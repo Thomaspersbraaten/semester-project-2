@@ -51,6 +51,7 @@ sortingSelector.addEventListener("change", () => {
   }
 });
 
+// Scroll to top
 document.body.addEventListener("scroll", () => {
   showAndHideScrollToTopBtn();
 });
