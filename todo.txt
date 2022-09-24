@@ -15,13 +15,15 @@
 * fix footer\wrapper på alle sider | DONE
 * fix edit og delete visual | DONE
 * fade inn på modal? | DONE
+* alt text på product bilder? | cant|
+* alt text i API og add/edit? | cant|
 
 * comment alt
 * forms have to scroll on smaller screens
 * fix flex på produkter
-
 * legge til fler properties på product
-* alt text på product bilder? | cant|
-* alt text i API og add/edit? | cant|
 * sort mens man søker
+
+* BIG - Grid og fjern width på cards
+* Fix price i details
 

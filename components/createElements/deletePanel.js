@@ -1,7 +1,6 @@
 import { deleteProduct } from "../formSubmissions/deleteProduct.js";
 import { fillForms } from "./fillForms.js";
-import { displayModal } from "../ui/displayModal.js";
-import { hideModal } from "../ui/hideModal.js";
+import { displayModal, hideModal } from "../ui/index.js";
 
 export function deletePanel(product) {
   displayModal();
@@ -20,12 +19,9 @@ export function deletePanel(product) {
   modalMessageContainer.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>`;
 
   // Cancel actions
-  btnCancel.addEventListener("click", () => {
-    hideModal();
-  });
-  const deleteaction = "delete";
+  btnCancel.addEventListener("click", hideModal);
 
-  fillForms(product, deleteaction);
+  fillForms(product, "delete");
 
   btnConfirm.addEventListener("click", () => {
     deleteProduct(product);

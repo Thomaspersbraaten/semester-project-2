@@ -1,7 +1,9 @@
 import { confirmLogout } from "../ui/confirmLogout.js";
+import { displayModal } from "../ui/displayModal.js";
+import { hideModal } from "../ui/hideModal.js";
 export function logoutPanel() {
+  displayModal();
   const modalContainer = document.querySelector(".modal-container");
-  modalContainer.style.display = "flex";
   modalContainer.innerHTML = `
  <div class="modal"> 
     <h2 class="modal__header">Are you sure you want to log out?</h2>
@@ -14,8 +16,7 @@ export function logoutPanel() {
 
   const canclBtn = document.querySelector(".cancel");
   canclBtn.addEventListener("click", () => {
-    modalContainer.innerHTML = "";
-    modalContainer.style.display = "none";
+    hideModal();
   });
 
   const logoutBtn = document.querySelector(".confirm");

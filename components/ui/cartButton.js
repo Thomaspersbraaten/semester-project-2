@@ -1,7 +1,9 @@
 import { productCartFeedback } from "../feedback/productCartFeedback.js";
 import { getCart, saveCart } from "../storage/storage.js";
-import { setupCartInfo } from "./pageSetup/setupCartInfo.js";
-// move this to UI
+import { setupCartInfo } from "../createElements/pageSetup/setupCartInfo.js";
+
+// Add's and removes the product from the shopping cart.
+// Shows feedback when item is removed or added and the cart info is updated(The number over the cart icon)
 export function cartButton(id, product) {
   let cartContents = getCart();
   setupCartInfo();
@@ -16,10 +18,10 @@ export function cartButton(id, product) {
     <button class="btn btn-large btn-cart--add">Add to Cart</button>`;
     const AddToCartBtn = document.querySelector(".btn-cart--add");
     AddToCartBtn.addEventListener("click", () => {
+      // Add the "amount" property to the product, so the user can order more than one item. This is handled inside the shopping cart.
       product.amount = 1;
-      // console.log(product.quantity);
-      cartContents.push(product);
 
+      cartContents.push(product);
       saveCart(cartContents);
       cartButton(id, product);
       productCartFeedback(isProductInCart);

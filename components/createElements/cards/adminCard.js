@@ -42,8 +42,7 @@ export function adminCard(product) {
   `;
 }
 
-{
-  /* <button class="card-action__edit" data-id="${id}">
+/* <button class="card-action__edit" data-id="${id}">
   <i class="fa-solid fa-pen-to-square" data-id="${id}"></i>
   <p data-id="${id}">Edit</p>
 </button>
@@ -51,4 +50,3 @@ export function adminCard(product) {
   <i class="fa-solid fa-trash" data-id="${id}"></i>
   <p data-id="${id}">Delete</p>
 </button> */
-}

@@ -2,7 +2,7 @@ import { getAllProducts } from "../components/apicalls/getAllProducts.js";
 import { createAllStoreProducts } from "../components/createElements/createAllStoreProducts.js";
 import { herokuUrl } from "../components/consts/herokuUrl.js";
 import { SetupBreadcrumbs, setupCartInfo, setupNavMenu } from "../components/createElements/pageSetup/index.js";
-import { hamburgerMenu, fixMenuPosition, sortProducts, searchForProduct, searchControlAndClearSearch, scrollToTop, showAndHideScrollToTopBtn } from "../components/ui/index.js";
+import { hamburgerMenu, fixMenuPosition, showSortedProducts, searchForProduct, searchControlAndClearSearch, scrollToTop, showAndHideScrollToTopBtn, sortProducts } from "../components/ui/index.js";
 // import { homeProducts } from "../components/createElements/homeProducts.js";
 // import { populateContainerWithCards } from "../components/createElements/populateContainerWithCards.js";
 
@@ -20,10 +20,6 @@ const products = await getAllProducts(herokuUrl);
 const searchInput = document.querySelector("#search");
 searchInput.placeholder = `Search among ${products.length} products`;
 createAllStoreProducts(products);
-// const storeContainer = document.querySelector(".store-item-container");
-// products.forEach((product) => {
-//   homeProducts(product, ".store-item-container");
-// });
 
 // Searching for products
 const searchForm = document.querySelector(".search-form");
@@ -43,8 +39,12 @@ const sortingSelector = document.querySelector(".form-select");
 sortingSelector.selectedIndex = 0;
 
 sortingSelector.addEventListener("change", () => {
+  // sortProducts(selectorValue, products);
+  // showSortedProducts(products, "not searching");
+
   const selectorIndex = sortingSelector.selectedIndex;
   const selectorValue = parseInt(sortingSelector[selectorIndex].value);
+
   const sortedProducts = sortProducts(selectorValue, products);
   if (sortedProducts) {
     createAllStoreProducts(sortedProducts);

@@ -45,11 +45,12 @@ header {
 }
 
 .row {
-  display: flex;
-  gap: 20px;
-  justify-items: center;
-  width: 100%;
-  margin: auto;
+  gap: 1rem;
+  // display: flex;
+  // gap: 20px;
+  justify-content: center;
+  // width: 100%;
+  // margin: auto;
 }
 
 .spinner-container {
@@ -63,4 +64,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (min-width: 1140px) {
+  .row {
+    justify-content: unset;
+  }
 }

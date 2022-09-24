@@ -12534,13 +12534,10 @@ header {
 }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-  justify-items: center;
-  width: 100%;
-  margin: auto;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .spinner-container {
@@ -12567,6 +12564,14 @@ header {
           justify-content: center;
 }
 
+@media (min-width: 1140px) {
+  .row {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+}
+
 .nav-item {
   font-family: "bebas neue", "cursive", "Open sans";
   font-size: 1.6rem;
@@ -12579,6 +12584,10 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 h1, .h1 {
   text-align: center;
+}
+
+h2, .h2 {
+  margin: 0.75rem auto;
 }
 
 p {
@@ -12963,13 +12972,6 @@ p {
   width: 100%;
   height: 100%;
   max-height: 700px;
-}
-
-.featured,
-.un-featured {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 @media (min-width: 445px) {

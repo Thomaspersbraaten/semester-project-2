@@ -1,7 +1,6 @@
 import { editProduct } from "../formSubmissions/editProduct.js";
 import { fillForms } from "./fillForms.js";
-import { displayModal } from "../ui/displayModal.js";
-import { hideModal } from "../ui/hideModal.js";
+import { displayModal, hideModal } from "../ui/index.js";
 
 export function editPanel(product) {
   displayModal();
@@ -16,9 +15,7 @@ export function editPanel(product) {
   fillForms(product);
 
   // Cancel action
-  btnCancel.addEventListener("click", () => {
-    hideModal();
-  });
+  btnCancel.addEventListener("click", hideModal);
 
   // Edit action
   btnConfirm.addEventListener("click", () => {

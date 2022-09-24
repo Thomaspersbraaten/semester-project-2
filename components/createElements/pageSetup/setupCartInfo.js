@@ -7,9 +7,7 @@ export function setupCartInfo() {
   cartInfoContainer.innerHTML = "";
   const cart = getCart();
   let cartAmount = 0;
-  // for (let i = 0; i < cart.length; i++) {
-  //   cartAmount += cart[i].amount;
-  // }
+
   cart.forEach((item) => {
     cartAmount += item.amount;
   });
