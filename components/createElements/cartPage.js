@@ -76,7 +76,7 @@ export function cartPage() {
     });
   });
 
-  // decreases the amount of the selected item in the cart. triggers on a settimeout so the user can keep decreases.
+  // decreases the amount of the selected item in the cart. triggers on a settimeout so the user can keep decreasing.
   amountMinus.forEach((minus) => {
     minus.addEventListener("click", (event) => {
       const targetId = event.target.dataset.id;

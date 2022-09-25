@@ -74,14 +74,12 @@ input[type="number"] {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-
   &__input {
     width: 40px;
     border-radius: 0px;
     text-align: center;
     border: 1px solid grey;
   }
-
   &__plus,
   &__minus {
     font-size: 1.5rem;

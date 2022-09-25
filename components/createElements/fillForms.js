@@ -13,6 +13,7 @@ export function fillForms(product, action) {
   isFeatured.checked = featured;
   form.dataset.id = id;
 
+  // Disables inputs when delete panel is opened
   if (action === "delete") {
     titleInput.disabled = true;
     descInput.disabled = true;

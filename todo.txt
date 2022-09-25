@@ -30,7 +30,3 @@ flytter button in i form, bruk submit på edit,delete og create.
 * comment alt
 
 
-/////******
-Login checks
-
-

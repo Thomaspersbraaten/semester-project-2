@@ -17,8 +17,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* number of lines to show */
-  // line-clamp: 1;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 .img-container {
@@ -37,6 +36,11 @@
   width: 110px;
   top: 4rem;
   right: -3.5rem;
+  font-weight: 600;
+}
+.card-featured-status {
+  @extend .card-cart-status;
+  background: linear-gradient(0deg, #4cb9ff 0%, #1db0fd 50%, #19cdff 100%);
 }
 .scale:hover {
   scale: 1.06;
@@ -68,7 +72,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-line-clamp: 3;
   line-clamp: 2;
   -webkit-box-orient: vertical;
 }

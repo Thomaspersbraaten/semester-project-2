@@ -31,10 +31,17 @@ export function editPanel(product) {
   const editForm = document.querySelector(".modal-form");
   const imageContainer = document.querySelector(".form-image__img");
 
+  // Sets the image in the form
+  imageContainer.src = imageUrlInput.value;
+
+  // Sets the src in the img tag on input
+  imageUrlInput.addEventListener("input", () => {
+    imageContainer.src = imageUrlInput.value;
+  });
+
   modalForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    imageContainer.src = imageUrlInput.value;
     const titleValid = validateTitle();
     const descriptionValid = validateDescription();
     const priceValid = validatePrice();
@@ -45,6 +52,13 @@ export function editPanel(product) {
       const priceValue = priceInput.value.trim();
       const imageUrlValue = imageUrlInput.value;
       editProduct(titleValue, descValue, priceValue, imageUrlValue, featuredCheck.checked, editForm.dataset.id);
+    }
+  });
+
+  // Makes it impossible to input anything other than numbers into the price input
+  priceInput.addEventListener("keypress", (event) => {
+    if ((event.which != 8 && event.which != 0 && event.which < 48) || event.which > 57) {
+      event.preventDefault();
     }
   });
 }

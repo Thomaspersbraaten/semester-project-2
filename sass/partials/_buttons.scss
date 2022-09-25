@@ -41,17 +41,11 @@
 .btn-cart--remove {
   color: white;
   background-color: $error-color;
-  // &:hover {
-  //   background-color: black;
-  //   color: white;
-  // }
 }
-
 .cancel {
   background-color: white;
   color: black;
 }
-
 .fa-angle-up {
   padding: 0.5rem;
   border: 2px solid #bfbfbf;
@@ -71,12 +65,10 @@
     background-color: #0d6efd;
   }
 }
-
 .back-to-admin {
   margin: 1.5rem auto;
   height: 40px !important;
 }
-
 .card-action > * {
   width: 75px;
   padding: 10px 0px;

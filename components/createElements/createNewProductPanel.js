@@ -29,7 +29,8 @@ export function createNewProductPanel() {
   const imageUrlInput = document.querySelector("#image");
   const imageContainer = document.querySelector(".form-image__img");
 
-  imageUrlInput.addEventListener("input", (event) => {
+  // Sets the src in the img tag on input
+  imageUrlInput.addEventListener("input", () => {
     imageContainer.src = imageUrlInput.value;
   });
 
@@ -40,7 +41,6 @@ export function createNewProductPanel() {
   const modalForm = document.querySelector(".modal-form");
   modalForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    imageContainer.src = imageUrlInput.value;
     const titleValid = validateTitle();
     const descriptionValid = validateDescription();
     const priceValid = validatePrice();
@@ -55,6 +55,7 @@ export function createNewProductPanel() {
     }
   });
 
+  // Makes it impossible to input anything other than numbers into the price input
   priceInput.addEventListener("keypress", (event) => {
     if ((event.which != 8 && event.which != 0 && event.which < 48) || event.which > 57) {
       event.preventDefault();
