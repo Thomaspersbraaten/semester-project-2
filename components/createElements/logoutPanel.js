@@ -1,6 +1,6 @@
-import { confirmLogout } from "../ui/confirmLogout.js";
-import { displayModal } from "../ui/displayModal.js";
-import { hideModal } from "../ui/hideModal.js";
+import { confirmLogout, displayModal, hideModal } from "../ui/index.js";
+
+// shows the logout prompt
 export function logoutPanel() {
   displayModal();
   const modalContainer = document.querySelector(".modal-container");

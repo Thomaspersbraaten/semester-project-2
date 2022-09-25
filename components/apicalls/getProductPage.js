@@ -5,7 +5,6 @@ export async function getProductPage(url) {
     const response = await fetch(url);
     return await response.json();
   } catch (error) {
-    console.log(error);
     displayMessage("catch-error", "there was an error fetching the product details", ".main-content");
   } finally {
     const spinner = document.querySelector(".spinner-container");

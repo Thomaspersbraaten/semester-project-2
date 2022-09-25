@@ -8,8 +8,6 @@ export * from "./scrollToTop.js";
 export * from "./searchControlAndClearSearch.js";
 export * from "./searchForProduct.js";
 export * from "./showAndHideScrollToTopBtn.js";
-export * from "./showSortedProducts.js";
-export * from "./sortProducts.js";
 export * from "./startDeletion.js";
 export * from "./startEdit.js";
 export * from "./updateCartAmounts.js";

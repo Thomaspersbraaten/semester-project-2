@@ -149,15 +149,18 @@
 .active {
   text-decoration: underline;
 }
-.nav-item,
+.nav-link,
 .fa-cart-shopping,
 .fa-user {
-  transition: color 0.2s;
+  transition: all 0.2s;
 }
-.nav-item:hover,
+.nav-link:hover {
+  color: $primary-color;
+  text-decoration: underline;
+}
 .fa-cart-shopping:hover,
 .fa-user:hover {
-  color: $primary-color;
+  scale: 1.075;
 }
 @media (min-width: 357px) {
   .navbar-brand img {

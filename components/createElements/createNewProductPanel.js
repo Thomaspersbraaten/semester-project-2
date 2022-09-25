@@ -1,7 +1,8 @@
 import { createNewProduct } from "../formSubmissions/createNewProduct.js";
-import { displayMessage } from "../feedback/displayMessage.js";
 import { displayModal } from "../ui/displayModal.js";
 import { hideModal } from "../ui/hideModal.js";
+import { validateTitle, validateDescription, validatePrice } from "../validations/index.js";
+
 export function createNewProductPanel() {
   displayModal();
 
@@ -15,7 +16,8 @@ export function createNewProductPanel() {
 
   // Cancel actions
 
-  btnCancel.addEventListener("click", () => {
+  btnCancel.addEventListener("click", (event) => {
+    event.preventDefault();
     hideModal();
   });
 
@@ -24,16 +26,38 @@ export function createNewProductPanel() {
   const titleInput = document.querySelector("#title");
   const descInput = document.querySelector("#description");
   const priceInput = document.querySelector("#price");
-  const imageUrl = document.querySelector("#image-url");
+  const imageUrlInput = document.querySelector("#image");
+  const imageContainer = document.querySelector(".form-image__img");
 
-  btnConfirm.addEventListener("click", () => {
-    const featuredCheck = document.querySelector(".form-check__input");
-    const titleValue = titleInput.value.trim();
-    const descValue = descInput.value.trim();
-    const priceValue = priceInput.value.trim();
-    const imageUrlValue = imageUrl.value;
-    if (titleValue.length === 0 || descValue.length === 0 || priceValue.value === 0) return displayMessage("alert-warning", "Please input atleast one character in each field", ".modal-form__message");
+  imageUrlInput.addEventListener("input", (event) => {
+    imageContainer.src = imageUrlInput.value;
+  });
 
-    createNewProduct(titleValue, descValue, priceValue, featuredCheck.checked, imageUrlValue);
+  titleInput.addEventListener("blur", validateTitle);
+  descInput.addEventListener("blur", validateDescription);
+  priceInput.addEventListener("blur", validatePrice);
+
+  const modalForm = document.querySelector(".modal-form");
+  modalForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    imageContainer.src = imageUrlInput.value;
+    const titleValid = validateTitle();
+    const descriptionValid = validateDescription();
+    const priceValid = validatePrice();
+
+    if (titleValid === true && descriptionValid === true && priceValid === true) {
+      const featuredCheck = document.querySelector(".form-check__input");
+      const titleValue = titleInput.value.trim();
+      const descValue = descInput.value.trim();
+      const priceValue = priceInput.value.trim();
+      const imageUrlValue = imageUrlInput.value;
+      createNewProduct(titleValue, descValue, priceValue, featuredCheck.checked, imageUrlValue);
+    }
+  });
+
+  priceInput.addEventListener("keypress", (event) => {
+    if ((event.which != 8 && event.which != 0 && event.which < 48) || event.which > 57) {
+      event.preventDefault();
+    }
   });
 }

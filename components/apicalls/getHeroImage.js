@@ -5,7 +5,6 @@ export async function getHeroImage(baseUrl) {
   try {
     const response = await fetch(baseUrl + "home");
     const data = await response.json();
-    console.log(data);
     const heroText = document.querySelector(".hero-info");
     heroText.style.display = "flex";
     const theHeroImage = data.hero_banner.url;

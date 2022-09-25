@@ -34,7 +34,7 @@ export function SetupBreadcrumbs(item) {
     <p class="active-page breadcrumbs__active">Shopping cart</p>
     `;
   }
-  if (pathname === "/contact.html") {
-    breadCrumbsContainer.innerHTML += `<p class="active-page breadcrumbs__active">Contact us</p>`;
+  if (pathname === "/visit.html") {
+    breadCrumbsContainer.innerHTML += `<p class="active-page breadcrumbs__active">Visit us</p>`;
   }
 }

@@ -2,9 +2,7 @@ import { getAllProducts } from "../components/apicalls/getAllProducts.js";
 import { createAllStoreProducts } from "../components/createElements/createAllStoreProducts.js";
 import { herokuUrl } from "../components/consts/herokuUrl.js";
 import { SetupBreadcrumbs, setupCartInfo, setupNavMenu } from "../components/createElements/pageSetup/index.js";
-import { hamburgerMenu, fixMenuPosition, showSortedProducts, searchForProduct, searchControlAndClearSearch, scrollToTop, showAndHideScrollToTopBtn, sortProducts } from "../components/ui/index.js";
-// import { homeProducts } from "../components/createElements/homeProducts.js";
-// import { populateContainerWithCards } from "../components/createElements/populateContainerWithCards.js";
+import { hamburgerMenu, fixMenuPosition, searchForProduct, searchControlAndClearSearch, scrollToTop, showAndHideScrollToTopBtn } from "../components/ui/index.js";
 
 // Initial page setup
 SetupBreadcrumbs();
@@ -19,6 +17,8 @@ window.addEventListener("resize", fixMenuPosition);
 const products = await getAllProducts(herokuUrl);
 const searchInput = document.querySelector("#search");
 searchInput.placeholder = `Search among ${products.length} products`;
+
+// sets up products in the store page
 createAllStoreProducts(products);
 
 // Searching for products
@@ -31,24 +31,6 @@ searchForm.addEventListener("submit", (event) => {
 
 searchForm.addEventListener("keyup", () => {
   searchControlAndClearSearch(products);
-});
-
-// Sorting the products
-const sortingSelector = document.querySelector(".form-select");
-// resets the selected index back to its "label" when page is refreshed
-sortingSelector.selectedIndex = 0;
-
-sortingSelector.addEventListener("change", () => {
-  // sortProducts(selectorValue, products);
-  // showSortedProducts(products, "not searching");
-
-  const selectorIndex = sortingSelector.selectedIndex;
-  const selectorValue = parseInt(sortingSelector[selectorIndex].value);
-
-  const sortedProducts = sortProducts(selectorValue, products);
-  if (sortedProducts) {
-    createAllStoreProducts(sortedProducts);
-  }
 });
 
 // Scroll to top

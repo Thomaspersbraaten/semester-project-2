@@ -26,7 +26,6 @@ hamburgerButton.addEventListener("click", hamburgerMenu);
 // Setup the admin page
 
 const products = await getAllProducts(herokuUrl);
-// console.log(products);
 products.sort(function (a, b) {
   return a.id - b.id;
 });

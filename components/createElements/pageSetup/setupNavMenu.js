@@ -29,7 +29,7 @@ export function setupNavMenu() {
     <a class="nav-link ${pathname === "/store.html" || pathname === "/details.html" ? "active" : ""}" href="store.html">Store</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link ${pathname === "/contact.html" ? "active" : ""}" href="contact.html">Contact</a>
+    <a class="nav-link ${pathname === "/visit.html" ? "active" : ""}" href="visit.html">Visit us</a>
   </li>
   `;
 }

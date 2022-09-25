@@ -17,13 +17,20 @@
 * fade inn på modal? | DONE
 * alt text på product bilder? | cant|
 * alt text i API og add/edit? | cant|
+* Fix price i details 
+* legge til fler properties på product
+* fix flex på produkter
+* BIG - Grid og fjern width på cards
+* forms have to scroll on smaller screen
+|done
+* sort mens man søker...fjerne sort?
+error felt i modal form
+flytter button in i form, bruk submit på edit,delete og create.
 
 * comment alt
-* forms have to scroll on smaller screens
-* fix flex på produkter
-* legge til fler properties på product
-* sort mens man søker
 
-* BIG - Grid og fjern width på cards
-* Fix price i details
+
+/////******
+Login checks
+
 

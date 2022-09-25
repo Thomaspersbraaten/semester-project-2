@@ -1,4 +1,4 @@
-export * from "./checkEmail.js";
-export * from "./validateEmail.js";
 export * from "./checkLength.js";
-export * from "./validatePassword.js";
+export * from "./validateDescription.js";
+export * from "./ValidatePrice.js";
+export * from "./validateTitle.js";

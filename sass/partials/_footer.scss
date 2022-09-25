@@ -17,7 +17,13 @@
   }
   & p {
     margin-bottom: 0px;
+    font-family: "bebas neue", "open-sans", sans-serif;
   }
+}
+.copyright {
+  margin-bottom: 1rem;
+  font-family: "bebas neue", "open-sans", sans-serif;
+  font-style: italic;
 }
 .footer-container {
   display: flex;

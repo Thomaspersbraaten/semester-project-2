@@ -1,18 +1,11 @@
-// import { baseUrl } from "../consts/baseUrl.js";
-
 import { displayMessage } from "../feedback/displayMessage.js";
 import { getToken } from "../storage/storage.js";
-import { createAdminItems } from "../createElements/createAdminItems.js";
-import { getAllProducts } from "../apicalls/getAllProducts.js";
 import { herokuUrl } from "../consts/herokuUrl.js";
+
 export async function createNewProduct(titleValue, descriptionValue, priceValue, isFeatured, imageUrl) {
   const token = getToken();
-  console.log(isFeatured);
-  console.log(token);
-  const modalForm = document.querySelector(".modal-form");
 
   const newProductUrl = herokuUrl + "products";
-
   const data = JSON.stringify({ title: titleValue, description: descriptionValue, price: priceValue, image_url: imageUrl, featured: isFeatured });
 
   const options = {
@@ -26,28 +19,17 @@ export async function createNewProduct(titleValue, descriptionValue, priceValue,
   try {
     const response = await fetch(newProductUrl, options);
     const json = await response.json();
-    console.log(json);
     if (json.created_at) {
       displayMessage("alert-success", "Product was succesfully created!", ".modal-form-message");
-      // Repopulates the container with updated items.
-      // const products = await getAllProducts(herokuUrl);
-      // createAdminItems(products);
-
       const form = document.querySelector(".modal-form");
-      const modalButtons = document.querySelector(".modal__btns");
-      // modalButtons.innerHTML = `<button class="btn btn-large back-to-admin" >Back to admin panel</button>`;
       form.style.display = "none";
-      modalButtons.innerHTML = `
-      <a href="admin.html">
-        <button class="btn btn-large back-to-admin">Back to admin panel</button>
-      </a>
-      `;
+      const modal = document.querySelector(".modal");
+      modal.innerHTML += `<a href="admin.html" class="btn btn-large btn-warning cancel back-to-admin">Back to admin page</a>`;
     }
     if (json.error) {
       displayMessage("alert-warning", "Product creation has failed", ".modal-form-message");
     }
   } catch (error) {
-    console.log(error);
     displayMessage("alert-warning", "There was an error during creation", ".modal-form-message");
   }
 }

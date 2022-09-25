@@ -1,7 +1,5 @@
 import { createAdminItems } from "../createElements/createAdminItems.js";
 import { createAllStoreProducts } from "../createElements/createAllStoreProducts.js";
-import { showSortedProducts } from "./index.js";
-// import { sortProducts } from "./sortProducts.js";
 
 const searchInput = document.querySelector("#search");
 
@@ -17,11 +15,6 @@ export function searchForProduct(products) {
         return true;
       }
     });
-    // const sortingSelector = document.querySelector(".form-select");
-    // const searchStatus = "searching";
-    // sortingSelector.addEventListener("change", () => {
-    //   showSortedProducts(filteredProducts, searchStatus);
-    // });
 
     // if no products was found, show helpfull message and empty product page.
     const itemHeader = document.querySelector(".item-header");

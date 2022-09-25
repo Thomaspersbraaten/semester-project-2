@@ -18,12 +18,18 @@ export function deletePanel(product) {
   const modalMessageContainer = document.querySelector(".modal-form-message");
   modalMessageContainer.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>`;
 
+  const modalForm = document.querySelector(".modal-form");
+
   // Cancel actions
-  btnCancel.addEventListener("click", hideModal);
+  btnCancel.addEventListener("click", (event) => {
+    event.preventDefault();
+    hideModal();
+  });
 
   fillForms(product, "delete");
 
-  btnConfirm.addEventListener("click", () => {
+  modalForm.addEventListener("submit", (event) => {
+    event.preventDefault();
     deleteProduct(product);
   });
 }

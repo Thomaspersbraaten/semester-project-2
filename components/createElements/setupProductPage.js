@@ -13,12 +13,11 @@ export function setupProductPage(product) {
           <img src="${image_url}" class="details-image" alt="${title}">
         </div>
         <div class="price-and-button">
-          <div class="card-stock details-stock"><i class="fa-solid fa-check"></i> 50+ in storage.</div>
-          <div>
-            <p>Price</p>
+          <div class="card-stock details-stock"><i class="fa-solid fa-check"></i> 50+ in stock</div>
+          <div class="details-price-container">
+            <p class="price-text">Price:</p>
             <p class="details-price"> ${price},-</p>
           </div>
-      
           <div class="btn-container"></div>
         </div>
     </div>

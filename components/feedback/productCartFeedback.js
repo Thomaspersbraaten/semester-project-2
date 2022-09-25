@@ -1,4 +1,7 @@
 let timerID;
+
+// Shows the feedback if the user add's or removes the item from the cart.
+// it is removed after 3seconds or if the user clicks the "X"
 export function productCartFeedback(productStatus) {
   const feedbackElement = document.querySelector(".feedback");
   feedbackElement.style.transition = "none";

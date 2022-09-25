@@ -1,5 +1,6 @@
 import { adminCard } from "./cards/adminCard.js";
 import { productCard } from "./cards/productCard.js";
+
 // Populates target container with the product card (folder consts)
 export function populateContainerWithCards(product, container) {
   const { pathname } = window.location;

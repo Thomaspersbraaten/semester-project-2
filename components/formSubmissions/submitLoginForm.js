@@ -22,7 +22,7 @@ export async function submitLoginForm(username, password) {
       saveToken(json.jwt);
       location.href = "./index.html";
     }
-    // show that the
+    // show that either the password or email is incorrect
     if (json.error) {
       displayMessage("alert-danger", "Login attempt failed: " + json.message[0].messages[0].message, ".login-form__message-container");
     }
