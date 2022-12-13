@@ -22,6 +22,16 @@
 .main-content {
   display: none;
 }
+.spinner-container {
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+.spinner-database {
+  display: none;
+}
 
 .hero-info {
   background-color: #f9d5a7;
