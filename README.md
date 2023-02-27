@@ -1,4 +1,8 @@
-# semester-project-2
+# semester-project-2 - "Practicly" webstore
+
+## Webstore designed for sales of electrical materials.
+
+
 
 Tasks for this project:
 * Deploy local Strapi API or deploy to Heroku.
