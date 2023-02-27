@@ -1,8 +1,8 @@
 # semester-project-2 - "Practicly" webstore
 
 ## Project description
-Webstore designed for sales of electrical materials.
 
+"Practicly" is a webstore that specializes in selling electrical components. The webstore provides customers with an easy-to-use platform to browse and purchase various electrical components for use in a variety of applications, such as electronic projects, home automation systems, and electrical installations.
 
 Tasks for this project:
 * Deploy local Strapi API or deploy to Heroku.
