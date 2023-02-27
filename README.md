@@ -1,5 +1,6 @@
 # semester-project-2 - "Practicly" webstore
 
+![image](https://tpbro.online/practicly-example.JPG)
 ## Project description
 
 "Practicly" is a webstore that specializes in selling electrical components. The webstore provides customers with an easy-to-use platform to browse and purchase various electrical components for use in a variety of applications, such as electronic projects, home automation systems, and electrical installations.
