@@ -1,7 +1,8 @@
 # semester-project-2 - "Practicly" webstore
 
 ![image](https://tpbro.online/practicly-example.JPG = 250x250)
-![](https://tpbro.online/practicly-example.JPG = 250x250)
+
+<img src="https://tpbro.online/practicly-example.JPG" width="200" height="200" />
 
 ## Project description
 
