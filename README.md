@@ -11,6 +11,7 @@
 * Vanilla JS with modules and localstorage
 * SASS or styled components
 * CSS framework of our choice
+
 SASS and bootstrap was used in this project.
 
 ## Tasks for this project:
