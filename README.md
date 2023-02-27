@@ -14,7 +14,7 @@ Tasks for this project:
 * Admin page - This page lists all products so admin user can interact with product. Admin user should be able to logout, create new products, Edit products and delete products.
 
 Tools to use
-* Vanilla JS with modules
+* Vanilla JS with modules and localstorage
 * SASS or styled components
 * CSS framework of our choice
 
@@ -23,6 +23,6 @@ SASS and bootstrap was used in this project.
 
 All tasks set for the poject were implemeneted, with some extra functionality:
 * Ribbons on customer facing products which informs if the product is in the cart(Localstorage) and ribbons on admin page which informs the admin user if the item is featured.
-* Amount controll in the shopping cart. User can  adjust the amount of products they want to order by either clicking "+", "-" or inputing directly in the <input> tag.
+* Amount controll in the shopping cart. User can adjust the amount of products they want to order by either clicking "+", "-" or inputing directly in the <input> tag.
 * A small number in the shopping cart icon showing the user how many items are in the cart.
 * Scroll to top button
