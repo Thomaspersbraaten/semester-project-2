@@ -28,3 +28,7 @@ SASS and bootstrap was used in this project.
 * Amount control in the shopping cart. User can adjust the amount of products they want to order by either clicking "+", "-" or inputing directly in the <input> tag.
 * A small number in the shopping cart icon showing the user how many items are in the cart.
 * Scroll to top button
+
+## Installing
+* Clone repo
+* run "npm install"
