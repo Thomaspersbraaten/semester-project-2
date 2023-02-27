@@ -1,7 +1,7 @@
 # semester-project-2 - "Practicly" webstore
 
-## Webstore designed for sales of electrical materials.
-
+## Project description
+Webstore designed for sales of electrical materials.
 
 
 Tasks for this project:
