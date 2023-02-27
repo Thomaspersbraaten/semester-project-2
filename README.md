@@ -1,7 +1,7 @@
 # semester-project-2 - "Practicly" webstore
 
 
-<img src="https://tpbro.online/practicly-example.JPG" width="400" height="400" />
+<img src="https://tpbro.online/practicly-example.JPG" width="500" height="400" />
 
 ## Project description
 
